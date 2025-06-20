@@ -1,38 +1,40 @@
 .legend-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     padding: 12px;
-    background: white;
+    background: rgba(255,255,255,0.95);
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     max-width: 260px;
     font-family: sans-serif;
+    transform: translateX(110%);
+    transition: transform 0.6s ease;
+    z-index: 1000;
 }
-
+.legend-container.visible {
+    transform: translateX(0);
+}
 .legend-section {
     margin-top: 1em;
 }
-
 .swatches {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    margin-top: 4px;
 }
-
 .swatch-row {
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
-
 .color-box {
     width: 22px;
     height: 22px;
     border: 1px solid #999;
     margin-right: 8px;
 }
-
 .label {
     font-size: 14px;
 }
-
 .layer-toggle {
     display: block;
     width: 100%;
