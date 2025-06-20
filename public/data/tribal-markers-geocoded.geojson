@@ -4,7 +4,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Absentee-Shawnee Tribe of Indians of Oklahoma"
+        "name": "Absentee-Shawnee Tribe of Indians of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -17,7 +22,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation, California"
+        "name": "Agua Caliente Band of Cahuilla Indians of the Agua Caliente Indian Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -30,7 +40,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ak Chin Indian Community"
+        "name": "Ak Chin Indian Community",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -43,7 +58,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Alabama-Coushatta Tribe of Texas"
+        "name": "Alabama-Coushatta Tribe of Texas",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -56,7 +76,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Alabama-Quassarte Tribal Town"
+        "name": "Alabama-Quassarte Tribal Town",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -69,7 +94,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Alturas Indian Rancheria, California"
+        "name": "Alturas Indian Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -82,7 +112,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Apache Tribe of Oklahoma"
+        "name": "Apache Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -95,7 +130,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Arapaho Tribe of the Wind River Reservation, Wyoming"
+        "name": "Arapaho Tribe of the Wind River Reservation, Wyoming",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -108,7 +148,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Aroostook Band of Micmacs"
+        "name": "Aroostook Band of Micmacs",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -121,7 +166,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana"
+        "name": "Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -134,7 +184,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Augustine Band of Cahuilla Indians, California"
+        "name": "Augustine Band of Cahuilla Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -147,7 +202,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bad River Band of the Lake Superior Tribe of Chippewa Indians of the Bad River Reservation, Wisconsin"
+        "name": "Bad River Band of the Lake Superior Tribe of Chippewa Indians of the Bad River Reservation, Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -160,7 +220,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bay Mills Indian Community, Michigan"
+        "name": "Bay Mills Indian Community, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -173,7 +238,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bear River Band of the Rohnerville Rancheria, California"
+        "name": "Bear River Band of the Rohnerville Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -186,7 +256,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Berry Creek Rancheria of Maidu Indians of California"
+        "name": "Berry Creek Rancheria of Maidu Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -199,7 +274,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Lagoon Rancheria, California"
+        "name": "Big Lagoon Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -212,7 +292,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Pine Paiute Tribe of the Owens Valley, California"
+        "name": "Big Pine Paiute Tribe of the Owens Valley, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -225,7 +310,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Sandy Rancheria of Western Mono Indians of California"
+        "name": "Big Sandy Rancheria of Western Mono Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -238,7 +328,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Big Valley Band of Pomo Indians of the Big Valley Rancheria, California"
+        "name": "Big Valley Band of Pomo Indians of the Big Valley Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -251,7 +346,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bishop Paiute Tribe"
+        "name": "Bishop Paiute Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -264,7 +364,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Blue Lake Rancheria, California"
+        "name": "Blue Lake Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -277,7 +382,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bridgeport Indian Colony, California"
+        "name": "Bridgeport Indian Colony, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -290,7 +400,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Buena Vista Rancheria of Me-Wuk Indians of California"
+        "name": "Buena Vista Rancheria of Me-Wuk Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -303,7 +418,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Burns Paiute Tribe"
+        "name": "Burns Paiute Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -316,7 +436,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cabazon Band of Mission Indians, California"
+        "name": "Cabazon Band of Mission Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -329,7 +454,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cachil DeHe Band of Wintun Indians of the Colusa Indian Community of the Colusa Rancheria, California"
+        "name": "Cachil DeHe Band of Wintun Indians of the Colusa Indian Community of the Colusa Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -342,7 +472,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Caddo Nation of Oklahoma"
+        "name": "Caddo Nation of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -355,7 +490,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cahto Tribe of the Laytonville Rancheria, California"
+        "name": "Cahto Tribe of the Laytonville Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -368,7 +508,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cahuilla Band of Indians, California"
+        "name": "Cahuilla Band of Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -381,7 +526,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "California Valley Miwok Tribe, California"
+        "name": "California Valley Miwok Tribe, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -394,7 +544,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Catawba Indian Nation"
+        "name": "Catawba Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -407,7 +562,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cayuga Nation"
+        "name": "Cayuga Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -420,7 +580,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cedarville Rancheria, California"
+        "name": "Cedarville Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -433,7 +598,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chemehuevi Indian Tribe of the Chemehuevi Reservation, California"
+        "name": "Chemehuevi Indian Tribe of the Chemehuevi Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -446,7 +616,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cher-Ae Heights Indian Community of the Trinidad Rancheria, California"
+        "name": "Cher-Ae Heights Indian Community of the Trinidad Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -459,7 +634,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cherokee Nation"
+        "name": "Cherokee Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -472,7 +652,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cheyenne and Arapaho Tribes, Oklahoma"
+        "name": "Cheyenne and Arapaho Tribes, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -485,7 +670,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota"
+        "name": "Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -498,7 +688,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chickahominy Indian Tribe"
+        "name": "Chickahominy Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -511,7 +706,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chickahominy Indian Tribe–Eastern Division"
+        "name": "Chickahominy Indian Tribe–Eastern Division",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -524,7 +724,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chickasaw Nation"
+        "name": "Chickasaw Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -537,7 +742,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chinook Indian Nation"
+        "name": "Chinook Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -550,7 +760,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chippewa Cree Indians of the Rocky Boy’s Reservation, Montana"
+        "name": "Chippewa Cree Indians of the Rocky Boy’s Reservation, Montana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -563,7 +778,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Chitimacha Tribe of Louisiana"
+        "name": "Chitimacha Tribe of Louisiana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -576,7 +796,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Choctaw Nation of Oklahoma"
+        "name": "Choctaw Nation of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -589,7 +814,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Citizen Potawatomi Nation, Oklahoma"
+        "name": "Citizen Potawatomi Nation, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -602,7 +832,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cloverdale Rancheria of Pomo Indians of California"
+        "name": "Cloverdale Rancheria of Pomo Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -615,7 +850,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cocopah Tribe of Arizona"
+        "name": "Cocopah Tribe of Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -628,7 +868,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Coeur D’Alene Tribe"
+        "name": "Coeur D’Alene Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -641,7 +886,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cold Springs Rancheria of Mono Indians of California"
+        "name": "Cold Springs Rancheria of Mono Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -654,7 +904,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Colorado River Indian Tribes of the Colorado River Indian Reservation, Arizona and California"
+        "name": "Colorado River Indian Tribes of the Colorado River Indian Reservation, Arizona and California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -667,7 +922,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Comanche Nation, Oklahoma"
+        "name": "Comanche Nation, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -680,7 +940,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Salish and Kootenai Tribes of the Flathead Reservation"
+        "name": "Confederated Salish and Kootenai Tribes of the Flathead Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -693,7 +958,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes and Bands of the Yakama Nation"
+        "name": "Confederated Tribes and Bands of the Yakama Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -706,7 +976,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians"
+        "name": "Confederated Tribes of Coos, Lower Umpqua and Siuslaw Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -719,7 +994,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of Grand Ronde Community of Oregon"
+        "name": "Confederated Tribes of Grand Ronde Community of Oregon",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -732,7 +1012,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of Siletz Indians of Oregon"
+        "name": "Confederated Tribes of Siletz Indians of Oregon",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -745,7 +1030,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of the Chehalis Reservation"
+        "name": "Confederated Tribes of the Chehalis Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -758,7 +1048,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of the Colville Reservation"
+        "name": "Confederated Tribes of the Colville Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -771,7 +1066,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of the Goshute Reservation, Nevada and Utah"
+        "name": "Confederated Tribes of the Goshute Reservation, Nevada and Utah",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -784,7 +1084,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of the Umatilla Indian Reservation"
+        "name": "Confederated Tribes of the Umatilla Indian Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -797,7 +1102,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Confederated Tribes of the Warm Springs Reservation of Oregon"
+        "name": "Confederated Tribes of the Warm Springs Reservation of Oregon",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -810,7 +1120,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Coquille Indian Tribe"
+        "name": "Coquille Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -823,7 +1138,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Coushatta Tribe of Louisiana"
+        "name": "Coushatta Tribe of Louisiana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -836,7 +1156,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cow Creek Band of Umpqua Tribe of Indians"
+        "name": "Cow Creek Band of Umpqua Tribe of Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -849,7 +1174,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cowlitz Indian Tribe"
+        "name": "Cowlitz Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -862,7 +1192,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Coyote Valley Band of Pomo Indians of California"
+        "name": "Coyote Valley Band of Pomo Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -875,7 +1210,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota"
+        "name": "Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -888,7 +1228,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Crow Tribe of Montana"
+        "name": "Crow Tribe of Montana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -901,7 +1246,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Delaware Nation, Oklahoma"
+        "name": "Delaware Nation, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -914,7 +1264,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Delaware Tribe of Indians"
+        "name": "Delaware Tribe of Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -927,7 +1282,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Dry Creek Rancheria Band of Pomo Indians, California"
+        "name": "Dry Creek Rancheria Band of Pomo Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -940,7 +1300,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Duckwater Shoshone Tribe of the Duckwater Reservation, Nevada"
+        "name": "Duckwater Shoshone Tribe of the Duckwater Reservation, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -953,7 +1318,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Eastern Band of Cherokee Indians"
+        "name": "Eastern Band of Cherokee Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -966,7 +1336,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Eastern Shawnee Tribe of Oklahoma"
+        "name": "Eastern Shawnee Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -979,7 +1354,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ely Shoshone Tribe of Nevada"
+        "name": "Ely Shoshone Tribe of Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -992,7 +1372,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Enterprise Rancheria of Maidu Indians of California"
+        "name": "Enterprise Rancheria of Maidu Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1005,7 +1390,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Flandreau Santee Sioux Tribe of South Dakota"
+        "name": "Flandreau Santee Sioux Tribe of South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1018,7 +1408,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Forest County Potawatomi Community, Wisconsin"
+        "name": "Forest County Potawatomi Community, Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1031,7 +1426,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Belknap Indian Community of the Fort Belknap Reservation of Montana"
+        "name": "Fort Belknap Indian Community of the Fort Belknap Reservation of Montana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1044,7 +1444,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Bidwell Indian Community of the Fort Bidwell Reservation of California"
+        "name": "Fort Bidwell Indian Community of the Fort Bidwell Reservation of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1057,7 +1462,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Independence Indian Community of Paiute Indians of the Fort Independence Reservation, California"
+        "name": "Fort Independence Indian Community of Paiute Indians of the Fort Independence Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1070,7 +1480,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation, Nevada and Oregon"
+        "name": "Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation, Nevada and Oregon",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1083,7 +1498,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort McDowell Yavapai Nation, Arizona"
+        "name": "Fort McDowell Yavapai Nation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1096,7 +1516,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Mojave Indian Tribe of Arizona, California & Nevada"
+        "name": "Fort Mojave Indian Tribe of Arizona, California & Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1109,7 +1534,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Fort Sill Apache Tribe of Oklahoma"
+        "name": "Fort Sill Apache Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1122,7 +1552,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Gila River Indian Community of the Gila River Indian Reservation, Arizona"
+        "name": "Gila River Indian Community of the Gila River Indian Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1135,7 +1570,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Grand Portage Band of Lake Superior Chippewa, Minnesota"
+        "name": "Grand Portage Band of Lake Superior Chippewa, Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1148,7 +1588,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Grand Traverse Band of Ottawa and Chippewa Indians, Michigan"
+        "name": "Grand Traverse Band of Ottawa and Chippewa Indians, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1161,7 +1606,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Greenville Rancheria"
+        "name": "Greenville Rancheria",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1174,7 +1624,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Grindstone Indian Rancheria of Wintun-Wailaki Indians of California"
+        "name": "Grindstone Indian Rancheria of Wintun-Wailaki Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1187,7 +1642,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Guidiville Rancheria of California"
+        "name": "Guidiville Rancheria of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1200,7 +1660,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Habematolel Pomo of Upper Lake, California"
+        "name": "Habematolel Pomo of Upper Lake, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1213,7 +1678,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hannahville Indian Community, Michigan"
+        "name": "Hannahville Indian Community, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1226,7 +1696,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Havasupai Tribe of the Havasupai Reservation, Arizona"
+        "name": "Havasupai Tribe of the Havasupai Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1239,7 +1714,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ho-Chunk Nation of Wisconsin"
+        "name": "Ho-Chunk Nation of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1252,7 +1732,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hoh Indian Tribe"
+        "name": "Hoh Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1265,7 +1750,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hopi Tribe of Arizona"
+        "name": "Hopi Tribe of Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1278,7 +1768,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Houlton Band of Maliseet Indians of Maine"
+        "name": "Houlton Band of Maliseet Indians of Maine",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1291,7 +1786,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hualapai Indian Tribe of the Hualapai Indian Reservation, Arizona"
+        "name": "Hualapai Indian Tribe of the Hualapai Indian Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1304,7 +1804,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ione Band of Miwok Indians of California"
+        "name": "Ione Band of Miwok Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1317,7 +1822,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Iowa Tribe of Kansas and Nebraska"
+        "name": "Iowa Tribe of Kansas and Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1330,7 +1840,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Iowa Tribe of Oklahoma"
+        "name": "Iowa Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1343,7 +1858,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Jackson Band of Miwuk Indians"
+        "name": "Jackson Band of Miwuk Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1356,7 +1876,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Jamestown S'Klallam Tribe"
+        "name": "Jamestown S'Klallam Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1369,7 +1894,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Jena Band of Choctaw Indians"
+        "name": "Jena Band of Choctaw Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1382,7 +1912,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Jicarilla Apache Nation, New Mexico"
+        "name": "Jicarilla Apache Nation, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1395,7 +1930,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kaibab Band of Paiute Indians of the Kaibab Indian Reservation, Arizona"
+        "name": "Kaibab Band of Paiute Indians of the Kaibab Indian Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1408,7 +1948,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kalispel Indian Community of the Kalispel Reservation, Washington"
+        "name": "Kalispel Indian Community of the Kalispel Reservation, Washington",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1421,7 +1966,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Karuk Tribe"
+        "name": "Karuk Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1434,7 +1984,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kaw Nation, Oklahoma"
+        "name": "Kaw Nation, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1447,7 +2002,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Keweenaw Bay Indian Community, Michigan"
+        "name": "Keweenaw Bay Indian Community, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1460,7 +2020,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kickapoo Traditional Tribe of Texas"
+        "name": "Kickapoo Traditional Tribe of Texas",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1473,7 +2038,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas"
+        "name": "Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1486,7 +2056,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kickapoo Tribe of Oklahoma"
+        "name": "Kickapoo Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1499,7 +2074,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kiowa Indian Tribe of Oklahoma"
+        "name": "Kiowa Indian Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1512,7 +2092,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Klamath Tribes"
+        "name": "Klamath Tribes",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1525,7 +2110,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Koi Nation of Northern California"
+        "name": "Koi Nation of Northern California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1538,7 +2128,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Kootenai Tribe of Idaho"
+        "name": "Kootenai Tribe of Idaho",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1551,7 +2146,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "La Jolla Band of Luiseño Indians, California"
+        "name": "La Jolla Band of Luiseño Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1564,7 +2164,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "La Posta Band of Diegueño Mission Indians of the La Posta Indian Reservation, California"
+        "name": "La Posta Band of Diegueño Mission Indians of the La Posta Indian Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1577,7 +2182,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lac Courte Oreilles Band of Lake Superior Chippewa Indians of Wisconsin"
+        "name": "Lac Courte Oreilles Band of Lake Superior Chippewa Indians of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1590,7 +2200,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lac du Flambeau Band of Lake Superior Chippewa Indians of Wisconsin"
+        "name": "Lac du Flambeau Band of Lake Superior Chippewa Indians of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1603,7 +2218,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lac Vieux Desert Band of Lake Superior Chippewa Indians, Michigan"
+        "name": "Lac Vieux Desert Band of Lake Superior Chippewa Indians, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1616,7 +2236,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Las Vegas Tribe of Paiute Indians of the Las Vegas Indian Colony, Nevada"
+        "name": "Las Vegas Tribe of Paiute Indians of the Las Vegas Indian Colony, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1629,7 +2254,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Little River Band of Ottawa Indians, Michigan"
+        "name": "Little River Band of Ottawa Indians, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1642,7 +2272,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Little Traverse Bay Bands of Odawa Indians, Michigan"
+        "name": "Little Traverse Bay Bands of Odawa Indians, Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1655,7 +2290,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lower Brule Sioux Tribe of the Lower Brule Reservation, South Dakota"
+        "name": "Lower Brule Sioux Tribe of the Lower Brule Reservation, South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1668,7 +2308,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lower Elwha Tribal Community"
+        "name": "Lower Elwha Tribal Community",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1681,7 +2326,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lower Sioux Indian Community in the State of Minnesota"
+        "name": "Lower Sioux Indian Community in the State of Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1694,7 +2344,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lummi Tribe of the Lummi Reservation"
+        "name": "Lummi Tribe of the Lummi Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1707,7 +2362,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lytton Rancheria of California"
+        "name": "Lytton Rancheria of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1720,7 +2380,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Makah Indian Tribe of the Makah Indian Reservation, Washington"
+        "name": "Makah Indian Tribe of the Makah Indian Reservation, Washington",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1733,7 +2398,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Makemie Memorial Presbyterian Church of Accomack County, Virginia"
+        "name": "Makemie Memorial Presbyterian Church of Accomack County, Virginia",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1746,7 +2416,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Manchester Band of Pomo Indians of the Manchester Rancheria, California"
+        "name": "Manchester Band of Pomo Indians of the Manchester Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1759,7 +2434,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Manzanita Band of Diegueño Mission Indians of the Manzanita Reservation, California"
+        "name": "Manzanita Band of Diegueño Mission Indians of the Manzanita Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1772,7 +2452,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mashantucket Pequot Tribe of Connecticut"
+        "name": "Mashantucket Pequot Tribe of Connecticut",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1785,7 +2470,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mashpee Wampanoag Tribe"
+        "name": "Mashpee Wampanoag Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1798,7 +2488,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Match-e-be-nash-she-wish Band of Pottawatomi Indians of Michigan"
+        "name": "Match-e-be-nash-she-wish Band of Pottawatomi Indians of Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1811,7 +2506,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mechoopda Indian Tribe of Chico Rancheria, California"
+        "name": "Mechoopda Indian Tribe of Chico Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1824,7 +2524,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Menominee Indian Tribe of Wisconsin"
+        "name": "Menominee Indian Tribe of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1837,7 +2542,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mesa Grande Band of Diegueño Mission Indians of the Mesa Grande Reservation, California"
+        "name": "Mesa Grande Band of Diegueño Mission Indians of the Mesa Grande Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1850,7 +2560,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mescalero Apache Tribe of the Mescalero Reservation, New Mexico"
+        "name": "Mescalero Apache Tribe of the Mescalero Reservation, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1863,7 +2578,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Miami Tribe of Oklahoma"
+        "name": "Miami Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1876,7 +2596,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Miccosukee Tribe of Indians of Florida"
+        "name": "Miccosukee Tribe of Indians of Florida",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1889,7 +2614,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Middletown Rancheria of Pomo Indians of California"
+        "name": "Middletown Rancheria of Pomo Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1902,7 +2632,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Minnesota Chippewa Tribe, Minnesota (Six component reservations: Bois Forte, Fond du Lac, Grand Portage, Leech Lake, Mille Lacs, White Earth)"
+        "name": "Minnesota Chippewa Tribe, Minnesota (Six component reservations: Bois Forte, Fond du Lac, Grand Portage, Leech Lake, Mille Lacs, White Earth)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1915,7 +2650,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mississippi Band of Choctaw Indians"
+        "name": "Mississippi Band of Choctaw Indians",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1928,7 +2668,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Moapa Band of Paiute Indians of the Moapa River Indian Reservation, Nevada"
+        "name": "Moapa Band of Paiute Indians of the Moapa River Indian Reservation, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1941,7 +2686,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Modoc Nation"
+        "name": "Modoc Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1954,7 +2704,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mohegan Tribe of Indians of Connecticut"
+        "name": "Mohegan Tribe of Indians of Connecticut",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1967,7 +2722,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Monacan Indian Nation"
+        "name": "Monacan Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1980,7 +2740,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Monterey Band of Monterey County Indians, California (Previously listed as: Monterey Band of Mission Indians, a group of landless Indians)"
+        "name": "Monterey Band of Monterey County Indians, California (Previously listed as: Monterey Band of Mission Indians, a group of landless Indians)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1993,7 +2758,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mooretown Rancheria of Maidu Indians of California"
+        "name": "Mooretown Rancheria of Maidu Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2006,7 +2776,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Morongo Band of Mission Indians, California"
+        "name": "Morongo Band of Mission Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2019,7 +2794,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Muckleshoot Indian Tribe"
+        "name": "Muckleshoot Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2032,7 +2812,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mueller-Watson Band of Pomo Indians of the Potter Valley Rancheria, California"
+        "name": "Mueller-Watson Band of Pomo Indians of the Potter Valley Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2045,7 +2830,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Narragansett Indian Tribe"
+        "name": "Narragansett Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2058,7 +2848,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Navajo Nation, Arizona, New Mexico & Utah"
+        "name": "Navajo Nation, Arizona, New Mexico & Utah",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2071,7 +2866,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nez Perce Tribe"
+        "name": "Nez Perce Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2084,7 +2884,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nisqually Indian Tribe"
+        "name": "Nisqually Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2097,7 +2902,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nooksack Indian Tribe"
+        "name": "Nooksack Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2110,7 +2920,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana"
+        "name": "Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2123,7 +2938,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Northfork Rancheria of Mono Indians of California"
+        "name": "Northfork Rancheria of Mono Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2136,7 +2956,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Northwestern Band of the Shoshoni Nation of Utah (Washakie)"
+        "name": "Northwestern Band of the Shoshoni Nation of Utah (Washakie)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2149,7 +2974,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Nottawaseppi Huron Band of the Potawatomi, Michigan (formerly the Huron Potawatomi, Inc.)"
+        "name": "Nottawaseppi Huron Band of the Potawatomi, Michigan (formerly the Huron Potawatomi, Inc.)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2162,7 +2992,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Oglala Sioux Tribe (previously listed as Oglala Sioux Tribe of the Pine Ridge Reservation, South Dakota)"
+        "name": "Oglala Sioux Tribe (previously listed as Oglala Sioux Tribe of the Pine Ridge Reservation, South Dakota)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2175,7 +3010,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ohkay Owingeh, New Mexico (formerly the San Juan Pueblo)"
+        "name": "Ohkay Owingeh, New Mexico (formerly the San Juan Pueblo)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2188,7 +3028,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Omaha Tribe of Nebraska"
+        "name": "Omaha Tribe of Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2201,7 +3046,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Oneida Nation (previously listed as Oneida Tribe of Indians of Wisconsin)"
+        "name": "Oneida Nation (previously listed as Oneida Tribe of Indians of Wisconsin)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2214,7 +3064,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Oneida Indian Nation (New York)"
+        "name": "Oneida Indian Nation (New York)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2227,7 +3082,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Onondaga Nation"
+        "name": "Onondaga Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2240,7 +3100,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Osage Nation"
+        "name": "Osage Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2253,7 +3118,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ottawa Tribe of Oklahoma"
+        "name": "Ottawa Tribe of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2266,7 +3136,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Paiute Indian Tribe of Utah"
+        "name": "Paiute Indian Tribe of Utah",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2279,7 +3154,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pamunkey Indian Tribe"
+        "name": "Pamunkey Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2292,7 +3172,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Passamaquoddy Tribe"
+        "name": "Passamaquoddy Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2305,7 +3190,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pascua Yaqui Tribe of Arizona"
+        "name": "Pascua Yaqui Tribe of Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2318,7 +3208,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pawnee Nation of Oklahoma"
+        "name": "Pawnee Nation of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2331,7 +3226,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Peoria Tribe of Indians of Oklahoma"
+        "name": "Peoria Tribe of Indians of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2344,7 +3244,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Picayune Rancheria of Chukchansi Indians of California"
+        "name": "Picayune Rancheria of Chukchansi Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2357,7 +3262,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pine Ridge Reservation (Oglala Sioux)"
+        "name": "Pine Ridge Reservation (Oglala Sioux)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2370,7 +3280,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pit River Tribe, California"
+        "name": "Pit River Tribe, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2383,7 +3298,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ponca Tribe of Indians of Oklahoma"
+        "name": "Ponca Tribe of Indians of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2396,7 +3316,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ponca Tribe of Nebraska"
+        "name": "Ponca Tribe of Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2409,7 +3334,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Port Gamble S'Klallam Tribe"
+        "name": "Port Gamble S'Klallam Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2422,7 +3352,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Potter Valley Tribe, California"
+        "name": "Potter Valley Tribe, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2435,7 +3370,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Prairie Band Potawatomi Nation"
+        "name": "Prairie Band Potawatomi Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2448,7 +3388,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Prairie Island Indian Community in the State of Minnesota"
+        "name": "Prairie Island Indian Community in the State of Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2461,7 +3406,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Acoma, New Mexico"
+        "name": "Pueblo of Acoma, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2474,7 +3424,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Cochiti, New Mexico"
+        "name": "Pueblo of Cochiti, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2487,7 +3442,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Isleta, New Mexico"
+        "name": "Pueblo of Isleta, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2500,7 +3460,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Jemez, New Mexico"
+        "name": "Pueblo of Jemez, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2513,7 +3478,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Laguna, New Mexico"
+        "name": "Pueblo of Laguna, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2526,7 +3496,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Nambe, New Mexico"
+        "name": "Pueblo of Nambe, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2539,7 +3514,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Picuris, New Mexico"
+        "name": "Pueblo of Picuris, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2552,7 +3532,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Pojoaque, New Mexico"
+        "name": "Pueblo of Pojoaque, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2565,7 +3550,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of San Felipe, New Mexico"
+        "name": "Pueblo of San Felipe, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2578,7 +3568,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of San Ildefonso, New Mexico"
+        "name": "Pueblo of San Ildefonso, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2591,7 +3586,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Sandia, New Mexico"
+        "name": "Pueblo of Sandia, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2604,7 +3604,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Santa Ana, New Mexico"
+        "name": "Pueblo of Santa Ana, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2617,7 +3622,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Santa Clara, New Mexico"
+        "name": "Pueblo of Santa Clara, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2630,7 +3640,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Santo Domingo, New Mexico"
+        "name": "Pueblo of Santo Domingo, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2643,7 +3658,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Taos, New Mexico"
+        "name": "Pueblo of Taos, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2656,7 +3676,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Tesuque, New Mexico"
+        "name": "Pueblo of Tesuque, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2669,7 +3694,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Pueblo of Zia, New Mexico"
+        "name": "Pueblo of Zia, New Mexico",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2682,7 +3712,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Puyallup Tribe of the Puyallup Reservation"
+        "name": "Puyallup Tribe of the Puyallup Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2695,7 +3730,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Quapaw Nation (previously listed as The Quapaw Tribe of Indians)"
+        "name": "Quapaw Nation (previously listed as The Quapaw Tribe of Indians)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2708,7 +3748,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Quartz Valley Indian Community of the Quartz Valley Reservation of California"
+        "name": "Quartz Valley Indian Community of the Quartz Valley Reservation of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2721,7 +3766,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Quechan Tribe of the Fort Yuma Indian Reservation, California & Arizona"
+        "name": "Quechan Tribe of the Fort Yuma Indian Reservation, California & Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2734,7 +3784,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Quileute Tribe of the Quileute Reservation, Washington"
+        "name": "Quileute Tribe of the Quileute Reservation, Washington",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2747,7 +3802,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Quinault Indian Nation"
+        "name": "Quinault Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2760,7 +3820,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ramona Band of Cahuilla, California"
+        "name": "Ramona Band of Cahuilla, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2773,7 +3838,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin"
+        "name": "Red Cliff Band of Lake Superior Chippewa Indians of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2786,7 +3856,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Red Lake Band of Chippewa Indians, Minnesota"
+        "name": "Red Lake Band of Chippewa Indians, Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2799,7 +3874,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Redding Rancheria, California"
+        "name": "Redding Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2812,7 +3892,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Reno-Sparks Indian Colony, Nevada"
+        "name": "Reno-Sparks Indian Colony, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2825,7 +3910,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Resighini Rancheria, California"
+        "name": "Resighini Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2838,7 +3928,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Rincon Band of Luiseño Mission Indians of the Rincon Reservation, California"
+        "name": "Rincon Band of Luiseño Mission Indians of the Rincon Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2851,7 +3946,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Robinson Rancheria"
+        "name": "Robinson Rancheria",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2864,7 +3964,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Rosebud Sioux Tribe of the Rosebud Indian Reservation, South Dakota"
+        "name": "Rosebud Sioux Tribe of the Rosebud Indian Reservation, South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2877,7 +3982,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Round Valley Indian Tribes, Round Valley Reservation, California"
+        "name": "Round Valley Indian Tribes, Round Valley Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2890,7 +4000,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sac & Fox Nation, Oklahoma"
+        "name": "Sac & Fox Nation, Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2903,7 +4018,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sac & Fox of Missouri in Kansas and Nebraska"
+        "name": "Sac & Fox of Missouri in Kansas and Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2916,7 +4036,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sac & Fox Tribe of the Mississippi in Iowa"
+        "name": "Sac & Fox Tribe of the Mississippi in Iowa",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2929,7 +4054,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Saginaw Chippewa Indian Tribe of Michigan"
+        "name": "Saginaw Chippewa Indian Tribe of Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2942,7 +4072,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Saint Regis Mohawk Tribe, New York (formerly the St. Regis Band of Mohawk Indians of New York)"
+        "name": "Saint Regis Mohawk Tribe, New York (formerly the St. Regis Band of Mohawk Indians of New York)",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2955,7 +4090,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Salinan Tribe of Monterey and San Luis Obispo Counties, California"
+        "name": "Salinan Tribe of Monterey and San Luis Obispo Counties, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2968,7 +4108,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Samish Indian Nation"
+        "name": "Samish Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2981,7 +4126,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "San Carlos Apache Tribe of the San Carlos Reservation, Arizona"
+        "name": "San Carlos Apache Tribe of the San Carlos Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2994,7 +4144,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "San Juan Southern Paiute Tribe of Arizona"
+        "name": "San Juan Southern Paiute Tribe of Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3007,7 +4162,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sand Hill Band of Indians of California"
+        "name": "Sand Hill Band of Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3020,7 +4180,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Santa Rosa Band of Cahuilla Indians, California"
+        "name": "Santa Rosa Band of Cahuilla Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3033,7 +4198,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Santa Ynez Band of Chumash Mission Indians of the Santa Ynez Reservation, California"
+        "name": "Santa Ynez Band of Chumash Mission Indians of the Santa Ynez Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3046,7 +4216,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Santee Sioux Nation, Nebraska"
+        "name": "Santee Sioux Nation, Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3059,7 +4234,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sauk-Suiattle Indian Tribe"
+        "name": "Sauk-Suiattle Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3072,7 +4252,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sault Ste. Marie Tribe of Chippewa Indians of Michigan"
+        "name": "Sault Ste. Marie Tribe of Chippewa Indians of Michigan",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3085,7 +4270,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Scotts Valley Band of Pomo Indians of California"
+        "name": "Scotts Valley Band of Pomo Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3098,7 +4288,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Seminole Nation of Oklahoma"
+        "name": "Seminole Nation of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3111,7 +4306,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Seminole Tribe of Florida"
+        "name": "Seminole Tribe of Florida",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3124,7 +4324,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Seneca Nation of Indians, New York"
+        "name": "Seneca Nation of Indians, New York",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3137,7 +4342,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Seneca-Cayuga Nation"
+        "name": "Seneca-Cayuga Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3150,7 +4360,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Shakopee Mdewakanton Sioux Community of Minnesota"
+        "name": "Shakopee Mdewakanton Sioux Community of Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3163,7 +4378,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Shinnecock Indian Nation"
+        "name": "Shinnecock Indian Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3176,7 +4396,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Shoalwater Bay Indian Tribe of the Shoalwater Bay Indian Reservation, Washington"
+        "name": "Shoalwater Bay Indian Tribe of the Shoalwater Bay Indian Reservation, Washington",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3189,7 +4414,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho"
+        "name": "Shoshone-Bannock Tribes of the Fort Hall Reservation of Idaho",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3202,7 +4432,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Shoshone-Paiute Tribes of the Duck Valley Reservation, Nevada"
+        "name": "Shoshone-Paiute Tribes of the Duck Valley Reservation, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3215,7 +4450,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota"
+        "name": "Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3228,7 +4468,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Skokomish Indian Tribe"
+        "name": "Skokomish Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3241,7 +4486,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Skull Valley Band of Goshute Indians of Utah"
+        "name": "Skull Valley Band of Goshute Indians of Utah",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3254,7 +4504,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Snoqualmie Indian Tribe"
+        "name": "Snoqualmie Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3267,7 +4522,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Soboba Band of Luiseño Indians, California"
+        "name": "Soboba Band of Luiseño Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3280,7 +4540,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Sokaogon Chippewa Community, Wisconsin"
+        "name": "Sokaogon Chippewa Community, Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3293,7 +4558,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado"
+        "name": "Southern Ute Indian Tribe of the Southern Ute Reservation, Colorado",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3306,7 +4576,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Spirit Lake Tribe, North Dakota"
+        "name": "Spirit Lake Tribe, North Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3319,7 +4594,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Spokane Tribe of the Spokane Reservation"
+        "name": "Spokane Tribe of the Spokane Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3332,7 +4612,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Squaxin Island Tribe of the Squaxin Island Reservation"
+        "name": "Squaxin Island Tribe of the Squaxin Island Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3345,7 +4630,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "St. Croix Chippewa Indians of Wisconsin"
+        "name": "St. Croix Chippewa Indians of Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3358,7 +4648,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Standing Rock Sioux Tribe of North & South Dakota"
+        "name": "Standing Rock Sioux Tribe of North & South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3371,7 +4666,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Stockbridge-Munsee Community, Wisconsin"
+        "name": "Stockbridge-Munsee Community, Wisconsin",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3384,7 +4684,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Summit Lake Paiute Tribe of Nevada"
+        "name": "Summit Lake Paiute Tribe of Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3397,7 +4702,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Suquamish Indian Tribe of the Port Madison Reservation"
+        "name": "Suquamish Indian Tribe of the Port Madison Reservation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3410,7 +4720,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Susanville Indian Rancheria, California"
+        "name": "Susanville Indian Rancheria, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3423,7 +4738,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Swinomish Indian Tribal Community"
+        "name": "Swinomish Indian Tribal Community",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3436,7 +4756,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Table Mountain Rancheria of California"
+        "name": "Table Mountain Rancheria of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3449,7 +4774,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Te-Moak Tribe of Western Shoshone Indians of Nevada"
+        "name": "Te-Moak Tribe of Western Shoshone Indians of Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3462,7 +4792,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Thlopthlocco Tribal Town"
+        "name": "Thlopthlocco Tribal Town",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3475,7 +4810,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota"
+        "name": "Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3488,7 +4828,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tohono O’odham Nation of Arizona"
+        "name": "Tohono O’odham Nation of Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3501,7 +4846,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tolowa Dee-ni’ Nation"
+        "name": "Tolowa Dee-ni’ Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3514,7 +4864,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tonawanda Band of Seneca"
+        "name": "Tonawanda Band of Seneca",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3527,7 +4882,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tonkawa Tribe of Indians of Oklahoma"
+        "name": "Tonkawa Tribe of Indians of Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3540,7 +4900,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Torres Martinez Desert Cahuilla Indians, California"
+        "name": "Torres Martinez Desert Cahuilla Indians, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3553,7 +4918,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tule River Indian Tribe of the Tule River Reservation, California"
+        "name": "Tule River Indian Tribe of the Tule River Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3566,7 +4936,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tuolumne Band of Me-Wuk Indians of the Tuolumne Rancheria of California"
+        "name": "Tuolumne Band of Me-Wuk Indians of the Tuolumne Rancheria of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3579,7 +4954,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Turtle Mountain Band of Chippewa Indians of North Dakota"
+        "name": "Turtle Mountain Band of Chippewa Indians of North Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3592,7 +4972,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Tuscarora Nation"
+        "name": "Tuscarora Nation",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3605,7 +4990,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Twenty-Nine Palms Band of Mission Indians of California"
+        "name": "Twenty-Nine Palms Band of Mission Indians of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3618,7 +5008,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "United Auburn Indian Community of the Auburn Rancheria of California"
+        "name": "United Auburn Indian Community of the Auburn Rancheria of California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3631,7 +5026,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Upper Skagit Indian Tribe"
+        "name": "Upper Skagit Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3644,7 +5044,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation, California"
+        "name": "Utu Utu Gwaitu Paiute Tribe of the Benton Paiute Reservation, California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3657,7 +5062,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Walker River Paiute Tribe of the Walker River Reservation, Nevada"
+        "name": "Walker River Paiute Tribe of the Walker River Reservation, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3670,7 +5080,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Wampanoag Tribe of Gay Head (Aquinnah) of Massachusetts"
+        "name": "Wampanoag Tribe of Gay Head (Aquinnah) of Massachusetts",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3683,7 +5098,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Washoe Tribe of Nevada & California"
+        "name": "Washoe Tribe of Nevada & California",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3696,7 +5116,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "White Earth Band of Minnesota Chippewa Tribe, Minnesota"
+        "name": "White Earth Band of Minnesota Chippewa Tribe, Minnesota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3709,7 +5134,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "White Mountain Apache Tribe of the Fort Apache Reservation, Arizona"
+        "name": "White Mountain Apache Tribe of the Fort Apache Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3722,7 +5152,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Wichita and Affiliated Tribes (Wichita, Keechi, Waco & Tawakonie), Oklahoma"
+        "name": "Wichita and Affiliated Tribes (Wichita, Keechi, Waco & Tawakonie), Oklahoma",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3735,7 +5170,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Winnebago Tribe of Nebraska"
+        "name": "Winnebago Tribe of Nebraska",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3748,7 +5188,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Winnemucca Indian Colony of Nevada"
+        "name": "Winnemucca Indian Colony of Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3761,7 +5206,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Yankton Sioux Tribe of South Dakota"
+        "name": "Yankton Sioux Tribe of South Dakota",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3774,7 +5224,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Yavapai-Apache Nation of the Camp Verde Indian Reservation, Arizona"
+        "name": "Yavapai-Apache Nation of the Camp Verde Indian Reservation, Arizona",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3787,7 +5242,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Yavapai-Prescott Indian Tribe"
+        "name": "Yavapai-Prescott Indian Tribe",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3800,7 +5260,12 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Yomba Shoshone Tribe of the Yomba Reservation, Nevada"
+        "name": "Yomba Shoshone Tribe of the Yomba Reservation, Nevada",
+        "multimedia": {
+          "image": "",
+          "video": "",
+          "audio": ""
+        }
       },
       "geometry": {
         "type": "Point",
