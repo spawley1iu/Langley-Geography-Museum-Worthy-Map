@@ -1,36 +1,52 @@
-import React from 'react'
-import './Legend.css'
+import React, { useEffect, useState } from 'react'
+import './styles/Legend.css'
 
-const swatches = [
-    { color: '#f2f0f7', label: '0–10%' },
-    { color: '#cbc9e2', label: '10–20%' },
-    { color: '#9e9ac8', label: '20–30%' },
-    { color: '#756bb1', label: '30–40%' },
-    { color: '#54278f', label: '40%+' }
-]
+const Legend = ({
+                    toggleReservation,
+                    toggleAncestral,
+                    reservationVisible,
+                    ancestralVisible
+                }) => {
+    const [visible, setVisible] = useState(false)
 
-export default function Legend({ toggleReservation, toggleAncestral, reservationVisible, ancestralVisible }) {
+    useEffect(() => {
+        setTimeout(() => setVisible(true), 600)
+    }, [])
+
+    const choroplethData = [
+        { label: '0–10%', color: '#f7fbff' },
+        { label: '10–20%', color: '#deebf7' },
+        { label: '20–30%', color: '#9ecae1' },
+        { label: '30–40%', color: '#3182bd' },
+        { label: '40–50%+', color: '#08519c' }
+    ]
+
     return (
-        <div className="legend-container">
-            <h3>Legend</h3>
-            <div className="legend-section">
+        <div className={`legend-container${visible ? ' visible' : ''}`}>
+            <h4>Legend & Layers</h4>
+
+            <section className="legend-section">
+                <strong>AI/AN %</strong>
                 <div className="swatches">
-                    {swatches.map((s, i) => (
+                    {choroplethData.map((d, i) => (
                         <div key={i} className="swatch-row">
-                            <div className="color-box" style={{ backgroundColor: s.color }}></div>
-                            <span className="label">{s.label}</span>
+                            <div className="color-box" style={{ background: d.color }} />
+                            <div className="label">{d.label}</div>
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="legend-section">
-                <button className="layer-toggle" onClick={toggleReservation}>
+            </section>
+
+            <section className="legend-section">
+                <button onClick={toggleReservation} className="layer-toggle">
                     {reservationVisible ? 'Hide' : 'Show'} Reservations
                 </button>
-                <button className="layer-toggle" onClick={toggleAncestral}>
+                <button onClick={toggleAncestral} className="layer-toggle">
                     {ancestralVisible ? 'Hide' : 'Show'} Ancestral Lands
                 </button>
-            </div>
+            </section>
         </div>
     )
 }
+
+export default Legend
