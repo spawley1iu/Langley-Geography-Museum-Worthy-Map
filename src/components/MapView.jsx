@@ -17,6 +17,7 @@ import Legend from './Legend'
 import countyData from '../data/counties.geojson?url'
 import reservationData from '../data/reservations.geojson?url'
 import tribalLandData from '../data/tribal-lands.geojson?url'
+import markerData from '../data/tribal-markers.json'
 
 const MapView = () => {
   const mapRef = useRef()
@@ -84,7 +85,7 @@ const MapView = () => {
       }
     })
 
-    // Load overlay layers
+    // Add reservations
     const reservations = new VectorLayer({
       source: new VectorSource({ url: reservationData, format: new GeoJSON() }),
       visible: false,
@@ -109,6 +110,21 @@ const MapView = () => {
     setCountyLayer(county)
     setReservationLayer(reservations)
     setTribalLayer(tribes)
+
+    // 🔥 Add animated pulsing markers
+    markerData.forEach(({ name, lon, lat, color }) => {
+      const el = document.createElement('div')
+      el.className = 'pulse-marker'
+      el.style.backgroundColor = color
+      el.title = name
+      const markerOverlay = new Overlay({
+        position: fromLonLat([lon, lat]),
+        positioning: 'center-center',
+        element: el,
+        stopEvent: false
+      })
+      map.addOverlay(markerOverlay)
+    })
 
     return () => map.setTarget(null)
   }, [])
