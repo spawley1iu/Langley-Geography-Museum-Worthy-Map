@@ -1,0 +1,110 @@
+import requests
+import json
+import os
+
+def create_tribal_lands_geojson():
+    """
+    Fetches data for Federally Recognized Tribal Reservations from an ArcGIS server
+    and all Ancestral Territories from the Native Land Digital API. It then
+    combines them into a single GeoJSON FeatureCollection and saves it to a
+    file named 'reservations.geojson'.
+    """
+    # --- Data Sources ---
+    # URL for Federally Recognized Tribal Reservations from the Bureau of Indian Affairs (BIA) ArcGIS Layer
+    bia_reservations_url = 'https://gis.bia.gov/server/rest/services/External/BIA_AIAN_National_Layer/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson'
+    
+    # URL for all Ancestral Territories from the Native Land Digital API
+    native_land_url = 'https://native-land.ca/api/v1/territories'
+
+    print("Starting the process to create 'reservations.geojson'...")
+
+    try:
+        # --- Fetching Data ---
+        print("Fetching Federally Recognized Reservations data from BIA ArcGIS server...")
+        reservations_response = requests.get(bia_reservations_url)
+        # This will raise an HTTPError for bad responses (4xx or 5xx)
+        reservations_response.raise_for_status()
+        reservations_data = reservations_response.json()
+        print(f"...Success. Fetched {len(reservations_data.get('features', []))} reservation features.")
+
+        print("Fetching all Ancestral Territories data from Native Land Digital API...")
+        print("(This may take a few moments as it's a large dataset)")
+        native_land_response = requests.get(native_land_url, headers={'Accept': 'application/json'})
+        native_land_response.raise_for_status()
+        native_land_data = native_land_response.json()
+        print(f"...Success. Fetched {len(native_land_data)} ancestral territory records.")
+        
+        # --- Processing and Combining Data ---
+        print("Processing and combining the datasets...")
+
+        # 1. Process BIA Reservations Data
+        # We will add a 'source' property to each feature for clear identification.
+        bia_features = reservations_data.get('features', [])
+        for feature in bia_features:
+            if 'properties' in feature and feature['properties'] is not None:
+                feature['properties']['source'] = 'BIA_Federally_Recognized_Reservation'
+            else:
+                feature['properties'] = {'source': 'BIA_Federally_Recognized_Reservation'}
+
+
+        # 2. Process Native Land Data into GeoJSON Feature format
+        # The API returns a list of custom objects; we need to format them as standard GeoJSON Features.
+        native_land_features = []
+        for territory in native_land_data:
+            # We must check if geometry data exists and is valid before creating a feature.
+            if territory.get('geometry') and territory['geometry'].get('coordinates'):
+                feature = {
+                    'type': 'Feature',
+                    'geometry': territory['geometry'],
+                    'properties': {
+                        'source': 'NativeLand_Ancestral_Territory',
+                        'name': territory.get('name', 'N/A'),
+                        'slug': territory.get('slug'),
+                        'description': territory.get('description')
+                    }
+                }
+                native_land_features.append(feature)
+
+        # 3. Combine the feature lists from both sources
+        combined_features = bia_features + native_land_features
+        
+        # 4. Create the final GeoJSON FeatureCollection object
+        final_geojson = {
+            "type": "FeatureCollection",
+            "name": "Combined_Tribal_And_Ancestral_Lands",
+            "features": combined_features
+        }
+        
+        print(f"Total combined features in the dataset: {len(combined_features)}")
+
+        # --- Saving the File ---
+        output_filename = 'reservations.geojson'
+        print(f"Saving combined data to '{output_filename}'...")
+        with open(output_filename, 'w', encoding='utf-8') as f:
+            # Use json.dump() to write the dictionary to the file.
+            # `indent=2` makes the output file human-readable.
+            # `ensure_ascii=False` correctly handles special characters and symbols.
+            json.dump(final_geojson, f, ensure_ascii=False, indent=2)
+        
+        # --- Final Success Message ---
+        # Provides the absolute path to the created file for clarity.
+        abs_path = os.path.abspath(output_filename)
+        print("\n----------------------------------------------------")
+        print(f"Success! The file was created at: {abs_path}")
+        print("----------------------------------------------------")
+
+
+    except requests.exceptions.RequestException as e:
+        print(f"\nError: A network error occurred while trying to fetch data.")
+        print(f"Details: {e}")
+        print("Please check your internet connection and ensure the data sources are online.")
+    except json.JSONDecodeError as e:
+        print(f"\nError: Failed to parse the data received from the server.")
+        print(f"Details: {e}")
+        print("The API might be temporarily down or returning an unexpected format.")
+    except Exception as e:
+        print(f"\nAn unexpected error occurred: {e}")
+
+# This standard Python construct ensures the function runs only when the script is executed directly.
+if __name__ == "__main__":
+    create_tribal_lands_geojson()
