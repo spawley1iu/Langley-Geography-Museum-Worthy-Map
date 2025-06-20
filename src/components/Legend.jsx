@@ -1,80 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import { Paper, IconButton, Typography } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close'
-import MenuIcon from '@mui/icons-material/Menu'
-import '../css/legend.css'
+import React from 'react'
+import './Legend.css'
 
-const legendItems = [
-    { label: 'AI/AN Population > 50%', color: '#8e44ad' },
-    { label: 'Poverty Rate > 30%', color: '#e67e22' },
-    { label: 'Median Income < $35k', color: '#3498db' },
-    { label: 'High School Diploma < 70%', color: '#c0392b' },
-    { label: 'Reservation Boundary', color: '#d32f2f', outline: true },
-    { label: 'Ancestral Land', color: '#00897b', transparent: true }
+const swatches = [
+    { color: '#f2f0f7', label: '0–10%' },
+    { color: '#cbc9e2', label: '10–20%' },
+    { color: '#9e9ac8', label: '20–30%' },
+    { color: '#756bb1', label: '30–40%' },
+    { color: '#54278f', label: '40%+' }
 ]
 
-const Legend = () => {
-    const [visible, setVisible] = useState(false)
-
-    useEffect(() => {
-        const timer = setTimeout(() => setVisible(true), 500)
-        return () => clearTimeout(timer)
-    }, [])
-
+export default function Legend({ toggleReservation, toggleAncestral, reservationVisible, ancestralVisible }) {
     return (
-        <>
-            {!visible && (
-                <IconButton
-                    onClick={() => setVisible(true)}
-                    style={{
-                        position: 'absolute',
-                        bottom: 20,
-                        right: 20,
-                        zIndex: 999,
-                        background: 'white',
-                        boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
-                    }}
-                >
-                    <MenuIcon />
-                </IconButton>
-            )}
-
-            <Paper
-                className={`legend-container ${!visible ? 'hidden' : ''}`}
-                elevation={4}
-                style={{ position: 'absolute', bottom: 20, right: 20 }}
-            >
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Typography variant="subtitle1" fontWeight={600}>
-                        Map Legend
-                    </Typography>
-                    <IconButton size="small" onClick={() => setVisible(false)}>
-                        <CloseIcon fontSize="small" />
-                    </IconButton>
-                </div>
-
-                <div>
-                    {legendItems.map((item, index) => (
-                        <div key={index} style={{ marginTop: 6 }}>
-              <span
-                  className="legend-color-box"
-                  style={{
-                      backgroundColor: item.transparent
-                          ? 'rgba(0,137,123,0.2)'
-                          : item.color,
-                      border:
-                          item.outline || item.transparent
-                              ? `2px solid ${item.color}`
-                              : '1px solid #ccc'
-                  }}
-              ></span>
-                            {item.label}
+        <div className="legend-container">
+            <h3>Legend</h3>
+            <div className="legend-section">
+                <div className="swatches">
+                    {swatches.map((s, i) => (
+                        <div key={i} className="swatch-row">
+                            <div className="color-box" style={{ backgroundColor: s.color }}></div>
+                            <span className="label">{s.label}</span>
                         </div>
                     ))}
                 </div>
-            </Paper>
-        </>
+            </div>
+            <div className="legend-section">
+                <button className="layer-toggle" onClick={toggleReservation}>
+                    {reservationVisible ? 'Hide' : 'Show'} Reservations
+                </button>
+                <button className="layer-toggle" onClick={toggleAncestral}>
+                    {ancestralVisible ? 'Hide' : 'Show'} Ancestral Lands
+                </button>
+            </div>
+        </div>
     )
 }
-
-export default Legend
