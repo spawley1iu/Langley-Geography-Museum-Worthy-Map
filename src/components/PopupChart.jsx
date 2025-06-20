@@ -1,34 +1,34 @@
-// src/components/PopupChart.jsx
-import React, { useEffect, useRef } from 'react';
-import Chart from 'chart.js/auto';
+import React from 'react'
+import { Line } from 'react-chartjs-2'
+import {
+    Chart as ChartJS,
+    LineElement,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    Tooltip
+} from 'chart.js'
 
-export default function PopupChart({ title, data }) {
-    const chartRef = useRef();
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip)
 
-    useEffect(() => {
-        if (!data || !chartRef.current) return;
+export default function PopupChart({ metrics }) {
+    const data = {
+        labels: ['AI/AN', 'Poverty', 'Income(k)', 'HS %'],
+        datasets: [{
+            data: metrics,
+            borderColor: '#1565c0',
+            fill: false,
+            tension: 0.3,
+            pointRadius: 0
+        }]
+    }
 
-        new Chart(chartRef.current, {
-            type: 'line',
-            data: {
-                labels: data.map((_, i) => i + 1),
-                datasets: [{
-                    label: title,
-                    data,
-                    fill: false,
-                    borderColor: '#4e79a7',
-                    tension: 0.2,
-                }],
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: { x: { display: false }, y: { display: false } },
-            },
-        });
-    }, [data]);
+    const options = {
+        plugins: { legend: { display: false } },
+        scales: { x: { display: false }, y: { display: false } },
+        responsive: true,
+        maintainAspectRatio: false
+    }
 
-    return (
-        <canvas ref={chartRef} width="150" height="60"></canvas>
-    );
+    return <div style={{ height: 60 }}><Line data={data} options={options} /></div>
 }
