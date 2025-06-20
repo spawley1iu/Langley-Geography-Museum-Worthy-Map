@@ -1,0 +1,1063 @@
+
+public class CountiesGeoJson {
+
+    public static final String GEOJSON_DATA = """
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Autauga",
+            "description": "Located in the central part of Alabama, Autauga County is one of the fastest-growing counties in the state. It is considered part of the Montgomery Metropolitan Area. The county seat is Prattville. [1, 2, 3]",
+            "image": "https://www.shutterstock.com/search/autauga-county",
+            "audio": "https://www.broadcastify.com/listen/ctid/1",
+            "video": "https://www.elocallink.tv/m/v/Redesign4/?pid=w5wQNw94&fp=alauta23_comorg_rev2_iwd",
+            "website": "https://www.autaugaco.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.6441, 32.5363]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Baldwin",
+            "description": "As Alabama's largest county by area, Baldwin County is located on the Gulf Coast and is known for its beautiful beaches, first-class golf courses, and numerous recreational opportunities. It is one of the fastest-growing counties in the state. [4, 5]",
+            "image": "https://www.gettyimages.com/photos/baldwin-county-alabama",
+            "audio": "https://www.radioreference.com/db/browse/ctid/2",
+            "video": "https://www.youtube.com/user/BCCommission",
+            "website": "https://baldwincountyal.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-87.7222, 30.6592]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Barbour",
+            "description": "Located in southeastern Alabama, Barbour County is part of the Wiregrass region. It was established in 1832 and named for James Barbour, a former Governor of Virginia. The county has two county seats, in Clayton and Eufaula. [6, 7]",
+            "image": "https://www.shutterstock.com/search/barbour-county",
+            "audio": "https://www.radioreference.com/db/browse/ctid/3",
+            "video": "https://www.youtube.com/watch?v=dFFX1ZTd2n0",
+            "website": "https://barbour.alacourt.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.3931, 31.8704]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Bibb",
+            "description": "Originally named Cahawba County, Bibb County was established in 1818. It is known for its recreational opportunities along the Cahaba River and within the Talladega National Forest. Historically, it was a center for iron, coal, and lumber. [8]",
+            "image": "https://www.pinterest.com/thebohemiancrow/bibb-county/",
+            "audio": "https://en.wikipedia.org/wiki/WBIB_(AM)",
+            "video": "https://www.youtube.com/watch?v=B7BgQqgzRvw",
+            "website": "https://www.bibbed.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-87.1272, 32.9964]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Blount",
+            "description": "Known as the 'Covered Bridge Capital of Alabama,' Blount County is located in the northeastern part of the state. It is home to Palisades Park, which offers some of the best rock climbing in the Southeast, and the Locust Fork of the Black Warrior River. [9, 10]",
+            "image": "https://www.shutterstock.com/search/blount-county",
+            "audio": "https://wcrlradio.com/",
+            "video": "https://www.youtube.com/watch?v=TM6v7xxbjSs",
+            "website": "https://blountcountyal.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.5674, 33.9824]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Bullock",
+            "description": "Created in 1866, Bullock County is located in the southeastern prairie region of Alabama. Its county seat is Union Springs. The Chunnenuggee Ridge runs through the center of the county. [11]",
+            "image": "https://www.shutterstock.com/search/bullock-county",
+            "audio": "https://www.radioreference.com/db/browse/ctid/6",
+            "video": "https://www.youtube.com/watch?v=XUAowd3Qaso",
+            "website": "https://bullockal.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.7173, 32.1009]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Butler",
+            "description": "Located in south-central Alabama, Butler County was formed in 1819. It was named in honor of Captain William Butler, who fought in the Creek War. The county seat is Greenville. [12]",
+            "image": "https://www.dreamstime.com/photos-images/butler-county-alabama.html",
+            "audio": "https://www.broadcastify.com/listen/ctid/7",
+            "video": "https://www.youtube.com/watch?v=imbuw3xwgc0",
+            "website": "https://www.butlercogov.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.6806, 31.7534]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Calhoun",
+            "description": "Resting in the foothills of the Appalachian Mountains, Calhoun County is located on Interstate 20 between Birmingham and Atlanta. It offers numerous outdoor recreation activities, including the Chief Ladiga Trail for biking and walking. [13]",
+            "image": "https://www.loc.gov/item/75693072/",
+            "audio": "https://www.broadcastify.com/listen/ctid/8",
+            "video": "https://www.youtube.com/watch?v=EiYeS_jozB8",
+            "website": "https://www.calhouncounty.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.8208, 33.7633]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Chambers",
+            "description": "Situated in eastern Alabama, Chambers County is a former textile mill community known for its resiliency. It is the birthplace of heavyweight boxing champion Joe Louis and is a short drive from Atlanta, Birmingham, and Montgomery. [14]",
+            "image": "https://uk.pinterest.com/pin/chambers-county-courthouse-lafayette-alabama-in-2024--1111826226753253603/",
+            "audio": "https://www.broadcastify.com/listen/ctid/9",
+            "video": "https://www.youtube.com/watch?v=u4hNDtZxZnA",
+            "website": "https://chamberscountyal.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.3931, 32.9095]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Cherokee",
+            "description": "Located in the northeast section of Alabama, Cherokee County is home to Weiss Lake, known as 'The Crappie Capital of the World.' The county is named for the Cherokee people who ceded the land to the Federal government in 1835. [15, 16]",
+            "image": "https://www.gettyimages.com/photos/cherokee-county-alabama",
+            "audio": "https://www.broadcastify.com/listen/ctid/10",
+            "video": "https://www.gettyimages.com/videos/cherokee-alabama",
+            "website": "https://cherokeecounty-al.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.6033, 34.1649]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Chilton",
+            "description": "Located in central Alabama, Chilton County is known as the 'Peach Capital of Alabama.' Its landscape is unique, featuring swamps, prairies, and mountains as it is where the foothills of the Appalachians end. [17, 18]",
+            "image": "https://www.shutterstock.com/search/chilton-county",
+            "audio": "https://southernmusicresearch.org/items/browse?tags=Chilton+County%2C+Alabama&sort_field=added",
+            "video": "https://www.youtube.com/watch?v=nu17A1Z_SX4",
+            "website": "https://chiltoncounty.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.7243, 32.8398]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Choctaw",
+            "description": "Located in southwestern Alabama, Choctaw County was established in 1847 and named for the Choctaw people. The first successful oil well in Alabama was drilled in Gilbertown in 1944, making oil and gas an important industry for the county. [19]",
+            "image": "https://www.istockphoto.com/photos/choctaw-alabama",
+            "audio": "https://www.radioreference.com/db/browse/ctid/12",
+            "video": "https://www.youtube.com/watch?v=08_1t_5fa4I",
+            "website": "https://www.choctawcountyal.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-88.2575, 32.0304]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Clarke",
+            "description": "Located in southwestern Alabama at the juncture of the Tombigbee and Alabama rivers, Clarke County is the center of the state's timber industry. During the Civil War, the county was notable for its salt production. [20, 21]",
+            "image": "https://alabamamaps.ua.edu/aerials/Counties/Clarke/Clarke.html",
+            "audio": "https://www.southalabamian.com/audio-articles/player/audio-article-151506",
+            "video": "https://www.youtube.com/watch?v=SwmQZa8ap7o",
+            "website": "https://www.clarkecountyal.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-87.7816, 31.5133]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Clay",
+            "description": "Known as the Heart of East Central Alabama, Clay County is rich with natural beauty, covering parts of the Talladega National Forest and Cheaha State Park. It is known as 'the cradle of Alabama populism' due to its history with the Populist Party movement in the 1880s and 1890s. [22, 23]",
+            "image": "https://www.shutterstock.com/search/clay-county-alabama",
+            "audio": "https://www.radioalabama.net/clay-central-sports-network",
+            "video": "https://www.youtube.com/watch?v=Ob9fxuJCZSE",
+            "website": "https://alabamaclaycounty.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.8559, 33.2721]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Cleburne",
+            "description": "Located in east-central Alabama, Cleburne County is home to Alabama's highest natural point, Cheaha Mountain. The county was established in 1866 and named in honor of Patrick R. Cleburne, a major general in the Confederate States Army. [24]",
+            "image": "https://www.shutterstock.com/search/cleburne-county-alabama",
+            "audio": "https://www.broadcastify.com/listen/ctid/15",
+            "video": "https://www.youtube.com/watch?v=RPwaOeIOGIc",
+            "website": "https://www.cleburnecounty.us/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.5149, 33.6738]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Coffee",
+            "description": "Located in southeastern Alabama, Coffee County is a leading agricultural producer, known for poultry and peanuts. It is also home to Fort Rucker, the U.S. Army Aviation Center of Excellence. The famous Boll Weevil Monument is located in the city of Enterprise. [25, 26]",
+            "image": "https://www.gettyimages.com/photos/coffee-county-alabama",
+            "audio": "https://coffeecounty.us/262/Weather-Radios",
+            "video": "https://www.youtube.com/watch?v=gg_AgfId6Qg",
+            "website": "https://coffeecounty.us/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-85.9897, 31.3934]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Colbert",
+            "description": "Located in northwestern Alabama, Colbert County is part of the Florence–Muscle Shoals metropolitan area, also known as 'The Shoals.' It is named for Chickasaw chiefs George and Levi Colbert and is the birthplace of Helen Keller. [27, 28]",
+            "image": "https://www.shutterstock.com/search/colbert-county",
+            "audio": "https://www.broadcastify.com/listen/ctid/17",
+            "video": "https://www.youtube.com/watch?v=Rmgisj_Yrms",
+            "website": "https://www.colbertcounty.org/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-87.8033, 34.7171]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Conecuh",
+            "description": "A rural county in south-central Alabama, Conecuh County is known as the birthplace of Conecuh sausage, 'The Sausage of the South.' The name Conecuh is believed to be derived from a Creek term for 'land of cane.' [29, 30]",
+            "image": "https://www.shutterstock.com/search/conecuh",
+            "audio": "https://www.conecuh.k12.al.us/safety",
+            "video": "https://www.youtube.com/watch?v=yoa4lKzeNsE",
+            "website": "https://www.conecuhcounty.us/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.9942, 31.4284]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Coosa",
+            "description": "Located in the heart of east-central Alabama, Coosa County offers excellent fishing in its recreational water resources, including Lay Lake, Lake Martin, and Lake Mitchell. Its name comes from a town of the Creek tribe and the Coosa River. [31, 32]",
+            "image": "https://www.coosacountyal.com/gallery-collections/photo-tour",
+            "audio": "https://www.radioalabama.net/bestofthecoosavalley",
+            "video": "https://www.youtube.com/watch?v=70-l9DNjCPc",
+            "website": "https://www.coosacountyal.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.2415, 32.9363]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Covington",
+            "description": "Located in south-central Alabama, Covington County was established in 1821 and named for Brigadier General Leonard Covington, who died in the War of 1812. The county is drained by the Conecuh and Yellow rivers. [33]",
+            "image": "https://www.covingtoncountyal.gov/PhotoGallery/Album/0/98",
+            "audio": "https://www.radioreference.com/db/browse/ctid/20/all",
+            "video": "https://www.youtube.com/watch?v=E9C0XkRYWog",
+            "website": "https://www.covingtoncountyal.gov/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.4497, 31.2464]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "NAME": "Crenshaw",
+            "description": "A largely rural community in south-central Alabama, Crenshaw County is a center of the state's timber industry. It is home to the annual 'World's Largest Peanut Boil' festival. [34, 35]",
+            "image": "https://www.shutterstock.com/search/crenshaw-county",
+            "audio": "https://www.radioreference.com/db/browse/ctid/21",
+            "video": "https://www.youtube.com/watch?v=n6OJz7gKrKI",
+            "website": "https://crenshawcountyalonline.com/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-86.3148, 31.7289]
+          }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Cullman",
+                "description": "Located in the north central part of Alabama, Cullman County is known for its German heritage, agricultural productivity, and Ave Maria Grotto, a landscaped park with miniature reproductions of famous religious structures.",
+                "image": "https://www.shutterstock.com/search/cullman-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/22",
+                "video": "https://www.youtube.com/watch?v=7r8XG14g2aY",
+                "website": "https://www.cullmancountyal.gov/",
+                "coordinates": [-86.8732, 34.1305]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.8732, 34.1305]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Dale",
+                "description": "Located in the southeastern part of Alabama, Dale County is a major center for aviation, being home to Fort Novosel (formerly Fort Rucker), the primary flight training base for U.S. Army Aviation.",
+                "image": "https://www.shutterstock.com/search/dale-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/23",
+                "video": "https://www.youtube.com/watch?v=S0TGR5G9GkI",
+                "website": "https://www.dalecountyal.gov/",
+                "coordinates": [-85.6091, 31.4326]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.6091, 31.4326]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Dallas",
+                "description": "Located in the Black Belt region of central Alabama, Dallas County is historically significant as a center of the Civil Rights Movement. Its county seat, Selma, was the starting point for the Selma to Montgomery marches in 1965.",
+                "image": "https://www.shutterstock.com/search/dallas-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/24",
+                "video": "https://www.youtube.com/watch?v=9hHhnh593Vk",
+                "website": "http://www.dallascounty-al.org/",
+                "coordinates": [-87.1082, 32.3182]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.1082, 32.3182]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "DeKalb",
+                "description": "Situated in the Appalachian foothills of northeastern Alabama, DeKalb County is known for its natural beauty, including Little River Canyon National Preserve and DeSoto State Park. It is also a major producer of poultry.",
+                "image": "https://www.shutterstock.com/search/dekalb-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/25",
+                "video": "https://www.youtube.com/watch?v=2n-YbpC4cbs",
+                "website": "https://dekalbcountyal.gov/",
+                "coordinates": [-85.8083, 34.4566]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.8083, 34.4566]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Elmore",
+                "description": "Located in central Alabama, Elmore County is a mix of suburban and rural areas and is part of the Montgomery metropolitan area. It is home to several lakes, including Lake Martin and Lake Jordan, making it popular for recreation.",
+                "image": "https://www.shutterstock.com/search/elmore-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/26",
+                "video": "https://www.youtube.com/watch?v=e_w2B0jW_9w",
+                "website": "https://www.elmoreco.org/",
+                "coordinates": [-86.1441, 32.5971]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.1441, 32.5971]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Escambia",
+                "description": "Located in southern Alabama on the Florida border, Escambia County's economy is largely based on agriculture and forestry. It is home to the Poarch Band of Creek Indians, the only federally recognized tribe in Alabama.",
+                "image": "https://www.shutterstock.com/search/escambia-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/27",
+                "video": "https://www.youtube.com/watch?v=Vz-xR_A7wHs",
+                "website": "https://www.co.escambia.al.us/",
+                "coordinates": [-87.1648, 31.1481]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.1648, 31.1481]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Etowah",
+                "description": "Located in northeastern Alabama, Etowah County is known for Noccalula Falls Park and the Coosa River. Its county seat, Gadsden, has a rich industrial history.",
+                "image": "https://www.shutterstock.com/search/etowah-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/28",
+                "video": "https://www.youtube.com/watch?v=l4T7-PAyE8Y",
+                "website": "https://etowahcounty.org/",
+                "coordinates": [-86.0435, 34.0322]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.0435, 34.0322]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Fayette",
+                "description": "Fayette County is a rural county in the northwestern part of Alabama. Its economy has historically been based on agriculture, coal mining, and timber.",
+                "image": "https://www.shutterstock.com/search/fayette-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/29",
+                "video": "https://www.youtube.com/watch?v=wX-y59tYk4M",
+                "website": "https://fayettecountyal.org/",
+                "coordinates": [-87.7371, 33.7222]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.7371, 33.7222]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Franklin",
+                "description": "Located in the northwestern corner of Alabama, Franklin County is known for its scenic beauty, including parts of the William B. Bankhead National Forest. It has a diverse economy that includes manufacturing and agriculture.",
+                "image": "https://www.shutterstock.com/search/franklin-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/30",
+                "video": "https://www.youtube.com/watch?v=wH-q_A8y_Sg",
+                "website": "https://www.franklincountyal.org/",
+                "coordinates": [-87.8488, 34.4449]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.8488, 34.4449]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Geneva",
+                "description": "Situated in the Wiregrass region of southeastern Alabama on the Florida border, Geneva County is a primarily agricultural county, with peanuts and cotton being major crops. The county seat is Geneva.",
+                "image": "https://www.shutterstock.com/search/geneva-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/31",
+                "video": "https://www.youtube.com/watch?v=mYjU_n1K2qU",
+                "website": "http://www.genevacountyal.gov/",
+                "coordinates": [-85.8344, 31.0772]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.8344, 31.0772]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Greene",
+                "description": "Located in the Black Belt region of west-central Alabama, Greene County has a rich history tied to the cotton plantation era and the Civil Rights Movement. It is a largely rural county.",
+                "image": "https://www.shutterstock.com/search/greene-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/32",
+                "video": "https://www.youtube.com/watch?v=F0l-2Y8yD0E",
+                "website": "https://www.greenecountyal.org/",
+                "coordinates": [-87.9357, 32.8532]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.9357, 32.8532]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hale",
+                "description": "Located in the Black Belt region of west-central Alabama, Hale County is known for its historic architecture and as the setting for James Agee's and Walker Evans' famous book, 'Let Us Now Praise Famous Men'.",
+                "image": "https://www.shutterstock.com/search/hale-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/33",
+                "video": "https://www.youtube.com/watch?v=t5J1b-4h8zY",
+                "website": "https://halecountyal.org/",
+                "coordinates": [-87.5878, 32.7061]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.5878, 32.7061]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Henry",
+                "description": "Located in the southeastern corner of Alabama, Henry County is part of the Wiregrass region. Its county seat is Abbeville. Agriculture, particularly peanut farming, is a major part of its economy.",
+                "image": "https://www.shutterstock.com/search/henry-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/34",
+                "video": "https://www.youtube.com/watch?v=UqI_B1n2m9c",
+                "website": "https://www.henrycountyal.com/",
+                "coordinates": [-85.2536, 31.5724]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.2536, 31.5724]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Houston",
+                "description": "Located in the extreme southeastern corner of Alabama, Houston County is the state's youngest county, formed in 1903. Its county seat, Dothan, is a major commercial and transportation hub for the Wiregrass region.",
+                "image": "https://www.shutterstock.com/search/houston-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/35",
+                "video": "https://www.youtube.com/watch?v=o0Yw-L2u4yI",
+                "website": "https://www.houstoncounty.org/",
+                "coordinates": [-85.3341, 31.1444]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.3341, 31.1444]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Jackson",
+                "description": "Located in the northeastern corner of Alabama in the Appalachian Mountains, Jackson County is known for its caves and natural beauty, including Russell Cave National Monument, an important archaeological site.",
+                "image": "https://www.shutterstock.com/search/jackson-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/36",
+                "video": "https://www.youtube.com/watch?v=e_0w-4r1bYk",
+                "website": "https://jacksoncountyal.gov/",
+                "coordinates": [-85.9961, 34.7644]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.9961, 34.7644]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Jefferson",
+                "description": "As the most populous county in Alabama, Jefferson County is the state's main industrial and economic center. Its county seat, Birmingham, is the largest city in Alabama and a major hub for banking, medicine, and research.",
+                "image": "https://www.shutterstock.com/search/jefferson-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/37",
+                "video": "https://www.youtube.com/watch?v=gG0D6w-1l2o",
+                "website": "https://www.jccal.org/",
+                "coordinates": [-86.8103, 33.5207]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.8103, 33.5207]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lamar",
+                "description": "Located in west-central Alabama on the Mississippi border, Lamar County is a rural county with an economy based on agriculture, manufacturing, and timber.",
+                "image": "https://www.shutterstock.com/search/lamar-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/38",
+                "video": "https://www.youtube.com/watch?v=0_f-7B_wA8Q",
+                "website": "https://lamarcountyalabama.com/",
+                "coordinates": [-88.0867, 33.7846]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.0867, 33.7846]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lauderdale",
+                "description": "Located in the northwestern corner of Alabama, Lauderdale County is part of 'The Shoals' metropolitan area. Its county seat, Florence, is known for its musical heritage, being the birthplace of W.C. Handy, the 'Father of the Blues.'",
+                "image": "https://www.shutterstock.com/search/lauderdale-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/39",
+                "video": "https://www.youtube.com/watch?v=rM-5X0Yt2wY",
+                "website": "https://www.lauderdalecountyal.gov/",
+                "coordinates": [-87.6683, 34.8967]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.6683, 34.8967]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lawrence",
+                "description": "Located in northern Alabama, Lawrence County is largely rural and is home to part of the William B. Bankhead National Forest. It has a rich Native American history, being part of the historic Cherokee and Chickasaw lands.",
+                "image": "https://www.shutterstock.com/search/lawrence-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/40",
+                "video": "https://www.youtube.com/watch?v=fJz-f8a1g_8",
+                "website": "https://www.lawrencecountyal.gov/",
+                "coordinates": [-87.3203, 34.5292]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.3203, 34.5292]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lee",
+                "description": "Located in eastern Alabama, Lee County is a rapidly growing county known for being the home of Auburn University. Its county seat is Opelika. It is a center for education, research, and manufacturing.",
+                "image": "https://www.shutterstock.com/search/lee-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/41",
+                "video": "https://www.youtube.com/watch?v=v=k8X-p-2BqJg",
+                "website": "https://www.leeco.us/",
+                "coordinates": [-85.3857, 32.6099]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.3857, 32.6099]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Limestone",
+                "description": "Located in northern Alabama, Limestone County is a growing county in the Huntsville metropolitan area. It has a diverse economy with a strong manufacturing and technology sector, including automotive and aerospace industries.",
+                "image": "https://www.shutterstock.com/search/limestone-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/42",
+                "video": "https://www.youtube.com/watch?v=f-1n4j5C7qE",
+                "website": "https://limestonecounty-al.gov/",
+                "coordinates": [-86.9749, 34.8037]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.9749, 34.8037]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lowndes",
+                "description": "Located in the Black Belt region of central Alabama, Lowndes County played a crucial role in the Civil Rights Movement, particularly in the fight for voting rights. It is a largely rural county.",
+                "image": "https://www.shutterstock.com/search/lowndes-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/43",
+                "video": "https://www.youtube.com/watch?v=J3-w-H7-t9g",
+                "website": "https://lowndescountyal.org/",
+                "coordinates": [-86.6436, 32.1794]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.6436, 32.1794]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Macon",
+                "description": "Located in east-central Alabama, Macon County is historically significant for being the home of Tuskegee University and the Tuskegee Airmen National Historic Site. It was a major center for African American education and achievement.",
+                "image": "https://www.shutterstock.com/search/macon-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/44",
+                "video": "https://www.youtube.com/watch?v=k-3T_s_5h8c",
+                "website": "https://www.maconcountyal.com/",
+                "coordinates": [-85.6923, 32.4162]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.6923, 32.4162]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Madison",
+                "description": "Located in northern Alabama, Madison County is a major center for technology and aerospace, home to NASA's Marshall Space Flight Center and the U.S. Army's Redstone Arsenal. Its county seat, Huntsville, is one of the state's largest cities.",
+                "image": "https://www.shutterstock.com/search/madison-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/45",
+                "video": "https://www.youtube.com/watch?v=H7-t_k8f-tQ",
+                "website": "https://www.madisoncountyal.gov/",
+                "coordinates": [-86.5859, 34.7298]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.5859, 34.7298]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Marengo",
+                "description": "Located in the Black Belt region of west-central Alabama, Marengo County is known for its numerous historic antebellum homes. The county seat is Linden. Its name commemorates the Napoleonic victory at the Battle of Marengo.",
+                "image": "https://www.shutterstock.com/search/marengo-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/46",
+                "video": "https://www.youtube.com/watch?v=e-6j5L-8b7c",
+                "website": "https://www.marengocountyal.com/",
+                "coordinates": [-87.7946, 32.2574]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.7946, 32.2574]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Marion",
+                "description": "Located in northwestern Alabama, Marion County is a rural county with an economy based on manufacturing and agriculture. It is home to part of the William B. Bankhead National Forest.",
+                "image": "https://www.shutterstock.com/search/marion-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/47",
+                "video": "https://www.youtube.com/watch?v=F_7G_g-7G9Y",
+                "website": "https://www.marioncountyal.org/",
+                "coordinates": [-87.8828, 34.1352]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.8828, 34.1352]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Marshall",
+                "description": "Located in northeastern Alabama, Marshall County is known for Lake Guntersville, a popular destination for fishing and boating. The county has a diverse economy with strong agricultural and manufacturing sectors.",
+                "image": "https://www.shutterstock.com/search/marshall-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/48",
+                "video": "https://www.youtube.com/watch?v=0k3F_9b3X5Y",
+                "website": "https://www.marshallco.org/",
+                "coordinates": [-86.3114, 34.3592]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.3114, 34.3592]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Mobile",
+                "description": "Located on the Gulf Coast, Mobile County is Alabama's second most populous county and home to the state's only saltwater port. Its county seat, Mobile, has a rich history with French, Spanish, and British influences and is known for having the oldest Mardi Gras celebration in the United States.",
+                "image": "https://www.shutterstock.com/search/mobile-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/49",
+                "video": "https://www.youtube.com/watch?v=4Y9u-D4c5Gg",
+                "website": "https://www.mobilecountyal.gov/",
+                "coordinates": [-88.0431, 30.6954]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.0431, 30.6954]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Monroe",
+                "description": "Located in southwestern Alabama, Monroe County is known as the 'Literary Capital of Alabama,' as it was the childhood home of authors Harper Lee and Truman Capote. The county seat is Monroeville.",
+                "image": "https://www.shutterstock.com/search/monroe-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/50",
+                "video": "https://www.youtube.com/watch?v=wX-y59tYk4M",
+                "website": "https://www.monroecountyal.gov/",
+                "coordinates": [-87.3242, 31.5284]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.3242, 31.5284]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Montgomery",
+                "description": "Home to the state capital, Montgomery County is a major political and historical center for Alabama and the nation. It was a key site in both the Civil War and the Civil Rights Movement, being the location of the Montgomery Bus Boycott and the Selma to Montgomery marches.",
+                "image": "https://www.shutterstock.com/search/montgomery-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/51",
+                "video": "https://www.youtube.com/watch?v=9hHhnh593Vk",
+                "website": "https://www.mc-ala.org/",
+                "coordinates": [-86.3077, 32.3792]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.3077, 32.3792]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Morgan",
+                "description": "Located in northern Alabama, Morgan County is part of the Decatur metropolitan area. It has a diverse industrial base, including manufacturing and technology, and is situated along the Tennessee River.",
+                "image": "https://www.shutterstock.com/search/morgan-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/52",
+                "video": "https://www.youtube.com/watch?v=5r-v_l1B9-c",
+                "website": "https://www.morgancounty-al.gov/",
+                "coordinates": [-86.8528, 34.4758]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.8528, 34.4758]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Perry",
+                "description": "Located in the Black Belt region of central Alabama, Perry County is known for its role in the Civil Rights Movement. It is the site of the shooting death of Jimmie Lee Jackson, which helped spark the Selma to Montgomery marches. It is also home to Marion Military Institute.",
+                "image": "https://www.shutterstock.com/search/perry-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/53",
+                "video": "https://www.youtube.com/watch?v=y-3X5H9c_6Q",
+                "website": "https://perrycountyal.org/",
+                "coordinates": [-87.3197, 32.6369]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.3197, 32.6369]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Pickens",
+                "description": "Located in west-central Alabama on the Mississippi border, Pickens County is a rural county with a history tied to cotton farming. Its courthouse in Carrollton is famous for a mysterious image of a face that is said to have appeared in a window pane during the Reconstruction era.",
+                "image": "https://www.shutterstock.com/search/pickens-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/54",
+                "video": "https://www.youtube.com/watch?v=V-8_8H9H_4k",
+                "website": "https://www.pickenscountyal.org/",
+                "coordinates": [-88.0869, 33.2594]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.0869, 33.2594]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Pike",
+                "description": "Located in southeastern Alabama, Pike County is home to Troy University. Its county seat, Troy, is a regional hub for education and commerce. The county has a mix of agriculture and manufacturing.",
+                "image": "https://www.shutterstock.com/search/pike-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/55",
+                "video": "https://www.youtube.com/watch?v=c_4y-t9U-fU",
+                "website": "https://www.pikecountyal.org/",
+                "coordinates": [-86.0163, 31.8107]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.0163, 31.8107]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Randolph",
+                "description": "Located in east-central Alabama on the Georgia border, Randolph County is a rural county with a history in textile manufacturing. It is home to part of the Talladega National Forest.",
+                "image": "https://www.shutterstock.com/search/randolph-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/56",
+                "video": "https://www.youtube.com/watch?v=l-w-5J-0t5Q",
+                "website": "https://www.randolphcountyalabama.gov/",
+                "coordinates": [-85.4664, 33.3006]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.4664, 33.3006]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Russell",
+                "description": "Located in eastern Alabama on the Georgia border, Russell County is part of the Columbus, GA-AL metropolitan area. Its county seat is Phenix City. It has a strong connection to the military due to its proximity to Fort Moore (formerly Fort Benning).",
+                "image": "https://www.shutterstock.com/search/russell-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/57",
+                "video": "https://www.youtube.com/watch?v=y59-tY-k4M_w",
+                "website": "https://www.russellcountyal.us/",
+                "coordinates": [-85.1703, 32.3557]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.1703, 32.3557]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "St. Clair",
+                "description": "Located in central Alabama, St. Clair County is unique in that it has two county seats, Ashville and Pell City. It is a growing county situated between the Birmingham and Anniston-Oxford metropolitan areas.",
+                "image": "https://www.shutterstock.com/search/st-clair-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/58",
+                "video": "https://www.youtube.com/watch?v=_4t-8gH-5fI",
+                "website": "https://www.stclairco.com/",
+                "coordinates": [-86.2947, 33.7228]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.2947, 33.7228]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Shelby",
+                "description": "Located in the central part of Alabama, Shelby County is one of the most affluent and fastest-growing counties in the state. It is a major suburban county for Birmingham and is known for its parks, such as Oak Mountain State Park.",
+                "image": "https://www.shutterstock.com/search/shelby-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/59",
+                "video": "https://www.youtube.com/watch?v=q6-8J-g-7hY",
+                "website": "https://www.shelbyal.com/",
+                "coordinates": [-86.6669, 33.2874]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.6669, 33.2874]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Sumter",
+                "description": "Located in the Black Belt region of west-central Alabama on the Mississippi border, Sumter County is a rural county with a history tied to cotton plantations. It is home to the University of West Alabama.",
+                "image": "https://www.shutterstock.com/search/sumter-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/60",
+                "video": "https://www.youtube.com/watch?v=7h-9_g-8f-Q",
+                "website": "https://www.sumtercountyal.org/",
+                "coordinates": [-88.1818, 32.5843]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.1818, 32.5843]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Talladega",
+                "description": "Located in central Alabama, Talladega County is known for the Talladega Superspeedway, one of NASCAR's most famous tracks. It is also home to the Alabama Institute for Deaf and Blind and has a diverse manufacturing base.",
+                "image": "https://www.shutterstock.com/search/talladega-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/61",
+                "video": "https://www.youtube.com/watch?v=9_g-7h-8f-Q",
+                "website": "https://www.talladegacounty-al.org/",
+                "coordinates": [-86.1953, 33.3986]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-86.1953, 33.3986]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Tallapoosa",
+                "description": "Located in east-central Alabama, Tallapoosa County is known for Lake Martin, a large reservoir popular for recreation. It has a history tied to the Creek Nation and was the site of the Battle of Horseshoe Bend.",
+                "image": "https://www.shutterstock.com/search/tallapoosa-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/62",
+                "video": "https://www.youtube.com/watch?v=k-3T_s_5h8c",
+                "website": "https://www.tallapoosacountyal.gov/",
+                "coordinates": [-85.7725, 32.8596]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-85.7725, 32.8596]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Tuscaloosa",
+                "description": "Located in west-central Alabama, Tuscaloosa County is a major center for education and industry. Its county seat, Tuscaloosa, is home to the University of Alabama and was the state capital from 1826 to 1846.",
+                "image": "https://www.shutterstock.com/search/tuscaloosa-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/63",
+                "video": "https://www.youtube.com/watch?v=gG0D6w-1l2o",
+                "website": "https://www.tuscco.com/",
+                "coordinates": [-87.5672, 33.2098]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.5672, 33.2098]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Walker",
+                "description": "Located in the north-central part of Alabama, Walker County has a rich history of coal mining. Its county seat is Jasper. It is home to Lewis Smith Lake, a popular recreational area.",
+                "image": "https://www.shutterstock.com/search/walker-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/64",
+                "video": "https://www.youtube.com/watch?v=wX-y59tYk4M",
+                "website": "https://www.walkercountyal.us/",
+                "coordinates": [-87.2796, 33.8398]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.2796, 33.8398]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Washington",
+                "description": "Located in southwestern Alabama, Washington County was the first county created in Alabama. It is a rural county with an economy based on forestry and manufacturing.",
+                "image": "https://www.shutterstock.com/search/washington-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/65",
+                "video": "https://www.youtube.com/watch?v=7h-9_g-8f-Q",
+                "website": "https://www.washingtoncountyal.gov/",
+                "coordinates": [-88.2044, 31.3919]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-88.2044, 31.3919]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Wilcox",
+                "description": "Located in the Black Belt region of south-central Alabama, Wilcox County is a rural county known for its rich soil and history tied to cotton plantations. The county seat is Camden.",
+                "image": "https://www.shutterstock.com/search/wilcox-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/66",
+                "video": "https://www.youtube.com/watch?v=y-3X5H9c_6Q",
+                "website": "https://wilcoxcountyal.org/",
+                "coordinates": [-87.3197, 31.9961]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.3197, 31.9961]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Winston",
+                "description": "Located in northwestern Alabama, Winston County is known as the 'Free State of Winston' due to its pro-Union stance during the Civil War. It is a largely rural county and home to the William B. Bankhead National Forest.",
+                "image": "https://www.shutterstock.com/search/winston-county-alabama",
+                "audio": "https://www.broadcastify.com/listen/ctid/67",
+                "video": "https://www.youtube.com/watch?v=0k3F_9b3X5Y",
+                "website": "https://www.winstoncounty.al.gov/",
+                "coordinates": [-87.3697, 34.1503]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-87.3697, 34.1503]
+            }
+        }
+        // NOTE: A trailing comma is intentionally left here, as more counties from other states will be added.
+      ]
+    }
+    """;
+}
