@@ -42,6 +42,7 @@ const Legend = () => {
             <Paper
                 className={`legend-container ${!visible ? 'hidden' : ''}`}
                 elevation={4}
+                style={{ position: 'absolute', bottom: 20, right: 20 }}
             >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <Typography variant="subtitle1" fontWeight={600}>
@@ -60,3 +61,20 @@ const Legend = () => {
                   style={{
                       backgroundColor: item.transparent
                           ? 'rgba(0,137,123,0.2)'
+                          : item.color,
+                      border:
+                          item.outline || item.transparent
+                              ? `2px solid ${item.color}`
+                              : '1px solid #ccc'
+                  }}
+              ></span>
+                            {item.label}
+                        </div>
+                    ))}
+                </div>
+            </Paper>
+        </>
+    )
+}
+
+export default Legend
