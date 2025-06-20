@@ -1,40 +1,62 @@
 import React, { useEffect, useState } from 'react'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Slide from '@mui/material/Slide'
+import { Paper, IconButton, Typography } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close'
+import MenuIcon from '@mui/icons-material/Menu'
+import '../css/legend.css'
+
+const legendItems = [
+    { label: 'AI/AN Population > 50%', color: '#8e44ad' },
+    { label: 'Poverty Rate > 30%', color: '#e67e22' },
+    { label: 'Median Income < $35k', color: '#3498db' },
+    { label: 'High School Diploma < 70%', color: '#c0392b' },
+    { label: 'Reservation Boundary', color: '#d32f2f', outline: true },
+    { label: 'Ancestral Land', color: '#00897b', transparent: true }
+]
 
 const Legend = () => {
-  const [open, setOpen] = useState(false)
+    const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 1000)
-    return () => clearTimeout(timer)
-  }, [])
+    useEffect(() => {
+        const timer = setTimeout(() => setVisible(true), 500)
+        return () => clearTimeout(timer)
+    }, [])
 
-  return (
-    <Slide direction="up" in={open} mountOnEnter unmountOnExit>
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 20,
-          left: 280,
-          background: 'white',
-          padding: 2,
-          borderRadius: 1,
-          boxShadow: 4,
-          zIndex: 1000
-        }}
-      >
-        <Typography variant="body2" fontWeight="bold">Legend</Typography>
-        <ul style={{ paddingLeft: 16, margin: 0, fontSize: 13 }}>
-          <li><span style={{ color: '#084081' }}>■■</span> &gt; 50% AI/AN</li>
-          <li><span style={{ color: '#2b8cbe' }}>■■</span> &gt; 20%</li>
-          <li><span style={{ color: '#7bccc4' }}>■■</span> &gt; 10%</li>
-          <li><span style={{ color: '#bae4bc' }}>■■</span> &gt; 1%</li>
-        </ul>
-      </Box>
-    </Slide>
-  )
-}
+    return (
+        <>
+            {!visible && (
+                <IconButton
+                    onClick={() => setVisible(true)}
+                    style={{
+                        position: 'absolute',
+                        bottom: 20,
+                        right: 20,
+                        zIndex: 999,
+                        background: 'white',
+                        boxShadow: '0 2px 5px rgba(0,0,0,0.3)'
+                    }}
+                >
+                    <MenuIcon />
+                </IconButton>
+            )}
 
-export default Legend
+            <Paper
+                className={`legend-container ${!visible ? 'hidden' : ''}`}
+                elevation={4}
+            >
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Typography variant="subtitle1" fontWeight={600}>
+                        Map Legend
+                    </Typography>
+                    <IconButton size="small" onClick={() => setVisible(false)}>
+                        <CloseIcon fontSize="small" />
+                    </IconButton>
+                </div>
+
+                <div>
+                    {legendItems.map((item, index) => (
+                        <div key={index} style={{ marginTop: 6 }}>
+              <span
+                  className="legend-color-box"
+                  style={{
+                      backgroundColor: item.transparent
+                          ? 'rgba(0,137,123,0.2)'
