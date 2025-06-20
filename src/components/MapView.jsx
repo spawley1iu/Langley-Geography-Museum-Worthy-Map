@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Map, View, Overlay } from 'ol'
 import TileLayer from 'ol/layer/Tile'
-import VectorLayer from 'ol/layer/Vector'
-import VectorSource from 'ol/source/Vector'
-import GeoJSON from 'ol/format/GeoJSON'
+import { Vector as VectorLayer } from 'ol/layer'
+import { Vector as VectorSource } from 'ol/source'
 import OSM from 'ol/source/OSM'
+import GeoJSON from 'ol/format/GeoJSON'
+import { Style, Circle as CircleStyle, Fill, Stroke } from 'ol/style'
 import { render } from 'react-dom'
-
 import 'ol/ol.css'
 
 import CountyPopup from './CountyPopup'
@@ -14,12 +14,12 @@ import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
 import Legend from './Legend'
 
-import { Style, Circle as CircleStyle, Fill, Stroke } from 'ol/style'
-
 // External layers
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
-import tribalMarkers from '../data/tribal-markers-geocoded.geojson'
+
+// Load tribal markers URL from public assets
+const tribalMarkersUrl = process.env.PUBLIC_URL + '/data/tribal-markers-geocoded.geojson'
 
 export default function MapView() {
   const mapRef = useRef()
@@ -43,7 +43,7 @@ export default function MapView() {
 
   const tribalMarkerLayer = new VectorLayer({
     source: new VectorSource({
-      url: tribalMarkers,
+      url: tribalMarkersUrl,
       format: new GeoJSON()
     }),
     style: new Style({
@@ -96,7 +96,7 @@ export default function MapView() {
     const newVisible = !layerObj.visible
 
     fadeLayer(layerObj.layer, newVisible)
-    layerObj.layer.setVisible(true) // Stay in map
+    layerObj.layer.setVisible(true)
     layerObj.visible = newVisible
     setLayerState(updated)
   }
@@ -155,33 +155,3 @@ export default function MapView() {
     })
 
     return () => map.setTarget(null)
-  }, [])
-
-  return (
-      <>
-        <div ref={mapRef} style={{ width: '100vw', height: '100vh' }} />
-        <div
-            ref={popupRef}
-            className="ol-popup"
-            style={{
-              position: 'absolute',
-              display: 'none',
-              zIndex: 999,
-              background: 'white',
-              padding: 10,
-              borderRadius: 6,
-              boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
-            }}
-        />
-        <MobileDrawer>
-          <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
-          <Legend
-              toggleReservation={toggleReservation}
-              toggleAncestral={toggleAncestral}
-              reservationVisible={reservationVisible}
-              ancestralVisible={ancestralVisible}
-          />
-        </MobileDrawer>
-      </>
-  )
-}
