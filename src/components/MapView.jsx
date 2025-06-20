@@ -24,6 +24,7 @@ const tribalMarkersUrl = process.env.PUBLIC_URL + '/data/tribal-markers-geocoded
 export default function MapView() {
   const mapRef = useRef()
   const popupRef = useRef()
+  const mapInstance = useRef(null) // to persist the map instance across effects
 
   const aiAnLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
@@ -101,6 +102,15 @@ export default function MapView() {
     setLayerState(updated)
   }
 
+  // TOUCH + DOUBLE TAP
+  useEffect(() => {
+    const handleTouch = () => {
+      document.body.style.cursor = 'pointer'
+    }
+    window.addEventListener('touchstart', handleTouch)
+    return () => window.removeEventListener('touchstart', handleTouch)
+  }, [])
+
   useEffect(() => {
     const popup = new Overlay({
       element: popupRef.current,
@@ -126,6 +136,8 @@ export default function MapView() {
         zoom: 4
       })
     })
+
+    mapInstance.current = map
 
     map.on('pointermove', e => {
       let hoverDone = false
@@ -154,4 +166,50 @@ export default function MapView() {
       if (!found) popupRef.current.style.display = 'none'
     })
 
+    // DOUBLE TAP DETECTION
+    let lastTap = 0
+    map.on('click', e => {
+      const now = new Date().getTime()
+      const timeSince = now - lastTap
+
+      if (timeSince < 400 && timeSince > 0) {
+        const view = map.getView()
+        view.animate({ zoom: view.getZoom() + 1, duration: 300 })
+      } else {
+        console.log('Single tap at:', e.coordinate)
+      }
+
+      lastTap = now
+    })
+
     return () => map.setTarget(null)
+  }, [])
+
+  return (
+      <>
+        <div ref={mapRef} style={{ width: '100vw', height: '100vh' }} />
+        <div
+            ref={popupRef}
+            className="ol-popup"
+            style={{
+              position: 'absolute',
+              display: 'none',
+              zIndex: 999,
+              background: 'white',
+              padding: 10,
+              borderRadius: 6,
+              boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
+            }}
+        />
+        <MobileDrawer>
+          <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
+          <Legend
+              toggleReservation={toggleReservation}
+              toggleAncestral={toggleAncestral}
+              reservationVisible={reservationVisible}
+              ancestralVisible={ancestralVisible}
+          />
+        </MobileDrawer>
+      </>
+  )
+}
