@@ -4,23 +4,33 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Navajo Nation"
+        "name": "Tano"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-109.5, 36.1]  // Placeholder or resolved
+        "coordinates": [0, 0]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Cherokee"
+        "name": "Taos"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-84.1, 35.7]  // Placeholder or resolved
+        "coordinates": [0, 0]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taposa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
       }
     }
-    // + hundreds more
+    // ... continues for all 500+ tribes
   ]
 }
