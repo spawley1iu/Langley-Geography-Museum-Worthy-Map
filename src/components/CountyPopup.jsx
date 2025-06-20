@@ -1,36 +1,24 @@
 import React from 'react'
-import PopupChart from './PopupChart'
+import CountyChart from './CountyChart'
 
 export default function CountyPopup({ feature }) {
-  if (!feature) return null
+    const props = feature.getProperties()
 
-  const name = feature.get('county_name')
-  const aiAn = feature.get('ai_an_pct')
-  const poverty = feature.get('poverty_rate')
-  const income = feature.get('median_income')
-  const education = feature.get('hs_diploma_pct')
+    const aiAn = props.ai_an || 0
+    const poverty = props.poverty || 0
+    const income = props.income || 0
+    const hsGrad = props.hs_grad || 0
 
-  const chartData = [aiAn, poverty, income / 1000, education] // normalize income
-
-  return (
-      <div style={{
-        background: '#fff',
-        borderRadius: 8,
-        padding: '12px',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-        width: 260,
-        fontFamily: 'Segoe UI, sans-serif'
-      }}>
-        <h4 style={{ margin: '4px 0 8px 0' }}>{name}</h4>
-        <ul style={{ padding: 0, margin: 0, listStyle: 'none', fontSize: 14 }}>
-          <li>AI/AN: {aiAn}%</li>
-          <li>Poverty: {poverty}%</li>
-          <li>Income: ${income}</li>
-          <li>HS Diploma: {education}%</li>
-        </ul>
-        <div style={{ marginTop: 12 }}>
-          <PopupChart metrics={chartData} />
+    return (
+        <div style={{ fontSize: 14 }}>
+            <h3>{props.NAME}</h3>
+            <ul style={{ paddingLeft: 16 }}>
+                <li>AI/AN Population: {aiAn.toFixed(1)}%</li>
+                <li>Poverty Rate: {poverty.toFixed(1)}%</li>
+                <li>Median Income: ${income.toLocaleString()}</li>
+                <li>High School Graduates: {hsGrad.toFixed(1)}%</li>
+            </ul>
+            <CountyChart data={[aiAn, poverty, income, hsGrad]} />
         </div>
-      </div>
-  )
+    )
 }
