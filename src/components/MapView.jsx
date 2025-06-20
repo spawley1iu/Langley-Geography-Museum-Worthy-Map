@@ -11,6 +11,7 @@ import { Style, Fill, Stroke } from 'ol/style'
 
 import CountyPopup from './CountyPopup'
 import LayerToggle from './LayerToggle'
+import MobileDrawer from './MobileDrawer'
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
 
@@ -51,7 +52,6 @@ export default function MapView() {
     const duration = 600
     const startOpacity = visible ? 0 : 1
     const endOpacity = visible ? 1 : 0
-
     const step = 16 / duration
     let progress = 0
 
@@ -69,7 +69,7 @@ export default function MapView() {
     const newVisible = !current.visible
 
     fadeLayer(current.layer, newVisible)
-    current.layer.setVisible(true) // Keep always true to animate opacity
+    current.layer.setVisible(true) // remain visible to allow fading
     updated[key].visible = newVisible
     setLayerState(updated)
   }
@@ -147,7 +147,9 @@ export default function MapView() {
               boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
             }}
         />
-        <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
+        <MobileDrawer>
+          <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
+        </MobileDrawer>
       </>
   )
 }
