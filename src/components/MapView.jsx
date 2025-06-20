@@ -18,7 +18,6 @@ import Legend from './Legend'
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
 
-// Load tribal markers URL from public assets
 const tribalMarkersUrl = process.env.PUBLIC_URL + '/data/tribal-markers-geocoded.geojson'
 
 export default function MapView() {
@@ -57,10 +56,21 @@ export default function MapView() {
     visible: true
   })
 
-  const [layerState, setLayerState] = useState({
-    'AI/AN %': { layer: aiAnLayer, visible: true },
-    'Poverty': { layer: povertyLayer, visible: true },
-    'Income': { layer: incomeLayer, visible: true }
+  const thematicGroups = {
+    Demographics: ['AI/AN %', 'Poverty', 'Income'],
+    Geography: ['Reservations', 'Ancestral Lands'],
+    PointsOfInterest: ['Tribal Markers']
+  }
+
+  const [layerGroups, setLayerGroups] = useState({
+    Demographics: {
+      'AI/AN %': { layer: aiAnLayer, visible: true },
+      'Poverty': { layer: povertyLayer, visible: true },
+      'Income': { layer: incomeLayer, visible: true }
+    },
+    PointsOfInterest: {
+      'Tribal Markers': { layer: tribalMarkerLayer, visible: true }
+    }
   })
 
   const [reservationVisible, setReservationVisible] = useState(true)
@@ -91,18 +101,18 @@ export default function MapView() {
     }, 16)
   }
 
-  function toggleLayer(key) {
-    const updated = { ...layerState }
-    const layerObj = updated[key]
-    const newVisible = !layerObj.visible
+  function toggleLayerInGroup(groupName, layerName) {
+    const updated = { ...layerGroups }
+    const target = updated[groupName][layerName]
+    const newVisible = !target.visible
 
-    fadeLayer(layerObj.layer, newVisible)
-    layerObj.layer.setVisible(true)
-    layerObj.visible = newVisible
-    setLayerState(updated)
+    fadeLayer(target.layer, newVisible)
+    target.layer.setVisible(true)
+    target.visible = newVisible
+
+    setLayerGroups(updated)
   }
 
-  // Touch interaction visual feedback
   useEffect(() => {
     const handleTouch = () => {
       document.body.style.cursor = 'pointer'
@@ -205,7 +215,7 @@ export default function MapView() {
             }}
         />
         <MobileDrawer>
-          <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
+          <LayerToggle layerGroups={layerGroups} toggleLayer={toggleLayerInGroup} />
           <Legend
               toggleReservation={toggleReservation}
               toggleAncestral={toggleAncestral}

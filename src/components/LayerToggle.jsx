@@ -1,19 +1,26 @@
 import React from 'react'
+import './styles/LayerToggle.css'
 
-export default function LayerToggle({ layers, toggleLayer }) {
+const LayerToggle = ({ layers, toggleLayer }) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {Object.keys(layers).map(key => (
-                <label key={key} style={{ fontSize: 14 }}>
-                    <input
-                        type="checkbox"
-                        checked={layers[key].visible}
-                        onChange={() => toggleLayer(key)}
-                        style={{ marginRight: 8 }}
-                    />
-                    {key}
-                </label>
-            ))}
+        <div className="layer-toggle-container">
+            <h4>Data Layers</h4>
+            <ul className="layer-toggle-list">
+                {Object.entries(layers).map(([label, { visible }]) => (
+                    <li key={label}>
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={visible}
+                                onChange={() => toggleLayer(label)}
+                            />
+                            {label}
+                        </label>
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
+
+export default LayerToggle
