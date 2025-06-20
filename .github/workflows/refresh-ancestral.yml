@@ -1,0 +1,38 @@
+name: Refresh Native Land Ancestral GeoJSON
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Every Monday at 9:00 UTC
+  workflow_dispatch:
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install deps
+        run: npm install node-fetch@2
+
+      - name: Run fetch script
+        env:
+          NATIVE_API_KEY: ${{ secrets.NATIVE_API_KEY }}
+        run: |
+          echo "Injecting key..."
+          echo "const apiKey = '${NATIVE_API_KEY}'" > apikey.js
+          node fetch-ancestral.js
+
+      - name: Commit and push if changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/native-lands.geojson
+          git commit -m "🔄 Weekly update: Native Lands GeoJSON" || echo "No changes"
+          git push
