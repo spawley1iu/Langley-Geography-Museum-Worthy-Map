@@ -14,9 +14,12 @@ import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
 import Legend from './Legend'
 
+import { Style, Circle as CircleStyle, Fill, Stroke } from 'ol/style'
+
 // External layers
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
+import tribalMarkers from '../data/tribal-markers-geocoded.geojson'
 
 export default function MapView() {
   const mapRef = useRef()
@@ -35,6 +38,21 @@ export default function MapView() {
 
   const incomeLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
+    visible: true
+  })
+
+  const tribalMarkerLayer = new VectorLayer({
+    source: new VectorSource({
+      url: tribalMarkers,
+      format: new GeoJSON()
+    }),
+    style: new Style({
+      image: new CircleStyle({
+        radius: 6,
+        fill: new Fill({ color: '#ff6600' }),
+        stroke: new Stroke({ color: '#fff', width: 2 })
+      })
+    }),
     visible: true
   })
 
@@ -78,7 +96,7 @@ export default function MapView() {
     const newVisible = !layerObj.visible
 
     fadeLayer(layerObj.layer, newVisible)
-    layerObj.layer.setVisible(true) // Keep layer active
+    layerObj.layer.setVisible(true) // Stay in map
     layerObj.visible = newVisible
     setLayerState(updated)
   }
@@ -99,7 +117,8 @@ export default function MapView() {
         povertyLayer,
         incomeLayer,
         reservationsLayer,
-        ancestralLayer
+        ancestralLayer,
+        tribalMarkerLayer
       ],
       overlays: [popup],
       view: new View({
@@ -108,7 +127,6 @@ export default function MapView() {
       })
     })
 
-    // 🧭 Tribal Boundary Hover Tooltip
     map.on('pointermove', e => {
       let hoverDone = false
       map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
@@ -123,7 +141,6 @@ export default function MapView() {
       if (!hoverDone) popupRef.current.style.display = 'none'
     })
 
-    // 📍 County Data Popup
     map.on('singleclick', e => {
       let found = false
       map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
