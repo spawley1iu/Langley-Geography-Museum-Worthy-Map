@@ -1,27 +1,60 @@
 import React from 'react'
-import CountyChart from './CountyChart'
 
-export default function CountyPopup({ feature }) {
+const CountyPopup = ({ feature }) => {
     if (!feature) return null
 
-    const props = feature.getProperties ? feature.getProperties() : {}
-
-    const name = props.NAME || 'Unknown County'
-    const aiAn = parseFloat(props.ai_an) || 0
-    const poverty = parseFloat(props.poverty) || 0
-    const income = parseFloat(props.income) || 0
-    const hsGrad = parseFloat(props.hs_grad) || 0
+    const properties = feature.getProperties()
+    const { NAME, description, image, audio, video, website } = properties
 
     return (
-        <div style={{ fontSize: 14, maxWidth: 260 }}>
-            <h3 style={{ marginTop: 0 }}>{name}</h3>
-            <ul style={{ paddingLeft: 16 }}>
-                <li>AI/AN Population: {aiAn.toFixed(1)}%</li>
-                <li>Poverty Rate: {poverty.toFixed(1)}%</li>
-                <li>Median Income: ${income.toLocaleString()}</li>
-                <li>HS Diploma: {hsGrad.toFixed(1)}%</li>
-            </ul>
-            <CountyChart data={[aiAn, poverty, income, hsGrad]} />
+        <div style={{ maxWidth: 320 }}>
+            <h3 style={{ marginTop: 0 }}>{NAME || 'Unnamed County'}</h3>
+
+            {image ? (
+                <img
+                    src={image}
+                    alt={NAME}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                        marginBottom: 8,
+                        borderRadius: 4,
+                        objectFit: 'cover'
+                    }}
+                />
+            ) : (
+                <p style={{ fontStyle: 'italic' }}>No image available</p>
+            )}
+
+            {description && <p>{description}</p>}
+
+            {audio ? (
+                <audio controls style={{ width: '100%' }}>
+                    <source src={audio} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+            ) : (
+                <p style={{ fontStyle: 'italic' }}>No audio narration</p>
+            )}
+
+            {video ? (
+                <video controls width="100%" style={{ marginTop: 10, borderRadius: 4 }}>
+                    <source src={video} type="video/mp4" />
+                    Your browser does not support the video element.
+                </video>
+            ) : (
+                <p style={{ fontStyle: 'italic' }}>No video content</p>
+            )}
+
+            {website && (
+                <p style={{ marginTop: 10 }}>
+                    <a href={website} target="_blank" rel="noopener noreferrer">
+                        Learn more →
+                    </a>
+                </p>
+            )}
         </div>
     )
 }
+
+export default CountyPopup
