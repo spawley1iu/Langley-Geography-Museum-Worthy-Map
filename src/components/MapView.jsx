@@ -12,6 +12,7 @@ import { fromLonLat } from 'ol/proj'
 
 import CountyPopup from './CountyPopup'
 import Sidebar from './Sidebar'
+import Legend from './Legend'
 
 import countyData from '../data/counties.geojson?url'
 import reservationData from '../data/reservations.geojson?url'
@@ -29,12 +30,14 @@ const MapView = () => {
 
   const [reservationLayer, setReservationLayer] = useState(null)
   const [tribalLayer, setTribalLayer] = useState(null)
+  const [countyLayer, setCountyLayer] = useState(null)
 
   useEffect(() => {
     const source = new VectorSource({ url: countyData, format: new GeoJSON() })
 
-    const vectorLayer = new VectorLayer({
+    const county = new VectorLayer({
       source: source,
+      className: 'fade-layer',
       style: feature => {
         const value = feature.get('ai_an_pct')
         let fill = '#eee'
@@ -53,7 +56,7 @@ const MapView = () => {
       target: mapRef.current,
       layers: [
         new TileLayer({ source: new OSM() }),
-        vectorLayer
+        county
       ],
       view: new View({
         center: fromLonLat([-98, 39]),
@@ -81,7 +84,7 @@ const MapView = () => {
       }
     })
 
-    // Load tribal overlays
+    // Load overlay layers
     const reservations = new VectorLayer({
       source: new VectorSource({ url: reservationData, format: new GeoJSON() }),
       visible: false,
@@ -94,17 +97,16 @@ const MapView = () => {
     const tribes = new VectorLayer({
       source: new VectorSource({ url: tribalLandData, format: new GeoJSON() }),
       visible: false,
-      style: feature => {
-        return new Style({
-          stroke: new Stroke({ color: '#8e24aa', width: 1.5 }),
-          fill: new Fill({ color: 'rgba(142, 36, 170, 0.2)' })
-        })
-      }
+      style: new Style({
+        stroke: new Stroke({ color: '#8e24aa', width: 1.5 }),
+        fill: new Fill({ color: 'rgba(142, 36, 170, 0.2)' })
+      })
     })
 
     map.addLayer(reservations)
     map.addLayer(tribes)
 
+    setCountyLayer(county)
     setReservationLayer(reservations)
     setTribalLayer(tribes)
 
@@ -114,7 +116,17 @@ const MapView = () => {
   useEffect(() => {
     if (reservationLayer) reservationLayer.setVisible(layerVisibility.reservations)
     if (tribalLayer) tribalLayer.setVisible(layerVisibility.tribalLands)
-  }, [layerVisibility, reservationLayer, tribalLayer])
+    if (countyLayer) {
+      const el = document.querySelector('.fade-layer')
+      if (el) {
+        if (layerVisibility.tribalLands || layerVisibility.reservations) {
+          el.classList.add('hidden')
+        } else {
+          el.classList.remove('hidden')
+        }
+      }
+    }
+  }, [layerVisibility, reservationLayer, tribalLayer, countyLayer])
 
   return (
     <>
@@ -123,9 +135,9 @@ const MapView = () => {
       <div ref={popupRef} className="ol-popup">
         {popupData && <CountyPopup data={popupData} />}
       </div>
+      <Legend />
     </>
   )
 }
 
 export default MapView
-
