@@ -1,53 +1,48 @@
-// geocode-tribes.js
+import fs from 'fs/promises';
+import fetch from 'node-fetch';
+import dotenv from 'dotenv';
+dotenv.config();
 
-import fs from 'fs/promises'
-import fetch from 'node-fetch'
-import dotenv from 'dotenv'
+const INPUT = './public/data/tribal-markers.geojson';
+const OUTPUT = './public/data/tribal-markers-geocoded.geojson';
+const ACCESS = process.env.MAPBOX_API_KEY;
+const BATCH_SIZE = 50;
+const DELAY_MS = 200;
 
-dotenv.config()  // Loads .env into process.env
-
-const MAPBOX_API_KEY = process.env.MAPBOX_API_KEY
-
-if (!MAPBOX_API_KEY) {
-    console.error('❌ Missing MAPBOX_API_KEY in .env')
-    process.exit(1)
+async function delay(ms) {
+    return new Promise((res) => setTimeout(res, ms));
 }
 
-const inputPath = './public/data/tribal-markers.geojson'
-const outputPath = './public/data/tribal-markers-geocoded.geojson'
-
-async function geocode(name) {
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(name)}.json?access_token=${MAPBOX_API_KEY}&limit=1`
+async function geocodeName(name) {
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(name)}.json?limit=1&access_token=${ACCESS}`;
     try {
-        const res = await fetch(url)
-        const json = await res.json()
-        const coords = json?.features?.[0]?.center
-        return coords || null
+        const res = await fetch(url);
+        const json = await res.json();
+        const f = json.features?.[0];
+        if (f && f.center) return f.center;
+        console.warn(`No match: ${name}`);
+        return [0, 0];
     } catch (err) {
-        console.error(`⚠️ Error geocoding "${name}":`, err.message)
-        return null
+        console.error(`Error for ${name}:`, err);
+        return [0, 0];
     }
 }
 
 async function main() {
-    const raw = await fs.readFile(inputPath, 'utf-8')
-    const geojson = JSON.parse(raw)
-
-    let updated = 0
-    for (const feature of geojson.features) {
-        const name = feature.properties.name
-        console.log(`🌍 Geocoding: ${name}`)
-        const coords = await geocode(name)
-        if (coords) {
-            feature.geometry.coordinates = coords
-            updated++
-        } else {
-            console.warn(`  ⚠️ No coordinates found for "${name}"`)
-        }
+    const raw = await fs.readFile(INPUT, 'utf-8');
+    const geo = JSON.parse(raw);
+    for (let i = 0; i < geo.features.length; i += BATCH_SIZE) {
+        const batch = geo.features.slice(i, i + BATCH_SIZE);
+        await Promise.all(batch.map(async (feat) => {
+            const name = feat.properties.name;
+            const [lon, lat] = await geocodeName(name);
+            feat.geometry.coordinates = [lon, lat];
+        }));
+        console.log(`Processed features ${i + 1}-${Math.min(i + BATCH_SIZE, geo.features.length)}`);
+        await delay(DELAY_MS);
     }
-
-    await fs.writeFile(outputPath, JSON.stringify(geojson, null, 2))
-    console.log(`✅ Saved ${updated} geocoded features to ${outputPath}`)
+    await fs.writeFile(OUTPUT, JSON.stringify(geo, null, 2));
+    console.log('✅ Geocoding complete:', OUTPUT);
 }
 
-main()
+main();
