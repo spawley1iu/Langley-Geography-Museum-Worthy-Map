@@ -1,53 +1,36 @@
-import React, { useEffect, useRef } from 'react'
-import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale } from 'chart.js'
+import React from 'react'
+import PopupChart from './PopupChart'
 
-Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale)
+export default function CountyPopup({ feature }) {
+  if (!feature) return null
 
-const CountyPopup = ({ data }) => {
-  const canvasRef = useRef()
+  const name = feature.get('county_name')
+  const aiAn = feature.get('ai_an_pct')
+  const poverty = feature.get('poverty_rate')
+  const income = feature.get('median_income')
+  const education = feature.get('hs_diploma_pct')
 
-  useEffect(() => {
-    const ctx = canvasRef.current.getContext('2d')
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['AI/AN %', 'Poverty %', 'Income/1k', 'HS %'],
-        datasets: [{
-          data: [
-            data.ai_an_pct,
-            data.poverty_pct,
-            data.median_income / 1000,
-            data.hs_pct
-          ],
-          borderColor: '#333',
-          backgroundColor: 'rgba(0,0,0,0.1)',
-          tension: 0.3,
-          pointRadius: 0
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { display: false },
-          y: { display: false }
-        }
-      }
-    })
-  }, [data])
+  const chartData = [aiAn, poverty, income / 1000, education] // normalize income
 
   return (
-    <div style={{ padding: '5px', maxWidth: '250px' }}>
-      <h4>{data.NAME}, {data.STATE}</h4>
-      <ul style={{ padding: 0, listStyle: 'none', margin: '8px 0' }}>
-        <li>AI/AN: {data.ai_an_pct}%</li>
-        <li>Poverty: {data.poverty_pct}%</li>
-        <li>Income: ${data.median_income.toLocaleString()}</li>
-        <li>HS Diploma: {data.hs_pct}%</li>
-      </ul>
-      <canvas ref={canvasRef} width="240" height="60"></canvas>
-    </div>
+      <div style={{
+        background: '#fff',
+        borderRadius: 8,
+        padding: '12px',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+        width: 260,
+        fontFamily: 'Segoe UI, sans-serif'
+      }}>
+        <h4 style={{ margin: '4px 0 8px 0' }}>{name}</h4>
+        <ul style={{ padding: 0, margin: 0, listStyle: 'none', fontSize: 14 }}>
+          <li>AI/AN: {aiAn}%</li>
+          <li>Poverty: {poverty}%</li>
+          <li>Income: ${income}</li>
+          <li>HS Diploma: {education}%</li>
+        </ul>
+        <div style={{ marginTop: 12 }}>
+          <PopupChart metrics={chartData} />
+        </div>
+      </div>
   )
 }
-
-export default CountyPopup
