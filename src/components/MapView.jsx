@@ -8,22 +8,30 @@ import OSM from 'ol/source/OSM'
 import GeoJSON from 'ol/format/GeoJSON'
 import { Fill, Stroke, Style } from 'ol/style'
 import Overlay from 'ol/Overlay'
-import { fromLonLat, toLonLat } from 'ol/proj'
+import { fromLonLat } from 'ol/proj'
 
 import CountyPopup from './CountyPopup'
+import Sidebar from './Sidebar'
+
 import countyData from '../data/counties.geojson?url'
+import reservationData from '../data/reservations.geojson?url'
+import tribalLandData from '../data/tribal-lands.geojson?url'
 
 const MapView = () => {
   const mapRef = useRef()
   const popupRef = useRef()
   const [popupData, setPopupData] = useState(null)
   const [overlay, setOverlay] = useState(null)
+  const [layerVisibility, setLayerVisibility] = useState({
+    reservations: false,
+    tribalLands: false
+  })
+
+  const [reservationLayer, setReservationLayer] = useState(null)
+  const [tribalLayer, setTribalLayer] = useState(null)
 
   useEffect(() => {
-    const source = new VectorSource({
-      url: countyData,
-      format: new GeoJSON()
-    })
+    const source = new VectorSource({ url: countyData, format: new GeoJSON() })
 
     const vectorLayer = new VectorLayer({
       source: source,
@@ -41,7 +49,7 @@ const MapView = () => {
       }
     })
 
-    const olMap = new Map({
+    const map = new Map({
       target: mapRef.current,
       layers: [
         new TileLayer({ source: new OSM() }),
@@ -53,18 +61,16 @@ const MapView = () => {
       })
     })
 
-    // Setup popup overlay
     const popupOverlay = new Overlay({
       element: popupRef.current,
       autoPan: true,
       autoPanAnimation: { duration: 250 }
     })
-    olMap.addOverlay(popupOverlay)
+    map.addOverlay(popupOverlay)
     setOverlay(popupOverlay)
 
-    // Click handler
-    olMap.on('singleclick', evt => {
-      const features = olMap.getFeaturesAtPixel(evt.pixel)
+    map.on('singleclick', evt => {
+      const features = map.getFeaturesAtPixel(evt.pixel)
       if (features && features.length > 0) {
         const props = features[0].getProperties()
         setPopupData(props)
@@ -75,11 +81,44 @@ const MapView = () => {
       }
     })
 
-    return () => olMap.setTarget(null)
+    // Load tribal overlays
+    const reservations = new VectorLayer({
+      source: new VectorSource({ url: reservationData, format: new GeoJSON() }),
+      visible: false,
+      style: new Style({
+        stroke: new Stroke({ color: '#ff1744', width: 2 }),
+        fill: new Fill({ color: 'rgba(255, 23, 68, 0.05)' })
+      })
+    })
+
+    const tribes = new VectorLayer({
+      source: new VectorSource({ url: tribalLandData, format: new GeoJSON() }),
+      visible: false,
+      style: feature => {
+        return new Style({
+          stroke: new Stroke({ color: '#8e24aa', width: 1.5 }),
+          fill: new Fill({ color: 'rgba(142, 36, 170, 0.2)' })
+        })
+      }
+    })
+
+    map.addLayer(reservations)
+    map.addLayer(tribes)
+
+    setReservationLayer(reservations)
+    setTribalLayer(tribes)
+
+    return () => map.setTarget(null)
   }, [])
+
+  useEffect(() => {
+    if (reservationLayer) reservationLayer.setVisible(layerVisibility.reservations)
+    if (tribalLayer) tribalLayer.setVisible(layerVisibility.tribalLands)
+  }, [layerVisibility, reservationLayer, tribalLayer])
 
   return (
     <>
+      <Sidebar layerVisibility={layerVisibility} setLayerVisibility={setLayerVisibility} />
       <div ref={mapRef} style={{ flexGrow: 1 }} />
       <div ref={popupRef} className="ol-popup">
         {popupData && <CountyPopup data={popupData} />}
@@ -89,3 +128,4 @@ const MapView = () => {
 }
 
 export default MapView
+
