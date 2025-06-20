@@ -10,11 +10,11 @@ import { render } from 'react-dom'
 import 'ol/ol.css'
 
 import CountyPopup from './CountyPopup'
+import TribalPopup from './TribalPopup'
 import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
 import Legend from './Legend'
 
-// External layers
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
 
@@ -24,7 +24,7 @@ const tribalMarkersUrl = process.env.PUBLIC_URL + '/data/tribal-markers-geocoded
 export default function MapView() {
   const mapRef = useRef()
   const popupRef = useRef()
-  const mapInstance = useRef(null) // to persist the map instance across effects
+  const mapInstance = useRef(null)
 
   const aiAnLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
@@ -102,7 +102,7 @@ export default function MapView() {
     setLayerState(updated)
   }
 
-  // TOUCH + DOUBLE TAP
+  // Touch interaction visual feedback
   useEffect(() => {
     const handleTouch = () => {
       document.body.style.cursor = 'pointer'
@@ -162,23 +162,26 @@ export default function MapView() {
           popupRef.current.style.display = 'block'
           found = true
         }
+        if (layer === tribalMarkerLayer && !found) {
+          const properties = feature.getProperties()
+          popup.setPosition(e.coordinate)
+          render(<TribalPopup properties={properties} />, popupRef.current)
+          popupRef.current.style.display = 'block'
+          found = true
+        }
       })
       if (!found) popupRef.current.style.display = 'none'
     })
 
-    // DOUBLE TAP DETECTION
     let lastTap = 0
     map.on('click', e => {
       const now = new Date().getTime()
       const timeSince = now - lastTap
-
       if (timeSince < 400 && timeSince > 0) {
-        const view = map.getView()
-        view.animate({ zoom: view.getZoom() + 1, duration: 300 })
+        map.getView().animate({ zoom: map.getView().getZoom() + 1, duration: 300 })
       } else {
         console.log('Single tap at:', e.coordinate)
       }
-
       lastTap = now
     })
 
