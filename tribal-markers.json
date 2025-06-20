@@ -1,0 +1,867 @@
+[
+  {
+    "name": "Absentee-Shawnee Tribe of Indians of Oklahoma",
+    "lat": 35.2932119,
+    "lng": -96.9241278
+  },
+  {
+    "name": "Agua Caliente Band of Cahuilla Indians, California",
+    "lat": 33.824,
+    "lng": -116.545
+  },
+  {
+    "name": "Ak-Chin Indian Community, Arizona",
+    "lat": 33.028,
+    "lng": -112.06
+  },
+  {
+    "name": "Alabama-Coushatta Tribe of Texas",
+    "lat": 30.701577,
+    "lng": -94.674011
+  },
+  {
+    "name": "Alabama-Quassarte Tribal Town",
+    "lat": 35.2411,
+    "lng": -96.2386
+  },
+  {
+    "name": "Apache Tribe of Oklahoma",
+    "lat": 35.0659637,
+    "lng": -98.2359535
+  },
+  {
+    "name": "Aroostook Band of Micmacs",
+    "lat": 46.6992,
+    "lng": -68.0341
+  },
+  {
+    "name": "Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana",
+    "lat": 48.35,
+    "lng": -105.53
+  },
+  {
+    "name": "Bad River Band of the Lake Superior Tribe of Chippewa Indians, Wisconsin",
+    "lat": 46.59,
+    "lng": -90.66
+  },
+  {
+    "name": "Bay Mills Indian Community, Michigan",
+    "lat": 46.4542,
+    "lng": -84.6136
+  },
+  {
+    "name": "Blackfeet Tribe of the Blackfeet Indian Reservation of Montana",
+    "lat": 48.5,
+    "lng": -113.0
+  },
+  {
+    "name": "Burns Paiute Tribe, Oregon",
+    "lat": 43.5883,
+    "lng": -119.0614
+  },
+  {
+    "name": "Cabazon Band of Cahuilla Indians, California",
+    "lat": 33.7174,
+    "lng": -116.1944
+  },
+  {
+    "name": "Caddo Nation of Oklahoma",
+    "lat": 35.22502880967241,
+    "lng": -98.34765981331239
+  },
+  {
+    "name": "Catawba Indian Nation, South Carolina",
+    "lat": 34.853,
+    "lng": -80.911
+  },
+  {
+    "name": "Cayuga Nation, New York",
+    "lat": 42.91,
+    "lng": -76.73
+  },
+  {
+    "name": "Cher-Ae Heights Indian Community of the Trinidad Rancheria, California",
+    "lat": 41.0542,
+    "lng": -124.1303
+  },
+  {
+    "name": "Cherokee Nation",
+    "lat": 35.750786,
+    "lng": -94.669789
+  },
+  {
+    "name": "Cheyenne and Arapaho Tribes, Oklahoma",
+    "lat": 35.6156047,
+    "lng": -98.6939
+  },
+  {
+    "name": "Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota",
+    "lat": 45.02,
+    "lng": -101.24
+  },
+  {
+    "name": "Chickahominy Indian Tribe",
+    "lat": 37.4327,
+    "lng": -76.9826
+  },
+  {
+    "name": "Chickasaw Nation",
+    "lat": 34.50,
+    "lng": -97.13
+  },
+  {
+    "name": "Chippewa Cree Indians of the Rocky Boy's Reservation, Montana",
+    "lat": 48.1837375,
+    "lng": -109.814561
+  },
+  {
+    "name": "Chitimacha Tribe of Louisiana",
+    "lat": 29.887985,
+    "lng": -91.528095
+  },
+  {
+    "name": "Choctaw Nation of Oklahoma",
+    "lat": 33.99,
+    "lng": -95.53
+  },
+  {
+    "name": "Citizen Potawatomi Nation, Oklahoma",
+    "lat": 35.40483,
+    "lng": -97.13474
+  },
+  {
+    "name": "Cocopah Tribe of Arizona",
+    "lat": 32.7325,
+    "lng": -114.6917
+  },
+  {
+    "name": "Coeur D'Alene Tribe",
+    "lat": 47.3142,
+    "lng": -116.9545
+  },
+  {
+    "name": "Colorado River Indian Tribes of the Colorado River Indian Reservation, Arizona and California",
+    "lat": 34.13,
+    "lng": -114.6
+  },
+  {
+    "name": "Comanche Nation, Oklahoma",
+    "lat": 34.67,
+    "lng": -98.47
+  },
+  {
+    "name": "Confederated Salish & Kootenai Tribes of the Flathead Reservation",
+    "lat": 47.45,
+    "lng": -114.28
+  },
+  {
+    "name": "Confederated Tribes and Bands of the Yakama Nation",
+    "lat": 46.3,
+    "lng": -120.5
+  },
+  {
+    "name": "Confederated Tribes of Siletz Indians of Oregon",
+    "lat": 44.901577,
+    "lng": -124.010611
+  },
+  {
+    "name": "Confederated Tribes of the Colville Reservation",
+    "lat": 48.13,
+    "lng": -118.88
+  },
+  {
+    "name": "Coquille Indian Tribe, Oregon",
+    "lat": 43.10938,
+    "lng": -123.95858
+  },
+  {
+    "name": "Coushatta Tribe of Louisiana",
+    "lat": 30.55,
+    "lng": -92.91
+  },
+  {
+    "name": "Cow Creek Band of Umpqua Tribe of Indians",
+    "lat": 42.9469,
+    "lng": -123.3378
+  },
+  {
+    "name": "Cowlitz Indian Tribe",
+    "lat": 46.1468,
+    "lng": -122.9084
+  },
+  {
+    "name": "Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota",
+    "lat": 44.1,
+    "lng": -99.43
+  },
+  {
+    "name": "Crow Tribe of Montana",
+    "lat": 45.618,
+    "lng": -107.46
+  },
+  {
+    "name": "Delaware Tribe of Indians",
+    "lat": 36.7582,
+    "lng": -95.919
+  },
+  {
+    "name": "Duckwater Shoshone Tribe, Nevada",
+    "lat": 38.9303,
+    "lng": -115.7103
+  },
+  {
+    "name": "Eastern Band of Cherokee Indians, North Carolina",
+    "lat": 35.4769,
+    "lng": -83.3203
+  },
+  {
+    "name": "Eastern Shawnee Tribe of Oklahoma",
+    "lat": 36.83905,
+    "lng": -94.61845
+  },
+  {
+    "name": "Ely Shoshone Tribe of Nevada",
+    "lat": 39.161,
+    "lng": -115.013
+  },
+  {
+    "name": "Flandreau Santee Sioux Tribe of South Dakota",
+    "lat": 44.04,
+    "lng": -96.6
+  },
+  {
+    "name": "Forest County Potawatomi Community, Wisconsin",
+    "lat": 45.67,
+    "lng": -88.88
+  },
+  {
+    "name": "Fort Belknap Indian Community of the Fort Belknap Reservation of Montana",
+    "lat": 48.06,
+    "lng": -108.78
+  },
+  {
+    "name": "Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation, Nevada and Oregon",
+    "lat": 41.9429,
+    "lng": -117.7076
+  },
+  {
+    "name": "Fort McDowell Yavapai Nation, Arizona",
+    "lat": 33.6333,
+    "lng": -111.6667
+  },
+  {
+    "name": "Fort Sill Apache Tribe of Oklahoma",
+    "lat": 34.8937875,
+    "lng": -98.3655607
+  },
+  {
+    "name": "Gila River Indian Community of the Gila River Indian Reservation, Arizona",
+    "lat": 33.16,
+    "lng": -112.03
+  },
+  {
+    "name": "Grand Traverse Band of Ottawa and Chippewa Indians, Michigan",
+    "lat": 45.0203,
+    "lng": -85.6061
+  },
+  {
+    "name": "Havasupai Tribe of the Havasupai Reservation, Arizona",
+    "lat": 36.2,
+    "lng": -112.7
+  },
+  {
+    "name": "Ho-Chunk Nation of Wisconsin",
+    "lat": 44.13,
+    "lng": -90.15
+  },
+  {
+    "name": "Hoh Indian Tribe, Washington",
+    "lat": 47.74,
+    "lng": -124.41
+  },
+  {
+    "name": "Hoopa Valley Tribe, California",
+    "lat": 41.096,
+    "lng": -123.688
+  },
+  {
+    "name": "Hopi Tribe of Arizona",
+    "lat": 35.85,
+    "lng": -110.61
+  },
+  {
+    "name": "Houlton Band of Maliseet Indians, Maine",
+    "lat": 46.12,
+    "lng": -67.79
+  },
+  {
+    "name": "Hualapai Indian Tribe of the Hualapai Indian Reservation, Arizona",
+    "lat": 35.9069,
+    "lng": -113.1328
+  },
+  {
+    "name": "Jamestown S'Klallam Tribe, Washington",
+    "lat": 48.12,
+    "lng": -123.08
+  },
+  {
+    "name": "Jena Band of Choctaw Indians, Louisiana",
+    "lat": 31.68,
+    "lng": -92.13
+  },
+  {
+    "name": "Jicarilla Apache Nation, New Mexico",
+    "lat": 36.5,
+    "lng": -107.0
+  },
+  {
+    "name": "Kaibab Band of Paiute Indians of the Kaibab Indian Reservation, Arizona",
+    "lat": 36.93,
+    "lng": -112.67
+  },
+  {
+    "name": "Kalispel Indian Community of the Kalispel Reservation, Washington",
+    "lat": 48.37,
+    "lng": -117.29
+  },
+  {
+    "name": "Keweenaw Bay Indian Community, Michigan",
+    "lat": 46.77,
+    "lng": -88.48
+  },
+  {
+    "name": "Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas",
+    "lat": 39.67,
+    "lng": -95.6
+  },
+  {
+    "name": "Klamath Tribes, Oregon",
+    "lat": 42.6,
+    "lng": -121.87
+  },
+  {
+    "name": "Kootenai Tribe of Idaho",
+    "lat": 48.77,
+    "lng": -116.32
+  },
+  {
+    "name": "Lac du Flambeau Band of Lake Superior Chippewa Indians, Wisconsin",
+    "lat": 45.97,
+    "lng": -89.89
+  },
+  {
+    "name": "Leech Lake Band of Ojibwe, Minnesota",
+    "lat": 47.28,
+    "lng": -94.22
+  },
+  {
+    "name": "Little Traverse Bay Bands of Odawa Indians, Michigan",
+    "lat": 45.37,
+    "lng": -85.0
+  },
+  {
+    "name": "Lower Elwha Tribal Community, Washington",
+    "lat": 48.15,
+    "lng": -123.56
+  },
+  {
+    "name": "Lummi Tribe of the Lummi Reservation, Washington",
+    "lat": 48.77,
+    "lng": -122.63
+  },
+  {
+    "name": "Makah Indian Tribe of the Makah Indian Reservation, Washington",
+    "lat": 48.33,
+    "lng": -124.6
+  },
+  {
+    "name": "Mashantucket Pequot Indian Tribe, Connecticut",
+    "lat": 41.47,
+    "lng": -71.97
+  },
+  {
+    "name": "Mashpee Wampanoag Tribe, Massachusetts",
+    "lat": 41.65,
+    "lng": -70.52
+  },
+  {
+    "name": "Menominee Indian Tribe of Wisconsin",
+    "lat": 45.1,
+    "lng": -88.6
+  },
+  {
+    "name": "Mescalero Apache Tribe of the Mescalero Reservation, New Mexico",
+    "lat": 33.2,
+    "lng": -105.7
+  },
+  {
+    "name": "Miami Tribe of Oklahoma",
+    "lat": 36.91,
+    "lng": -94.88
+  },
+  {
+    "name": "Miccosukee Tribe of Indians, Florida",
+    "lat": 25.74,
+    "lng": -80.64
+  },
+  {
+    "name": "Mi'kmaq Nation",
+    "lat": 46.6992,
+    "lng": -68.0341
+  },
+  {
+    "name": "Minnesota Chippewa Tribe, Minnesota",
+    "lat": 47.28,
+    "lng": -94.22
+  },
+  {
+    "name": "Mississippi Band of Choctaw Indians",
+    "lat": 32.8,
+    "lng": -89.2
+  },
+  {
+    "name": "Mohegan Tribe of Indians of Connecticut",
+    "lat": 41.49,
+    "lng": -72.08
+  },
+  {
+    "name": "Muckleshoot Indian Tribe, Washington",
+    "lat": 47.3,
+    "lng": -122.1
+  },
+  {
+    "name": "Muscogee (Creek) Nation, Oklahoma",
+    "lat": 35.75,
+    "lng": -96.0
+  },
+  {
+    "name": "Narragansett Indian Tribe, Rhode Island",
+    "lat": 41.45,
+    "lng": -71.55
+  },
+  {
+    "name": "Navajo Nation, Arizona, New Mexico & Utah",
+    "lat": 36.0,
+    "lng": -110.0
+  },
+  {
+    "name": "Nez Perce Tribe, Idaho",
+    "lat": 46.2,
+    "lng": -116.2
+  },
+  {
+    "name": "Nisqually Indian Tribe, Washington",
+    "lat": 47.01,
+    "lng": -122.65
+  },
+  {
+    "name": "Nooksack Indian Tribe, Washington",
+    "lat": 48.9,
+    "lng": -122.35
+  },
+  {
+    "name": "Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana",
+    "lat": 45.5,
+    "lng": -106.7
+  },
+  {
+    "name": "Northwestern Band of the Shoshone Nation, Utah",
+    "lat": 41.9,
+    "lng": -112.1
+  },
+  {
+    "name": "Oglala Sioux Tribe, South Dakota",
+    "lat": 43.3,
+    "lng": -102.5
+  },
+  {
+    "name": "Omaha Tribe of Nebraska",
+    "lat": 42.1,
+    "lng": -96.3
+  },
+  {
+    "name": "Oneida Indian Nation, New York",
+    "lat": 43.1,
+    "lng": -75.6
+  },
+  {
+    "name": "Onondaga Nation, New York",
+    "lat": 42.9,
+    "lng": -76.1
+  },
+  {
+    "name": "Osage Nation, Oklahoma",
+    "lat": 36.7,
+    "lng": -96.4
+  },
+  {
+    "name": "Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada",
+    "lat": 39.4,
+    "lng": -118.7
+  },
+  {
+    "name": "Pamunkey Indian Tribe, Virginia",
+    "lat": 37.58,
+    "lng": -77.01
+  },
+  {
+    "name": "Pascua Yaqui Tribe of Arizona",
+    "lat": 32.1,
+    "lng": -111.0
+  },
+  {
+    "name": "Passamaquoddy Tribe, Maine",
+    "lat": 45.1,
+    "lng": -67.3
+  },
+  {
+    "name": "Pauma Band of Luiseno Mission Indians of the Pauma & Yuima Reservation, California",
+    "lat": 33.3,
+    "lng": -116.9
+  },
+  {
+    "name": "Penobscot Nation, Maine",
+    "lat": 45.3,
+    "lng": -68.7
+  },
+  {
+    "name": "Peoria Tribe of Indians of Oklahoma",
+    "lat": 36.9,
+    "lng": -94.7
+  },
+  {
+    "name": "Pit River Tribe, California",
+    "lat": 41.0,
+    "lng": -121.4
+  },
+  {
+    "name": "Poarch Band of Creek Indians, Alabama",
+    "lat": 31.1,
+    "lng": -87.5
+  },
+  {
+    "name": "Ponca Tribe of Nebraska",
+    "lat": 42.6,
+    "lng": -97.8
+  },
+  {
+    "name": "Port Gamble S'Klallam Tribe, Washington",
+    "lat": 47.8,
+    "lng": -122.6
+  },
+  {
+    "name": "Pueblo of Acoma, New Mexico",
+    "lat": 34.9,
+    "lng": -107.5
+  },
+  {
+    "name": "Pueblo of Cochiti, New Mexico",
+    "lat": 35.6,
+    "lng": -106.3
+  },
+  {
+    "name": "Pueblo of Jemez, New Mexico",
+    "lat": 35.6,
+    "lng": -106.7
+  },
+  {
+    "name": "Pueblo of Laguna, New Mexico",
+    "lat": 35.0,
+    "lng": -107.3
+  },
+  {
+    "name": "Pueblo of San Felipe, New Mexico",
+    "lat": 35.4,
+    "lng": -106.4
+  },
+  {
+    "name": "Pueblo of Santa Ana, New Mexico",
+    "lat": 35.3,
+    "lng": -106.5
+  },
+  {
+    "name": "Pueblo of Taos, New Mexico",
+    "lat": 36.4,
+    "lng": -105.5
+  },
+  {
+    "name": "Pueblo of Zuni, New Mexico",
+    "lat": 35.0,
+    "lng": -108.8
+  },
+  {
+    "name": "Puyallup Tribe of the Puyallup Reservation, Washington",
+    "lat": 47.2,
+    "lng": -122.4
+  },
+  {
+    "name": "Quapaw Nation, Oklahoma",
+    "lat": 36.9,
+    "lng": -94.7
+  },
+  {
+    "name": "Quechan Tribe of the Fort Yuma Indian Reservation, California & Arizona",
+    "lat": 32.7,
+    "lng": -114.6
+  },
+  {
+    "name": "Quileute Tribe of the Quileute Reservation, Washington",
+    "lat": 47.9,
+    "lng": -124.6
+  },
+  {
+    "name": "Quinault Indian Nation, Washington",
+    "lat": 47.3,
+    "lng": -124.1
+  },
+  {
+    "name": "Red Lake Band of Chippewa Indians, Minnesota",
+    "lat": 47.9,
+    "lng": -95.2
+  },
+  {
+    "name": "Rosebud Sioux Tribe of the Rosebud Indian Reservation, South Dakota",
+    "lat": 43.2,
+    "lng": -100.8
+  },
+  {
+    "name": "Sac & Fox Nation, Oklahoma",
+    "lat": 35.6,
+    "lng": -96.8
+  },
+  {
+    "name": "Saginaw Chippewa Indian Tribe of Michigan",
+    "lat": 43.6,
+    "lng": -84.7
+  },
+  {
+    "name": "Saint Regis Mohawk Tribe, New York",
+    "lat": 45.0,
+    "lng": -74.6
+  },
+  {
+    "name": "Salt River Pima-Maricopa Indian Community of the Salt River Reservation, Arizona",
+    "lat": 33.5,
+    "lng": -111.8
+  },
+  {
+    "name": "Samish Indian Nation, Washington",
+    "lat": 48.5,
+    "lng": -122.5
+  },
+  {
+    "name": "San Carlos Apache Tribe of the San Carlos Reservation, Arizona",
+    "lat": 33.3,
+    "lng": -110.4
+  },
+  {
+    "name": "Santee Sioux Nation, Nebraska",
+    "lat": 42.8,
+    "lng": -97.8
+  },
+  {
+    "name": "Sauk-Suiattle Indian Tribe, Washington",
+    "lat": 48.3,
+    "lng": -121.6
+  },
+  {
+    "name": "Sault Ste. Marie Tribe of Chippewa Indians, Michigan",
+    "lat": 46.5,
+    "lng": -84.3
+  },
+  {
+    "name": "Seminole Nation of Oklahoma",
+    "lat": 35.2,
+    "lng": -96.6
+  },
+  {
+    "name": "Seminole Tribe of Florida",
+    "lat": 26.2,
+    "lng": -80.8
+  },
+  {
+    "name": "Seneca Nation of Indians, New York",
+    "lat": 42.2,
+    "lng": -78.7
+  },
+  {
+    "name": "Shakopee Mdewakanton Sioux Community, Minnesota",
+    "lat": 44.7,
+    "lng": -93.4
+  },
+  {
+    "name": "Shawnee Tribe",
+    "lat": 35.0,
+    "lng": -95.0
+  },
+  {
+    "name": "Shinnecock Indian Nation, New York",
+    "lat": 40.8,
+    "lng": -72.4
+  },
+  {
+    "name": "Shoalwater Bay Indian Tribe of the Shoalwater Bay Indian Reservation, Washington",
+    "lat": 46.7,
+    "lng": -124.0
+  },
+  {
+    "name": "Shoshone-Bannock Tribes of the Fort Hall Reservation, Idaho",
+    "lat": 43.0,
+    "lng": -112.4
+  },
+  {
+    "name": "Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota",
+    "lat": 45.6,
+    "lng": -97.0
+  },
+  {
+    "name": "Skokomish Indian Tribe, Washington",
+    "lat": 47.3,
+    "lng": -123.1
+  },
+  {
+    "name": "Snoqualmie Indian Tribe, Washington",
+    "lat": 47.5,
+    "lng": -121.8
+  },
+  {
+    "name": "Spirit Lake Tribe, North Dakota",
+    "lat": 47.9,
+    "lng": -98.9
+  },
+  {
+    "name": "Spokane Tribe of the Spokane Reservation, Washington",
+    "lat": 47.8,
+    "lng": -118.0
+  },
+  {
+    "name": "Standing Rock Sioux Tribe of North & South Dakota",
+    "lat": 46.0,
+    "lng": -100.9
+  },
+  {
+    "name": "Stillaguamish Tribe of Indians of Washington",
+    "lat": 48.2,
+    "lng": -122.2
+  },
+  {
+    "name": "Suquamish Indian Tribe of the Port Madison Reservation, Washington",
+    "lat": 47.7,
+    "lng": -122.5
+  },
+  {
+    "name": "Swinomish Indian Tribal Community, Washington",
+    "lat": 48.4,
+    "lng": -122.5
+  },
+  {
+    "name": "Te-Moak Tribe of Western Shoshone Indians of Nevada",
+    "lat": 40.7,
+    "lng": -115.7
+  },
+  {
+    "name": "Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota",
+    "lat": 47.7,
+    "lng": -102.0
+  },
+  {
+    "name": "Tohono O'odham Nation of Arizona",
+    "lat": 32.0,
+    "lng": -112.0
+  },
+  {
+    "name": "Tonawanda Band of Seneca, New York",
+    "lat": 43.0,
+    "lng": -78.3
+  },
+  {
+    "name": "Tonto Apache Tribe of Arizona",
+    "lat": 34.2,
+    "lng": -111.3
+  },
+  {
+    "name": "Tulalip Tribes of Washington",
+    "lat": 48.0,
+    "lng": -122.2
+  },
+  {
+    "name": "Tule River Indian Tribe of the Tule River Reservation, California",
+    "lat": 36.1,
+    "lng": -118.8
+  },
+  {
+    "name": "Tunica-Biloxi Indian Tribe, Louisiana",
+    "lat": 31.0,
+    "lng": -92.0
+  },
+  {
+    "name": "Turtle Mountain Band of Chippewa Indians of North Dakota",
+    "lat": 48.8,
+    "lng": -99.8
+  },
+  {
+    "name": "Tuscarora Nation, New York",
+    "lat": 43.1,
+    "lng": -79.0
+  },
+  {
+    "name": "United Auburn Indian Community of the Auburn Rancheria, California",
+    "lat": 38.9,
+    "lng": -121.0
+  },
+  {
+    "name": "United Keetoowah Band of Cherokee Indians in Oklahoma",
+    "lat": 35.9,
+    "lng": -94.9
+  },
+  {
+    "name": "Upper Skagit Indian Tribe, Washington",
+    "lat": 48.4,
+    "lng": -122.3
+  },
+  {
+    "name": "Ute Indian Tribe of the Uintah and Ouray Reservation, Utah",
+    "lat": 40.1,
+    "lng": -109.8
+  },
+  {
+    "name": "Ute Mountain Ute Tribe, Colorado, New Mexico & Utah",
+    "lat": 37.1,
+    "lng": -108.6
+  },
+  {
+    "name": "Wampanoag Tribe of Gay Head (Aquinnah), Massachusetts",
+    "lat": 41.3,
+    "lng": -70.8
+  },
+  {
+    "name": "Washoe Tribe of Nevada & California",
+    "lat": 39.0,
+    "lng": -119.8
+  },
+  {
+    "name": "White Mountain Apache Tribe of the Fort Apache Reservation, Arizona",
+    "lat": 33.8,
+    "lng": -110.0
+  },
+  {
+    "name": "Winnebago Tribe of Nebraska",
+    "lat": 42.2,
+    "lng": -96.4
+  },
+  {
+    "name": "Yankton Sioux Tribe of South Dakota",
+    "lat": 43.0,
+    "lng": -98.2
+  },
+  {
+    "name": "Yavapai-Apache Nation of the Camp Verde Indian Reservation, Arizona",
+    "lat": 34.5,
+    "lng": -111.8
+  },
+  {
+    "name": "Yurok Tribe of the Yurok Reservation, California",
+    "lat": 41.3,
+    "lng": -123.9
+  }
+]
