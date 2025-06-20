@@ -1,9 +1,15 @@
+// geocode-tribes.js
+
 import fs from 'fs/promises'
 import fetch from 'node-fetch'
+import dotenv from 'dotenv'
+
+dotenv.config()  // Loads .env into process.env
 
 const MAPBOX_API_KEY = process.env.MAPBOX_API_KEY
+
 if (!MAPBOX_API_KEY) {
-    console.error('❌ Missing MAPBOX_API_KEY environment variable.')
+    console.error('❌ Missing MAPBOX_API_KEY in .env')
     process.exit(1)
 }
 
