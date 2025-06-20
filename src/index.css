@@ -1,0 +1,28 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.ol-popup {
+  position: absolute;
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  min-width: 240px;
+  z-index: 999;
+}
+
+.fade-layer {
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.fade-layer.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
