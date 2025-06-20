@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Navajo Nation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.2937295,
+          36.1828057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pine Ridge Reservation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.1145042,
+          43.4108835
+        ]
+      }
+    }
+  ]
+}
