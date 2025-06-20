@@ -1,0 +1,26 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Navajo Nation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-109.5, 36.1]  // Placeholder or resolved
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherokee"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-84.1, 35.7]  // Placeholder or resolved
+      }
+    }
+    // + hundreds more
+  ]
+}
