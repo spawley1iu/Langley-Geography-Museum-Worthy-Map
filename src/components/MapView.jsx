@@ -1,17 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { render } from 'react-dom'
-import 'ol/ol.css'
 import { Map, View, Overlay } from 'ol'
 import TileLayer from 'ol/layer/Tile'
 import VectorLayer from 'ol/layer/Vector'
 import VectorSource from 'ol/source/Vector'
 import GeoJSON from 'ol/format/GeoJSON'
 import OSM from 'ol/source/OSM'
-import { Style, Fill, Stroke } from 'ol/style'
+import { render } from 'react-dom'
+
+import 'ol/ol.css'
 
 import CountyPopup from './CountyPopup'
 import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
+import Legend from './Legend'
+
+// External layers
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
 
@@ -19,27 +22,20 @@ export default function MapView() {
   const mapRef = useRef()
   const popupRef = useRef()
 
-  // === Choropleth Layers ===
   const aiAnLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
-    style: new Style({ fill: new Fill({ color: 'rgba(180, 60, 60, 0.6)' }), stroke: new Stroke({ color: '#333', width: 0.5 }) }),
     className: 'ai_an',
-    visible: true,
-    opacity: 1
+    visible: true
   })
 
   const povertyLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
-    style: new Style({ fill: new Fill({ color: 'rgba(60, 60, 180, 0.6)' }), stroke: new Stroke({ color: '#333', width: 0.5 }) }),
-    visible: true,
-    opacity: 1
+    visible: true
   })
 
   const incomeLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
-    style: new Style({ fill: new Fill({ color: 'rgba(60, 180, 60, 0.6)' }), stroke: new Stroke({ color: '#333', width: 0.5 }) }),
-    visible: true,
-    opacity: 1
+    visible: true
   })
 
   const [layerState, setLayerState] = useState({
@@ -47,6 +43,19 @@ export default function MapView() {
     'Poverty': { layer: povertyLayer, visible: true },
     'Income': { layer: incomeLayer, visible: true }
   })
+
+  const [reservationVisible, setReservationVisible] = useState(true)
+  const [ancestralVisible, setAncestralVisible] = useState(true)
+
+  function toggleReservation() {
+    reservationsLayer.setVisible(!reservationVisible)
+    setReservationVisible(!reservationVisible)
+  }
+
+  function toggleAncestral() {
+    ancestralLayer.setVisible(!ancestralVisible)
+    setAncestralVisible(!ancestralVisible)
+  }
 
   function fadeLayer(layer, visible) {
     const duration = 600
@@ -65,12 +74,12 @@ export default function MapView() {
 
   function toggleLayer(key) {
     const updated = { ...layerState }
-    const current = updated[key]
-    const newVisible = !current.visible
+    const layerObj = updated[key]
+    const newVisible = !layerObj.visible
 
-    fadeLayer(current.layer, newVisible)
-    current.layer.setVisible(true) // remain visible to allow fading
-    updated[key].visible = newVisible
+    fadeLayer(layerObj.layer, newVisible)
+    layerObj.layer.setVisible(true) // Keep layer active
+    layerObj.visible = newVisible
     setLayerState(updated)
   }
 
@@ -99,7 +108,7 @@ export default function MapView() {
       })
     })
 
-    // Tribal hover tooltip
+    // 🧭 Tribal Boundary Hover Tooltip
     map.on('pointermove', e => {
       let hoverDone = false
       map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
@@ -114,7 +123,7 @@ export default function MapView() {
       if (!hoverDone) popupRef.current.style.display = 'none'
     })
 
-    // County data popup
+    // 📍 County Data Popup
     map.on('singleclick', e => {
       let found = false
       map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
@@ -149,6 +158,12 @@ export default function MapView() {
         />
         <MobileDrawer>
           <LayerToggle layers={layerState} toggleLayer={toggleLayer} />
+          <Legend
+              toggleReservation={toggleReservation}
+              toggleAncestral={toggleAncestral}
+              reservationVisible={reservationVisible}
+              ancestralVisible={ancestralVisible}
+          />
         </MobileDrawer>
       </>
   )
