@@ -1,0 +1,49 @@
+.legend-container {
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    max-width: 260px;
+    font-family: sans-serif;
+}
+
+.legend-section {
+    margin-top: 1em;
+}
+
+.swatches {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.swatch-row {
+    display: flex;
+    align-items: center;
+}
+
+.color-box {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #999;
+    margin-right: 8px;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.layer-toggle {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.layer-toggle:hover {
+    background-color: #d0d0d0;
+}
