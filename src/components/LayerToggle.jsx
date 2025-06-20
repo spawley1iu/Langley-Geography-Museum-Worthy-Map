@@ -1,25 +1,21 @@
+// src/components/LayerToggle.jsx
 import React from 'react'
-import { FormControlLabel, Switch, Paper } from '@mui/material'
 
-const LayerToggle = ({ toggles, onChange }) => {
+export default function LayerToggle({ layers, toggleLayer }) {
     return (
-        <Paper elevation={3} sx={{
-            position: 'absolute',
-            top: 10,
-            left: 10,
-            padding: 2,
-            zIndex: 1000
-        }}>
-            <FormControlLabel
-                control={<Switch checked={toggles.reservations} onChange={() => onChange('reservations')} />}
-                label="Reservations"
-            />
-            <FormControlLabel
-                control={<Switch checked={toggles.ancestral} onChange={() => onChange('ancestral')} />}
-                label="Ancestral Lands"
-            />
-        </Paper>
+        <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 1000, background: '#fff', padding: '10px', borderRadius: 8 }}>
+            {Object.keys(layers).map(key => (
+                <div key={key}>
+                    <label>
+                        <input
+                            type="checkbox"
+                            checked={layers[key].visible}
+                            onChange={() => toggleLayer(key)}
+                        />
+                        {key}
+                    </label>
+                </div>
+            ))}
+        </div>
     )
 }
-
-export default LayerToggle
