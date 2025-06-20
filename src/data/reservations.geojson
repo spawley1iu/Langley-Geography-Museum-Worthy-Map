@@ -1,110 +1,136 @@
-import requests
-import json
-import os
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.file.Paths;
 
-def create_tribal_lands_geojson():
-    """
-    Fetches data for Federally Recognized Tribal Reservations from an ArcGIS server
-    and all Ancestral Territories from the Native Land Digital API. It then
-    combines them into a single GeoJSON FeatureCollection and saves it to a
-    file named 'reservations.geojson'.
-    """
-    # --- Data Sources ---
-    # URL for Federally Recognized Tribal Reservations from the Bureau of Indian Affairs (BIA) ArcGIS Layer
-    bia_reservations_url = 'https://gis.bia.gov/server/rest/services/External/BIA_AIAN_National_Layer/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson'
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class GeoJsonGenerator {
+
+    // --- DATA SOURCES ---
+    // URL for Federally Recognized Tribal Reservations from the Bureau of Indian Affairs (BIA) ArcGIS Layer
+    private static final String BIA_RESERVATIONS_URL = "https://gis.bia.gov/server/rest/services/External/BIA_AIAN_National_Layer/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson";
     
-    # URL for all Ancestral Territories from the Native Land Digital API
-    native_land_url = 'https://native-land.ca/api/v1/territories'
+    // URL for all Ancestral Territories from the Native Land Digital API
+    private static final String NATIVE_LAND_URL = "https://native-land.ca/api/v1/territories";
+    
+    public static void main(String[] args) {
+        // This is the entry point of the application.
+        createTribalLandsGeoJson();
+    }
 
-    print("Starting the process to create 'reservations.geojson'...")
-
-    try:
-        # --- Fetching Data ---
-        print("Fetching Federally Recognized Reservations data from BIA ArcGIS server...")
-        reservations_response = requests.get(bia_reservations_url)
-        # This will raise an HTTPError for bad responses (4xx or 5xx)
-        reservations_response.raise_for_status()
-        reservations_data = reservations_response.json()
-        print(f"...Success. Fetched {len(reservations_data.get('features', []))} reservation features.")
-
-        print("Fetching all Ancestral Territories data from Native Land Digital API...")
-        print("(This may take a few moments as it's a large dataset)")
-        native_land_response = requests.get(native_land_url, headers={'Accept': 'application/json'})
-        native_land_response.raise_for_status()
-        native_land_data = native_land_response.json()
-        print(f"...Success. Fetched {len(native_land_data)} ancestral territory records.")
+    /**
+     * Fetches data for Federally Recognized Tribal Reservations and Native Land
+     * Ancestral Territories, combines them into a single GeoJSON FeatureCollection,
+     * and saves it to a file named 'reservations.geojson'.
+     */
+    public static void createTribalLandsGeoJson() {
+        System.out.println("Starting the process to create 'reservations.geojson'...");
         
-        # --- Processing and Combining Data ---
-        print("Processing and combining the datasets...")
+        // Use Java's modern HttpClient for making web requests.
+        HttpClient client = HttpClient.newHttpClient();
 
-        # 1. Process BIA Reservations Data
-        # We will add a 'source' property to each feature for clear identification.
-        bia_features = reservations_data.get('features', [])
-        for feature in bia_features:
-            if 'properties' in feature and feature['properties'] is not None:
-                feature['properties']['source'] = 'BIA_Federally_Recognized_Reservation'
-            else:
-                feature['properties'] = {'source': 'BIA_Federally_Recognized_Reservation'}
+        try {
+            // --- FETCHING DATA ---
+            // 1. Fetch data from the BIA ArcGIS server
+            System.out.println("Fetching Federally Recognized Reservations data from BIA ArcGIS server...");
+            HttpRequest reservationsRequest = HttpRequest.newBuilder()
+                    .uri(URI.create(BIA_RESERVATIONS_URL))
+                    .build();
+            HttpResponse<String> reservationsResponse = client.send(reservationsRequest, HttpResponse.BodyHandlers.ofString());
+            
+            if (reservationsResponse.statusCode() != 200) {
+                throw new IOException("Failed to fetch BIA data. Status code: " + reservationsResponse.statusCode());
+            }
+            // Parse the response body into a JSON Object
+            JSONObject reservationsData = new JSONObject(reservationsResponse.body());
+            System.out.println("...Success. Fetched BIA data.");
 
 
-        # 2. Process Native Land Data into GeoJSON Feature format
-        # The API returns a list of custom objects; we need to format them as standard GeoJSON Features.
-        native_land_features = []
-        for territory in native_land_data:
-            # We must check if geometry data exists and is valid before creating a feature.
-            if territory.get('geometry') and territory['geometry'].get('coordinates'):
-                feature = {
-                    'type': 'Feature',
-                    'geometry': territory['geometry'],
-                    'properties': {
-                        'source': 'NativeLand_Ancestral_Territory',
-                        'name': territory.get('name', 'N/A'),
-                        'slug': territory.get('slug'),
-                        'description': territory.get('description')
-                    }
+            // 2. Fetch data from the Native Land Digital API
+            System.out.println("Fetching all Ancestral Territories data from Native Land Digital API...");
+            System.out.println("(This may take a few moments as it's a large dataset)");
+            HttpRequest nativeLandRequest = HttpRequest.newBuilder()
+                    .uri(URI.create(NATIVE_LAND_URL))
+                    .header("Accept", "application/json")
+                    .build();
+            HttpResponse<String> nativeLandResponse = client.send(nativeLandRequest, HttpResponse.BodyHandlers.ofString());
+
+            if (nativeLandResponse.statusCode() != 200) {
+                throw new IOException("Failed to fetch Native Land data. Status code: " + nativeLandResponse.statusCode());
+            }
+            // Parse the response body into a JSON Array
+            JSONArray nativeLandData = new JSONArray(nativeLandResponse.body());
+            System.out.println("...Success. Fetched " + nativeLandData.length() + " ancestral territory records.");
+
+            // --- PROCESSING AND COMBINING DATA ---
+            System.out.println("Processing and combining the datasets...");
+
+            // Get the 'features' array from the BIA data
+            JSONArray biaFeatures = reservationsData.getJSONArray("features");
+            JSONArray combinedFeatures = new JSONArray();
+
+            // Process and add BIA features to the combined list
+            for (int i = 0; i < biaFeatures.length(); i++) {
+                JSONObject feature = biaFeatures.getJSONObject(i);
+                feature.getJSONObject("properties").put("source", "BIA_Federally_Recognized_Reservation");
+                combinedFeatures.put(feature);
+            }
+
+            // Process and add Native Land features to the combined list
+            for (int i = 0; i < nativeLandData.length(); i++) {
+                JSONObject territory = nativeLandData.getJSONObject(i);
+                // Check if geometry data exists and is valid before creating a feature.
+                if (territory.has("geometry") && !territory.isNull("geometry")) {
+                    JSONObject feature = new JSONObject();
+                    feature.put("type", "Feature");
+                    feature.put("geometry", territory.getJSONObject("geometry"));
+
+                    JSONObject properties = new JSONObject();
+                    properties.put("source", "NativeLand_Ancestral_Territory");
+                    properties.put("name", territory.optString("name", "N/A"));
+                    properties.put("slug", territory.optString("slug"));
+                    properties.put("description", territory.optString("description"));
+                    
+                    feature.put("properties", properties);
+                    combinedFeatures.put(feature);
                 }
-                native_land_features.append(feature)
+            }
 
-        # 3. Combine the feature lists from both sources
-        combined_features = bia_features + native_land_features
-        
-        # 4. Create the final GeoJSON FeatureCollection object
-        final_geojson = {
-            "type": "FeatureCollection",
-            "name": "Combined_Tribal_And_Ancestral_Lands",
-            "features": combined_features
+            // Create the final GeoJSON FeatureCollection object
+            JSONObject finalGeoJson = new JSONObject();
+            finalGeoJson.put("type", "FeatureCollection");
+            finalGeoJson.put("name", "Combined_Tribal_And_Ancestral_Lands");
+            finalGeoJson.put("features", combinedFeatures);
+
+            System.out.println("Total combined features in the dataset: " + combinedFeatures.length());
+
+            // --- SAVING THE FILE ---
+            String outputFilename = "reservations.geojson";
+            System.out.println("Saving combined data to '" + outputFilename + "'...");
+            
+            try (FileWriter file = new FileWriter(outputFilename)) {
+                // Use toString(2) for pretty-printing the JSON with an indent of 2 spaces
+                file.write(finalGeoJson.toString(2));
+                file.flush();
+            }
+
+            // --- FINAL SUCCESS MESSAGE ---
+            String absPath = Paths.get(outputFilename).toAbsolutePath().toString();
+            System.out.println("\n----------------------------------------------------");
+            System.out.println("Success! The file was created at: " + absPath);
+            System.out.println("----------------------------------------------------");
+
+        } catch (IOException | InterruptedException e) {
+            System.err.println("\nAn error occurred during network communication or file writing.");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("\nAn unexpected error occurred during JSON processing or other operations.");
+            e.printStackTrace();
         }
-        
-        print(f"Total combined features in the dataset: {len(combined_features)}")
-
-        # --- Saving the File ---
-        output_filename = 'reservations.geojson'
-        print(f"Saving combined data to '{output_filename}'...")
-        with open(output_filename, 'w', encoding='utf-8') as f:
-            # Use json.dump() to write the dictionary to the file.
-            # `indent=2` makes the output file human-readable.
-            # `ensure_ascii=False` correctly handles special characters and symbols.
-            json.dump(final_geojson, f, ensure_ascii=False, indent=2)
-        
-        # --- Final Success Message ---
-        # Provides the absolute path to the created file for clarity.
-        abs_path = os.path.abspath(output_filename)
-        print("\n----------------------------------------------------")
-        print(f"Success! The file was created at: {abs_path}")
-        print("----------------------------------------------------")
-
-
-    except requests.exceptions.RequestException as e:
-        print(f"\nError: A network error occurred while trying to fetch data.")
-        print(f"Details: {e}")
-        print("Please check your internet connection and ensure the data sources are online.")
-    except json.JSONDecodeError as e:
-        print(f"\nError: Failed to parse the data received from the server.")
-        print(f"Details: {e}")
-        print("The API might be temporarily down or returning an unexpected format.")
-    except Exception as e:
-        print(f"\nAn unexpected error occurred: {e}")
-
-# This standard Python construct ensures the function runs only when the script is executed directly.
-if __name__ == "__main__":
-    create_tribal_lands_geojson()
+    }
+}
