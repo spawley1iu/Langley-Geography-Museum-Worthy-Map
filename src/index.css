@@ -26,3 +26,9 @@ html, body, #root {
   opacity: 0;
   pointer-events: none;
 }
+#map {
+  touch-action: pan-x pan-y;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
