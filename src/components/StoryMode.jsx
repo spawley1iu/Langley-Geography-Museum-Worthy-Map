@@ -1,72 +1,101 @@
+// src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react'
-import { fromLonLat } from 'ol/proj'
-import storyData from '../public/data/storyData.json'
+import storySlides from '../data/storyData.json'
 import './styles/StoryMode.css'
 
-export default function StoryMode({ map }) {
-    const [slides, setSlides] = useState([])
-    const [idx, setIdx] = useState(0)
+// import the same layer objects you use in MapView:
+import ancestralLayer from '../ol/layers/ancestralLayer'
+import reservationsLayer from '../ol/layers/reservationsLayer'
 
-    // Load JSON on mount
-    useEffect(() => {
-        setSlides(storyData)
-    }, [])
+export default function StoryMode({ map, highlightSource }) {
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const slide = storySlides[currentIndex]
 
-    // Whenever idx or map changes, pan & zoom
     useEffect(() => {
-        if (map && slides.length) {
-            const slide = slides[idx]
-            const center = fromLonLat(slide.coordinates)
-            map.getView().animate({ center, zoom: slide.zoom || 6, duration: 600 })
+        if (!map || !highlightSource || !slide) return
+
+        // clear previous highlight
+        highlightSource.clear()
+
+        // pick the right source
+        let source = null
+        switch (slide.type) {
+            case 'tribe':
+                // find the tribal‐markers layer by its geojson URL
+                const tribeLayer = map
+                    .getLayers()
+                    .getArray()
+                    .find(
+                        (l) =>
+                            typeof l.getSource === 'function' &&
+                            l.getSource().getUrl?.()?.includes('tribal-markers-geocoded.geojson')
+                    )
+                source = tribeLayer?.getSource()
+                break
+
+            case 'land':
+                source = ancestralLayer.getSource()
+                break
+
+            case 'event':
+                source = reservationsLayer.getSource()
+                break
+
+            default:
+                source = null
         }
-    }, [idx, map, slides])
 
-    if (!slides.length) return null
+        if (source) {
+            // find the feature matching this slide’s name
+            const feat = source.getFeatures().find((f) => f.get('name') === slide.featureName)
+            if (feat) {
+                // add a clone to the highlight layer
+                highlightSource.addFeature(feat.clone())
+                // pan & zoom
+                map.getView().animate({
+                    center: feat.getGeometry().getCoordinates(),
+                    zoom: slide.zoom || 6,
+                    duration: 600
+                })
+            }
+        }
+    }, [currentIndex, map, highlightSource, slide])
 
-    const { title, description, image, audio, youtube, link } = slides[idx]
+    if (!slide) return null
 
     return (
         <div className="story-mode-panel">
-            <h2>{title}</h2>
+            <h2>{slide.featureName}</h2>
+            <p>{slide.description}</p>
 
-            {image && <img src={image} alt={title} className="story-image" />}
-
-            <p>{description}</p>
-
-            {audio && (
-                <audio controls className="story-audio">
-                    <source src={audio} type="audio/mpeg" />
-                    Your browser doesn’t support audio.
-                </audio>
-            )}
-
-            {youtube && (
+            {slide.videoUrl && (
                 <div className="story-video">
                     <iframe
                         width="100%"
-                        height="200"
-                        src={youtube}
+                        height="250"
+                        src={slide.videoUrl.replace('watch?v=', 'embed/')}
                         frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        title="story video"
+                        title={slide.featureName}
                     />
                 </div>
             )}
 
-            {link && (
-                <p>
-                    <a href={link} target="_blank" rel="noopener noreferrer">
-                        Learn more →
-                    </a>
-                </p>
-            )}
-
             <div className="story-controls">
-                <button onClick={() => setIdx((idx - 1 + slides.length) % slides.length)}>
+                <button
+                    onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
+                    disabled={currentIndex === 0}
+                >
                     ← Previous
                 </button>
-                <button onClick={() => setIdx((idx + 1) % slides.length)}>
+                <span>
+          {currentIndex + 1} / {storySlides.length}
+        </span>
+                <button
+                    onClick={() => setCurrentIndex((i) => Math.min(storySlides.length - 1, i + 1))}
+                    disabled={currentIndex === storySlides.length - 1}
+                >
                     Next →
                 </button>
             </div>
