@@ -15,6 +15,7 @@ import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
 import Legend from './Legend'
 import SearchBox from './SearchBox'
+import StoryMode from './StoryMode'
 
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
@@ -25,28 +26,24 @@ export default function MapView() {
   const mapRef = useRef()
   const popupRef = useRef()
   const mapInstance = useRef(null)
+  const [mapObj, setMapObj] = useState(null)
 
+  // Layers
   const aiAnLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
     className: 'ai_an',
     visible: true
   })
-
   const povertyLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
     visible: true
   })
-
   const incomeLayer = new VectorLayer({
     source: new VectorSource({ url: '/data/counties.geojson', format: new GeoJSON() }),
     visible: true
   })
-
   const tribalMarkerLayer = new VectorLayer({
-    source: new VectorSource({
-      url: tribalMarkersUrl,
-      format: new GeoJSON()
-    }),
+    source: new VectorSource({ url: tribalMarkersUrl, format: new GeoJSON() }),
     style: new Style({
       image: new CircleStyle({
         radius: 6,
@@ -57,17 +54,12 @@ export default function MapView() {
     visible: true
   })
 
-  const thematicGroups = {
-    Demographics: ['AI/AN %', 'Poverty', 'Income'],
-    Geography: ['Reservations', 'Ancestral Lands'],
-    PointsOfInterest: ['Tribal Markers']
-  }
-
+  // Themed groups (for LayerToggle)
   const [layerGroups, setLayerGroups] = useState({
     Demographics: {
       'AI/AN %': { layer: aiAnLayer, visible: true },
-      'Poverty': { layer: povertyLayer, visible: true },
-      'Income': { layer: incomeLayer, visible: true }
+      Poverty: { layer: povertyLayer, visible: true },
+      Income: { layer: incomeLayer, visible: true }
     },
     PointsOfInterest: {
       'Tribal Markers': { layer: tribalMarkerLayer, visible: true }
@@ -77,8 +69,10 @@ export default function MapView() {
   const [reservationVisible, setReservationVisible] = useState(true)
   const [ancestralVisible, setAncestralVisible] = useState(true)
 
+  // For search dropdown
   const [tribeNames, setTribeNames] = useState([])
 
+  // Fetch tribe names for SearchBox
   useEffect(() => {
     fetch(tribalMarkersUrl)
         .then(res => res.json())
@@ -88,6 +82,7 @@ export default function MapView() {
         })
   }, [])
 
+  // Zoom to selected tribe
   function zoomToTribe(tribeName) {
     const source = tribalMarkerLayer.getSource()
     const features = source.getFeatures()
@@ -102,7 +97,6 @@ export default function MapView() {
     reservationsLayer.setVisible(!reservationVisible)
     setReservationVisible(!reservationVisible)
   }
-
   function toggleAncestral() {
     ancestralLayer.setVisible(!ancestralVisible)
     setAncestralVisible(!ancestralVisible)
@@ -110,39 +104,35 @@ export default function MapView() {
 
   function fadeLayer(layer, visible) {
     const duration = 600
-    const startOpacity = visible ? 0 : 1
-    const endOpacity = visible ? 1 : 0
+    const start = visible ? 0 : 1
+    const end = visible ? 1 : 0
     const step = 16 / duration
-    let progress = 0
-
-    const interval = setInterval(() => {
-      progress += step
-      const opacity = startOpacity + (endOpacity - startOpacity) * progress
-      layer.setOpacity(Math.min(Math.max(opacity, 0), 1))
-      if (progress >= 1) clearInterval(interval)
+    let prog = 0
+    const iv = setInterval(() => {
+      prog += step
+      layer.setOpacity(Math.min(Math.max(start + (end - start) * prog, 0), 1))
+      if (prog >= 1) clearInterval(iv)
     }, 16)
   }
 
   function toggleLayerInGroup(groupName, layerName) {
     const updated = { ...layerGroups }
     const target = updated[groupName][layerName]
-    const newVisible = !target.visible
-
-    fadeLayer(target.layer, newVisible)
+    const newVis = !target.visible
+    fadeLayer(target.layer, newVis)
     target.layer.setVisible(true)
-    target.visible = newVisible
-
+    target.visible = newVis
     setLayerGroups(updated)
   }
 
+  // Cursor change on touch devices
   useEffect(() => {
-    const handleTouch = () => {
-      document.body.style.cursor = 'pointer'
-    }
-    window.addEventListener('touchstart', handleTouch)
-    return () => window.removeEventListener('touchstart', handleTouch)
+    const onTouch = () => (document.body.style.cursor = 'pointer')
+    window.addEventListener('touchstart', onTouch)
+    return () => window.removeEventListener('touchstart', onTouch)
   }, [])
 
+  // Initialize map
   useEffect(() => {
     const popup = new Overlay({
       element: popupRef.current,
@@ -170,34 +160,36 @@ export default function MapView() {
     })
 
     mapInstance.current = map
+    setMapObj(map) // 🔑 let StoryMode pick up the map
 
+    // Hover for ancestral lands
     map.on('pointermove', e => {
-      let hoverDone = false
-      map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
-        if (layer === ancestralLayer && !hoverDone) {
-          const name = feature.get('name') || 'Unnamed Territory'
+      let done = false
+      map.forEachFeatureAtPixel(e.pixel, (feat, lyr) => {
+        if (lyr === ancestralLayer && !done) {
+          const nm = feat.get('name') || 'Unnamed Territory'
           popup.setPosition(e.coordinate)
-          popupRef.current.innerHTML = `<strong>${name}</strong>`
+          popupRef.current.innerHTML = `<strong>${nm}</strong>`
           popupRef.current.style.display = 'block'
-          hoverDone = true
+          done = true
         }
       })
-      if (!hoverDone) popupRef.current.style.display = 'none'
+      if (!done) popupRef.current.style.display = 'none'
     })
 
+    // Click popups
     map.on('singleclick', e => {
       let found = false
-      map.forEachFeatureAtPixel(e.pixel, (feature, layer) => {
-        if (layer?.getClassName?.() === 'ai_an' && !found) {
+      map.forEachFeatureAtPixel(e.pixel, (feat, lyr) => {
+        if (lyr?.getClassName?.() === 'ai_an' && !found) {
           popup.setPosition(e.coordinate)
-          render(<CountyPopup feature={feature} />, popupRef.current)
+          render(<CountyPopup feature={feat} />, popupRef.current)
           popupRef.current.style.display = 'block'
           found = true
         }
-        if (layer === tribalMarkerLayer && !found) {
-          const properties = feature.getProperties()
+        if (lyr === tribalMarkerLayer && !found) {
           popup.setPosition(e.coordinate)
-          render(<TribalPopup properties={properties} />, popupRef.current)
+          render(<TribalPopup properties={feat.getProperties()} />, popupRef.current)
           popupRef.current.style.display = 'block'
           found = true
         }
@@ -205,14 +197,14 @@ export default function MapView() {
       if (!found) popupRef.current.style.display = 'none'
     })
 
+    // Double-tap zoom
     let lastTap = 0
     map.on('click', e => {
-      const now = new Date().getTime()
-      const timeSince = now - lastTap
-      if (timeSince < 400 && timeSince > 0) {
-        map.getView().animate({ zoom: map.getView().getZoom() + 1, duration: 300 })
-      } else {
-        console.log('Single tap at:', e.coordinate)
+      const now = Date.now()
+      const dt = now - lastTap
+      if (dt > 0 && dt < 400) {
+        const view = map.getView()
+        view.animate({ zoom: view.getZoom() + 1, duration: 300 })
       }
       lastTap = now
     })
@@ -222,12 +214,24 @@ export default function MapView() {
 
   return (
       <>
-        <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 1000, background: 'white', borderRadius: 4 }}>
+        {/* Search */}
+        <div
+            style={{
+              position: 'absolute',
+              top: 10,
+              left: 10,
+              zIndex: 1000,
+              background: 'white',
+              borderRadius: 4
+            }}
+        >
           <SearchBox tribes={tribeNames} onSelect={zoomToTribe} />
         </div>
 
+        {/* Map Container */}
         <div ref={mapRef} style={{ width: '100vw', height: '100vh' }} />
 
+        {/* Popup Container */}
         <div
             ref={popupRef}
             className="ol-popup"
@@ -242,6 +246,10 @@ export default function MapView() {
             }}
         />
 
+        {/* Story Mode Panel */}
+        {mapObj && <StoryMode map={mapObj} />}
+
+        {/* Layer Controls & Legend */}
         <MobileDrawer>
           <LayerToggle layerGroups={layerGroups} toggleLayer={toggleLayerInGroup} />
           <Legend
