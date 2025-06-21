@@ -1,29 +1,452 @@
-[
+/**
+ * story-mode.jsx
+ *
+ * This file contains the definitive, combined data for an educational, interactive story map.
+ * Each object represents a chapter, theme, or a specific Nation, designed to be visualized on a map.
+ * The content is curated from revered sources including PBS, Vision Maker Media, the National Film Board of Canada,
+ * tribal media, and academic institutions to center Indigenous voices and perspectives.
+ *
+ * Coordinates are in [longitude, latitude] format (EPSG:4326).
+ * These can be reprojected to Web Mercator (EPSG:3857) for use with map libraries.
+ *
+ * YouTube URLs are formatted for embedding. Other links are provided directly to the source.
+ */
+
+export const stories = [
+  // --- Part I: The Unbroken Chain: Sovereignty, Law, and Self-Determination ---
+  {
+    "id": "doctrine-of-discovery",
+    "title": "The Doctrine of Discovery",
+    "description": "A series of 15th-century papal bulls that gave Christian explorers the right to claim lands inhabited by non-Christians. This doctrine formed the legal and religious basis for the dispossession of Indigenous peoples worldwide and continues to influence U.S. Indian Law.",
+    "coordinates": [12.4534, 41.9023], // Vatican City
+    "youtube": "https://www.youtube.com/embed/lK3i4-M7p2w",
+    "link": "https://upstanderproject.org/learn/guides-and-resources/doctrine-of-discovery",
+    "theme": "Sovereignty & Law"
+  },
+  {
+    "id": "hawaiian-sovereignty",
+    "title": "Act of War: The Overthrow of the Hawaiian Nation",
+    "description": "This film details the 1893 illegal overthrow of the Hawaiian Kingdom by American businessmen, backed by U.S. Marines. It tells the story from a Native Hawaiian perspective, providing the historical foundation for the modern Hawaiian sovereignty movement.",
+    "coordinates": [-157.8583, 21.3069], // Honolulu, HI
+    "youtube": "https://itvs.org/films/act-of-war",
+    "link": "https://itvs.org/films/act-of-war",
+    "theme": "Sovereignty & Law"
+  },
+  {
+    "id": "fish-wars",
+    "title": "The Fish Wars & The Boldt Decision",
+    "description": "Chronicles the Pacific Northwest Indigenous civil rights movement of the 1960s-70s, where fishers staged 'fish-ins' to assert their treaty rights. This activism led to the landmark 1974 Boldt Decision, reaffirming tribal sovereignty and co-management of salmon resources.",
+    "coordinates": [-122.3321, 47.6062], // Seattle, WA (Center of legal battles)
+    "youtube": "https://nwtreatytribes.org/indigenous-civil-rights-documentary-fish-war-to-premiere-at-siff/",
+    "link": "https://nwtreatytribes.org/indigenous-civil-rights-documentary-fish-war-to-premiere-at-siff/",
+    "theme": "Sovereignty & Law"
+  },
+  {
+    "id": "ancsa",
+    "title": "ANCSA: The Alaska Native Claims Settlement Act",
+    "description": "In 1971, ANCSA settled aboriginal land claims by creating a system of Native-owned corporations. This film explores the complex 50-year legacy of this unique experiment in Indigenous self-determination through a corporate model.",
+    "coordinates": [-149.9003, 61.2181], // Anchorage, AK
+    "youtube": "https://ancsaregional.com/ancsaat50film/",
+    "link": "https://ancsaregional.com/ancsaat50film/",
+    "theme": "Sovereignty & Law"
+  },
+  {
+    "id": "federal-recognition",
+    "title": "The Gauntlet: The Fight for Federal Recognition",
+    "description": "For hundreds of unrecognized tribes, the costly and arduous process of gaining federal recognition is a modern form of political erasure. 'The Forgotten Creeks' tells the story of the Poarch Band of Creek Indians' successful, decades-long fight to have their history seen.",
+    "coordinates": [-87.4950, 31.0088], // Atmore, AL (Poarch Creek)
+    "youtube": "https://pci-nsn.gov/our-story/the-forgotten-creeks/",
+    "link": "https://pci-nsn.gov/our-story/the-forgotten-creeks/",
+    "theme": "Sovereignty & Law"
+  },
+
+  // --- Part II: Echoes of Injustice: Legacies of U.S. Federal Policy ---
+  {
+    "id": "california-missions",
+    "title": "The Mission System's Shadow",
+    "description": "This documentary challenges the romanticized narrative of the California Missions, elevating Native perspectives to expose the system's devastating impact through forced labor, disease, and cultural destruction. It is a call for historical truth-telling.",
+    "coordinates": [-121.8947, 36.6052], // Carmel Mission, CA
+    "youtube": "https://www.parks.ca.gov/?page_id=31643",
+    "link": "https://www.parks.ca.gov/?page_id=31643",
+    "theme": "Historical Trauma"
+  },
+  {
+    "id": "boarding-schools",
+    "title": "Home From School: The Children of Carlisle",
+    "description": "The story of the Northern Arapaho's journey to repatriate the remains of their children from the Carlisle Indian Industrial School, whose motto was 'Kill the Indian, save the man.' A powerful look at the brutal legacy of the boarding school system and the healing power of bringing ancestors home.",
+    "coordinates": [-77.1945, 40.2084], // Carlisle, PA
+    "youtube": "https://www.pbs.org/independentlens/documentaries/home-from-school-the-children-of-carlisle/",
+    "link": "https://www.pbs.org/independentlens/documentaries/home-from-school-the-children-of-carlisle/",
+    "theme": "Historical Trauma"
+  },
+  {
+    "id": "adoption-era-icwa",
+    "title": "Dawnland: The Indian Adoption Era & ICWA",
+    "description": "This Emmy-winning film investigates the systematic removal of Wabanaki children from their families by state child welfare services. It follows the first U.S. truth and reconciliation commission, providing essential context for the Indian Child Welfare Act (ICWA).",
+    "coordinates": [-68.7712, 44.8016], // Bangor, ME (Wabanaki Territory)
+    "youtube": "https://www.pbs.org/independentlens/documentaries/dawnland/",
+    "link": "https://www.pbs.org/independentlens/documentaries/dawnland/",
+    "theme": "Historical Trauma"
+  },
+  {
+    "id": "termination-era",
+    "title": "Termination and Relocation",
+    "description": "'Those Who Remember' captures the voices of Siletz tribal members who lived through the Termination Era, when the U.S. dissolved its relationship with tribes. It tells the story of their fight to reverse this policy and regain federal recognition in 1977.",
+    "coordinates": [-123.9218, 44.9546], // Siletz, OR
+    "youtube": "https://siletzartsheritagesociety.org/termination-era-film-2025/",
+    "link": "https://siletzartsheritagesociety.org/termination-era-film-2025/",
+    "theme": "Historical Trauma"
+  },
+
+  // --- Part III: The Rise of Red Power: Activism and Modern Resistance ---
+  {
+    "id": "alcatraz-occupation",
+    "title": "We Hold the Rock: The Occupation of Alcatraz",
+    "description": "In 1969, a group of Indigenous activists called 'Indians of All Tribes' occupied Alcatraz Island, igniting the modern Red Power movement and forcing a shift in federal policy away from termination and toward self-determination.",
+    "coordinates": [-122.4230, 37.8267], // Alcatraz Island, CA
+    "youtube": "https://www.pbslearningmedia.org/resource/ush22-soc-wim-alcatraz/the-occupation-of-alcatraz-1969-why-it-matters/",
+    "link": "https://www.pbs.org/wgbh/americanexperience/features/alcatraz-proclamation-and-letter/",
+    "theme": "Activism & Resistance"
+  },
+  {
+    "id": "wounded-knee-1973",
+    "title": "Standoff at Wounded Knee (1973)",
+    "description": "Commemorating the 50th anniversary, 'A Tattoo On My Heart' tells the story of the 71-day armed standoff at Wounded Knee through the intimate perspectives of the American Indian Movement (AIM) members who were there, demanding the U.S. honor its treaties.",
+    "coordinates": [-102.3690, 43.1419], // Wounded Knee, SD
+    "youtube": "https://www.pbs.org/video/a-tattoo-on-my-heart-the-warriors-of-wounded-knee-1973-huxfe5/",
+    "link": "https://www.pbs.org/wgbh/americanexperience/films/weshallremain/#episode_5",
+    "theme": "Activism & Resistance"
+  },
+  {
+    "id": "standing-rock",
+    "title": "Mni Wiconi: The Standing Rock Protests",
+    "description": "'Oyate' frames the 2016 Dakota Access Pipeline (#NoDAPL) protests as an inflection point for human rights. It shows how the movement, rooted in the cry 'Mni Wiconi - Water Is Life,' created a new blueprint for 21st-century Indigenous resistance.",
+    "coordinates": [-100.6517, 46.4111], // Standing Rock Sioux Reservation
+    "youtube": "https://www.filmswithapurpose.net/oyate",
+    "link": "https://www.filmswithapurpose.net/oyate",
+    "theme": "Activism & Resistance"
+  },
+
+  // --- Part IV: A Journey Through Nations ---
   {
     "id": "abenaki",
-    "title": "Abenaki Confederacy",
-    "description": "An alliance of Abenaki bands in what is now Vermont and New Hampshire, known for their birchbark canoes and Wabanaki Confederacy ties.",
+    "title": "Abenaki",
+    "description": "The Indigenous inhabitants of Wabanahkik ('Dawnland') in New England and Quebec. Today, Abenaki communities are vibrant centers of cultural revitalization, focused on language, traditional arts like basketmaking, and healing from historical traumas like the 20th-century eugenics programs.",
     "coordinates": [-72.5778, 44.2601],
-    "image": "/media/abenaki-18th-century-couple.jpg",
-    "youtube": "https://www.youtube.com/embed/VIDEO_ID_ABENAKI",
-    "audio": "/media/abenaki-language-recording.mp3",
-    "link": "https://en.wikipedia.org/wiki/Abenaki"
+    "youtube": "https://www.tenk.ca/en/documentaires/the-films-of-alanis-obomsawin/waban-aki-people-from-where-the-sun-rises",
+    "link": "https://abenaki-edu.org/",
+    "theme": "A Journey Through Nations"
   },
   {
     "id": "absaroka-crow",
-    "title": "Crow Nation (Absaroka)",
-    "description": "The Apsáalooke (“Children of the Large-Beaked Bird”) occupy the Crow Indian Reservation in south-central Montana.",
+    "title": "Absaroka (Crow)",
+    "description": "The Apsáalooke Nation of the Northern Plains are leaders in the fight for food sovereignty and the protection of their sacred lands in the Yellowstone River Valley. Their culture is renowned for its equestrian skills and matrilineal society.",
     "coordinates": [-107.4582, 45.6025],
-    "image": "/media/crow-distinguished-indians.jpg",
-    "youtube": "https://www.youtube.com/embed/VIDEO_ID_CROW",
-    "link": "https://en.wikipedia.org/wiki/Crow_Nation"
+    "youtube": "https://www.crowcountrydoc.com/",
+    "link": "https://itvs.org/films/contrary-warriors",
+    "theme": "A Journey Through Nations"
   },
   {
-    "id": "trail-of-tears",
-    "title": "Trail of Tears",
-    "description": "The forced removal (1830s) of the Cherokee, Muscogee, Seminole, Chickasaw and Choctaw nations from the southeastern United States.",
-    "coordinates": [-85.7350, 35.4825],
-    "youtube": "https://www.youtube.com/embed/VIDEO_ID_TRAIL_OF_TEARS",
-    "link": "https://en.wikipedia.org/wiki/Trail_of_Tears"
+    "id": "apache",
+    "title": "Apache",
+    "description": "Known for their fierce resistance to colonization, Apache groups were led by figures like Geronimo. Today, their nations celebrate resilience through art, including the legacy of Chiricahua sculptor Allan Houser.",
+    "coordinates": [-105.7917, 33.3444],
+    "youtube": "https://www.youtube.com/embed/KN9SifI6xbs",
+    "link": "https://mescaleroapachetribe.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "arapaho",
+    "title": "Arapaho",
+    "description": "The Hinono'eino ('Our People') of the Plains are engaged in preserving their unique language and history, including the story of their survival after the Sand Creek Massacre and their life on the Wind River Reservation.",
+    "coordinates": [-108.7330, 43.1558],
+    "youtube": "https://www.arapahotruths.com/we-are-the-arapaho-people",
+    "link": "https://www.northernarapaho.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "blackfeet-siksikaitsitapi",
+    "title": "Blackfeet (Siksikaitsitapi)",
+    "description": "A confederacy whose territory stretched across the Northern Plains. They are leaders in conservation, fighting to protect sacred lands like the Badger-Two Medicine area and restoring wild buffalo to their ancestral lands.",
+    "coordinates": [-112.9843, 48.5570],
+    "youtube": "https://itvs.org/films/backbone-of-the-world",
+    "link": "https://www.thunderheartfilms.com/bring-them-home",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "caddo",
+    "title": "Caddo",
+    "description": "A sophisticated agricultural society from the Red River Valley, known for their advanced pottery. Today, they are revitalizing their language and the ancient art of river cane basketry.",
+    "coordinates": [-98.3967, 35.3039],
+    "youtube": "https://www.pbs.org/video/caddo-voices-a-basketry-retrieval-coesgt/",
+    "link": "https://mycaddonation.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "cherokee",
+    "title": "Cherokee",
+    "description": "The Cherokee were forcibly removed from their Southeastern homelands on the 'Trail of Tears'. Today, the three federally recognized Cherokee tribes are leaders in media, language revitalization, and grappling with complex questions of citizenship for the descendants of their former slaves, the Freedmen.",
+    "coordinates": [-94.9727, 35.9151],
+    "youtube": "http://osiyo.tv/",
+    "link": "https://www.cherokee.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "cheyenne",
+    "title": "Cheyenne",
+    "description": "The Tsitsistas ('the people') were central figures in the Plains Wars. Today, the Northern and Southern Cheyenne nations focus on healing historical trauma, preserving their warrior society traditions, and creating opportunities for youth.",
+    "coordinates": [-105.8610, 45.4247],
+    "youtube": "https://www.catv35.com/",
+    "link": "http://www.cheyennenation.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "chickasaw",
+    "title": "Chickasaw",
+    "description": "Known as unconquerable warriors, the Chickasaw have a thriving sovereign nation in Oklahoma and tell their own stories through their world-class media production company, Chickasaw Films.",
+    "coordinates": [-96.6783, 34.7745],
+    "youtube": "https://chickasawfilms.com/Projects/Documentaries",
+    "link": "https://www.chickasaw.net/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "comanche",
+    "title": "Comanche",
+    "description": "Master equestrian warriors who built an empire on the Southern Plains. Today, the nation is healing from the trauma of boarding schools and preserving the legacy of leaders like Quanah Parker.",
+    "coordinates": [-98.3917, 34.6067],
+    "youtube": "https://tv.apple.com/us/episode/quanah-parker-the-last-comanche/umc.cmc.52pwsa7omxc1plpf3coar3w6o",
+    "link": "https://www.comanchenation.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "creek-muscogee",
+    "title": "Creek (Muscogee)",
+    "description": "A confederation from the Southeast. Those who resisted removal remain in Alabama as the Poarch Band, while the Muscogee Nation in Oklahoma fights to protect sacred sites like the Hickory Ground.",
+    "coordinates": [-95.9730, 35.6159],
+    "youtube": "https://pci-nsn.gov/our-story/the-forgotten-creeks/",
+    "link": "https://www.muscogeenation.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "delaware-lenape",
+    "title": "Delaware (Lenape)",
+    "description": "The original people of 'Lenapehoking' (the Delaware Valley), who were scattered across the continent by centuries of forced migrations. Today they are revitalizing their language and culture.",
+    "coordinates": [-95.9344, 36.6517],
+    "youtube": "https://www.pbs.org/video/the-secret-world-of-the-lenape-and-truths-about-1770s-life-ks8nel/",
+    "link": "https://delawaretribe.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "flathead-salish",
+    "title": "Flathead (Salish)",
+    "description": "The Confederated Salish and Kootenai Tribes of Montana are leaders in tribal governance and are saving their language from extinction through innovative immersion schools.",
+    "coordinates": [-114.1687, 47.4788],
+    "youtube": "https://www.pbs.org/show/saving-salish/",
+    "link": "https://www.csktribes.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "hopi",
+    "title": "Hopi",
+    "description": "Living in the oldest continuously inhabited settlement in the U.S. The Hopi have a complex ceremonial life, expressed in their art and the concept of 'Koyaanisqatsi' (life out of balance).",
+    "coordinates": [-110.6391, 35.8239],
+    "youtube": "https://www.youtube.com/embed/1y6oGam232s",
+    "link": "https://www.hopi-nsn.gov/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "iroquois-haudenosaunee",
+    "title": "Iroquois (Haudenosaunee)",
+    "description": "The 'People of the Longhouse,' a confederacy of six nations. Their Great Law of Peace is one of the world's oldest participatory democracies and influenced the U.S. Constitution.",
+    "coordinates": [-76.1474, 42.9893],
+    "youtube": "https://www.pbs.org/show/wmht-specials/collections/iroquois/",
+    "link": "https://www.haudenosauneeconfederacy.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "kiowa",
+    "title": "Kiowa",
+    "description": "A Southern Plains nation known for their pictorial calendars, the artistic achievements of the 'Kiowa Six' painters, and their fierce resistance led by figures like Satanta.",
+    "coordinates": [-98.4612, 35.1587],
+    "youtube": "https://www.youtube.com/embed/8k3cRXBVGg4",
+    "link": "https://kiowatribe.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "lakota",
+    "title": "Lakota",
+    "description": "The westernmost division of the Great Sioux Nation, their history is defined by their defense of the sacred Black Hills and pivotal events like the Battle of the Little Bighorn and the Wounded Knee Massacre. Today, Lakota people are leaders in language revitalization and treaty rights.",
+    "coordinates": [-102.5532, 43.4300],
+    "youtube": "https://www.pbs.org/independentlens/documentaries/without-arrows/",
+    "link": "https://www.oglalalakotanation.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "navajo-dine",
+    "title": "Navajo (Diné)",
+    "description": "The largest tribe in the U.S. by land base. The Navajo Code Talkers were crucial to WWII victory, and their culture is known for weaving and silversmithing.",
+    "coordinates": [-109.0449, 35.6728],
+    "youtube": "https://www.youtube.com/embed/5rS4K6mJ5RE",
+    "link": "http://www.navajo-nsn.gov/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "nez-perce",
+    "title": "Nez Percé",
+    "description": "The Nimiipuu embarked on a heroic 1,600-mile fighting retreat in 1877, led by Chief Joseph, in an attempt to reach freedom in Canada. Their story is an epic of resistance.",
+    "coordinates": [-116.6343, 46.3479],
+    "youtube": "https://www.pbs.org/show/sacred-journey-nez-perce/",
+    "link": "https://nezperce.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "pawnee",
+    "title": "Pawnee",
+    "description": "Known for their earth lodge villages and sophisticated astronomy. The Pawnee Nation is reviving its culture by repatriating and cultivating their ancestral seeds.",
+    "coordinates": [-96.8045, 36.3384],
+    "youtube": "https://www.rmpbs.org/shows/homegrown-documentary-shorts-collection/episodes/pawnee-seed-warriors-revive-ancient-ties-ancestors-vnnbq1",
+    "link": "https://pawneenation.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "pomo",
+    "title": "Pomo",
+    "description": "An Indigenous people of Northern California renowned for their intricate basketry. Today they are active in the 'Land Back' movement, seeking to restore Indigenous stewardship.",
+    "coordinates": [-123.2078, 39.1502],
+    "youtube": "https://www.nativewomeninfilm.com/pomo-land-back/",
+    "link": "https://www.northernpomolanguagetools.com/texts/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "puebloan-peoples",
+    "title": "Puebloan Peoples",
+    "description": "A diverse group of nations in the Southwest known for their permanent villages (pueblos). In 1680, they united in the successful Pueblo Revolt to expel Spanish colonizers.",
+    "coordinates": [-106.6504, 35.0844],
+    "youtube": "https://indianpueblo.org/media-center/",
+    "link": "https://indianpueblo.org/learn/pueblo-revolt/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "seminole",
+    "title": "Seminole",
+    "description": "A nation that coalesced in Florida from various Indigenous groups and free Black people. They famously resisted removal in three wars against the U.S.",
+    "coordinates": [-80.2423, 26.1154],
+    "youtube": "https://www.youtube.com/embed/8IJtNpMlFVo",
+    "link": "https://www.semtribe.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "shawnee",
+    "title": "Shawnee",
+    "description": "A highly mobile people of the Ohio Valley, led by the famed leader Tecumseh who sought to form a pan-tribal resistance to U.S. expansion.",
+    "coordinates": [-96.9248, 35.3378],
+    "youtube": "https://www.youtube.com/embed/0DOTJPYSjXU",
+    "link": "https://www.shawnee-tribe.com/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "shoshone",
+    "title": "Shoshone",
+    "description": "The Northwestern Band of the Shoshone are the survivors of the 1863 Bear River Massacre. Today, they are reclaiming the massacre site to create a place of healing.",
+    "coordinates": [-111.9436, 42.1249],
+    "youtube": "https://www.youtube.com/embed/AUwm1EH1LPk",
+    "link": "https://www.boaogoi.org/",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "sioux",
+    "title": "Sioux (Oceti Sakowin)",
+    "description": "The Great Sioux Nation, or Seven Council Fires, includes the Dakota, Lakota, and Nakota. Their history includes the U.S.-Dakota War of 1862, which resulted in the largest mass execution in U.S. history.",
+    "coordinates": [-94.7820, 44.5577],
+    "youtube": "https://www.youtube.com/embed/oIjAkJlHZZA",
+    "link": "https://www.mnhs.org/us-dakota-war",
+    "theme": "A Journey Through Nations"
+  },
+  {
+    "id": "zuni",
+    "title": "Zuni",
+    "description": "A Pueblo people with a unique language, known for their intricate silver inlay jewelry and fetish carvings. Their culture emphasizes a living, evolving continuity.",
+    "coordinates": [-108.8473, 35.0692],
+    "youtube": "https://www.youtube.com/embed/ejLUZ-YDPMs",
+    "link": "https://www.ashiwi.org/",
+    "theme": "A Journey Through Nations"
+  },
+
+  // --- Part V: We Are Still Here: Cultural Revitalization & Contemporary Life ---
+  {
+    "id": "language-revitalization",
+    "title": "The Breath of Language: Revitalization",
+    "description": "'We Still Live Here' tells the astonishing story of the Wampanoag, who brought their language back from extinction after a century of silence. It is a powerful testament to the language revitalization movements sweeping across Indian Country.",
+    "coordinates": [-70.6698, 41.6582], // Mashpee, MA (Wampanoag)
+    "youtube": "https://www.pbs.org/independentlens/films/we-still-live-here/",
+    "link": "https://www.pbs.org/independentlens/films/we-still-live-here/",
+    "theme": "Cultural Revitalization"
+  },
+  {
+    "id": "food-sovereignty-tek",
+    "title": "Reclaiming the Diet: Food Sovereignty & TEK",
+    "description": "'Tending the Wild' reveals the sophisticated Traditional Ecological Knowledge (TEK) of California's tribes, who actively managed their lands for millennia. The series showcases the modern movement to decolonize diets by reviving these ancient foodways.",
+    "coordinates": [-119.6982, 36.7783], // Central California
+    "youtube": "https://www.pbs.org/show/tending-wild/",
+    "link": "https://www.kcet.org/shows/tending-the-wild",
+    "theme": "Cultural Revitalization"
+  },
+  {
+    "id": "land-back",
+    "title": "Land Back: A Prayer From the Forest",
+    "description": "'Pomo Land Back' documents the spiritual and political movement to restore Indigenous stewardship over ancestral lands. It shows that returning land is essential for cultural survival, ecological healing, and restoring balance.",
+    "coordinates": [-123.2078, 39.1502], // Pomo Territory, CA
+    "youtube": "https://www.nativewomeninfilm.com/pomo-land-back/",
+    "link": "https://landback.org/",
+    "theme": "Cultural Revitalization"
+  },
+  {
+    "id": "two-spirit-traditions",
+    "title": "A Sacred Identity: Reclaiming Two-Spirit Traditions",
+    "description": "'Two Spirits' explores the honored place of integrated genders in many pre-colonial Indigenous societies through the tragic story of Fred Martinez, a Navajo nádleehí. The film documents the contemporary movement to decolonize gender and revitalize these sacred roles.",
+    "coordinates": [-109.0449, 35.6728], // Window Rock, AZ (Navajo Nation)
+    "youtube": "https://www.pbs.org/independentlens/documentaries/two-spirits/",
+    "link": "https://www.pbs.org/independentlens/documentaries/two-spirits/",
+    "theme": "Cultural Revitalization"
+  },
+
+  // --- Part VI: Seeking Justice in the 21st Century ---
+  {
+    "id": "mmiw-crisis",
+    "title": "No More Stolen Sisters: The MMIW Epidemic",
+    "description": "'Bring Her Home' puts a human face on the Missing and Murdered Indigenous Women (MMIW) crisis. It follows three women as they fight for justice for their relatives, highlighting the grassroots activism led by women at the heart of the MMIW movement.",
+    "coordinates": [-100.7788, 47.5515], // North Dakota (Center of MMIW activism)
+    "youtube": "https://www.pbs.org/show/bring-her-home/",
+    "link": "https://www.niwrc.org/",
+    "theme": "Contemporary Justice"
+  },
+  {
+    "id": "environmental-justice",
+    "title": "The Front Lines of Climate Change",
+    "description": "'Manzanar, Diverted' shows an unexpected alliance of Japanese American elders, Native activists (Paiute and Shoshone), and environmentalists defending their shared landscape in California's Owens Valley from water diversion, linking historical injustices to contemporary environmental battles.",
+    "coordinates": [-118.1549, 36.7449], // Manzanar, CA
+    "youtube": "https://visionmakermedia.org/film/manzanar-diverted-when-water-becomes-dust/",
+    "link": "https://www.manzanardiverted.com/",
+    "theme": "Contemporary Justice"
+  },
+
+  // --- Part VII: Deconstructing the Narrative: Representation & Erasure ---
+  {
+    "id": "media-stereotypes",
+    "title": "Reel Injun: On the Trail of the Hollywood Indian",
+    "description": "Cree filmmaker Neil Diamond deconstructs the evolution of the 'Hollywood Indian,' critiquing a century of media stereotypes. The film is an insightful and humorous look at the lasting impact of misrepresentation and the power of authentic storytelling.",
+    "coordinates": [-118.3287, 34.0928], // Hollywood, CA
+    "youtube": "https://www.pbs.org/independentlens/films/reel-injun/",
+    "link": "https://www.pbs.org/independentlens/films/reel-injun/",
+    "theme": "Representation"
+  },
+  {
+    "id": "vanishing-indian-myth",
+    "title": "Ishi and the 'Vanishing Indian' Myth",
+    "description": "'Ishi, the Last Yahi' chronicles the life of the last known survivor of a genocide, whose story was used to create the myth of the 'Vanishing Indian.' The film serves as a case study in how this narrative erases violent history and legitimizes colonial occupation.",
+    "coordinates": [-121.5065, 39.9347], // Oroville, CA (Ishi's Ancestral Land)
+    "youtube": "https://www.pbs.org/wgbh/americanexperience/films/ishi/",
+    "link": "https://www.pbs.org/wgbh/americanexperience/films/ishi/",
+    "theme": "Representation"
   }
-]
+];
