@@ -14,6 +14,7 @@ import TribalPopup from './TribalPopup'
 import LayerToggle from './LayerToggle'
 import MobileDrawer from './MobileDrawer'
 import Legend from './Legend'
+import SearchBox from './SearchBox'
 
 import reservationsLayer from '../ol/layers/reservationsLayer'
 import ancestralLayer from '../ol/layers/ancestralLayer'
@@ -75,6 +76,27 @@ export default function MapView() {
 
   const [reservationVisible, setReservationVisible] = useState(true)
   const [ancestralVisible, setAncestralVisible] = useState(true)
+
+  const [tribeNames, setTribeNames] = useState([])
+
+  useEffect(() => {
+    fetch(tribalMarkersUrl)
+        .then(res => res.json())
+        .then(data => {
+          const names = data.features.map(f => f.properties.name)
+          setTribeNames(names)
+        })
+  }, [])
+
+  function zoomToTribe(tribeName) {
+    const source = tribalMarkerLayer.getSource()
+    const features = source.getFeatures()
+    const match = features.find(f => f.get('name') === tribeName)
+    if (match) {
+      const coords = match.getGeometry().getCoordinates()
+      mapInstance.current.getView().animate({ center: coords, zoom: 6, duration: 600 })
+    }
+  }
 
   function toggleReservation() {
     reservationsLayer.setVisible(!reservationVisible)
@@ -200,7 +222,12 @@ export default function MapView() {
 
   return (
       <>
+        <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 1000, background: 'white', borderRadius: 4 }}>
+          <SearchBox tribes={tribeNames} onSelect={zoomToTribe} />
+        </div>
+
         <div ref={mapRef} style={{ width: '100vw', height: '100vh' }} />
+
         <div
             ref={popupRef}
             className="ol-popup"
@@ -214,6 +241,7 @@ export default function MapView() {
               boxShadow: '0 2px 6px rgba(0,0,0,0.3)'
             }}
         />
+
         <MobileDrawer>
           <LayerToggle layerGroups={layerGroups} toggleLayer={toggleLayerInGroup} />
           <Legend
