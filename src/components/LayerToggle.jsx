@@ -1,6 +1,5 @@
 import React from 'react'
-import './styles/LayerToggle.css'
-
+import "src/styles/LayerToggle.css"
 const LayerToggle = ({ layers, toggleLayer }) => {
     return (
         <div className="layer-toggle-container">
