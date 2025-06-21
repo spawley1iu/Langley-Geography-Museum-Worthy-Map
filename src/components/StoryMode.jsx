@@ -1,6 +1,6 @@
 // src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react'
-import storySlides from '../data/storyData.json'
+import storySlides from 'src/data/storyData.json'
 import './styles/StoryMode.css'
 
 // import the same layer objects you use in MapView:
