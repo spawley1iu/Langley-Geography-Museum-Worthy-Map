@@ -19,3 +19,7 @@
 .layer-toggle-list input[type='checkbox'] {
     margin-right: 6px;
 }
+/* src/components/styles/LayerToggle.css */
+.layer-toggle-container {
+    /* your styles… */
+}
