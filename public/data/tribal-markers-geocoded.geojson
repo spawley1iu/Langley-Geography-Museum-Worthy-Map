@@ -1,1 +1,2123 @@
-
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.5778,
+          44.2601
+        ]
+      },
+      "properties": {
+        "name": "Abenaki",
+        "description": "Cultural assets and information for the Abenaki tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Replica of an archaic style dress made from milkweed plant fiber",
+            "url": "representing pre-contact attire. Made by Vera Walker Sheehan.\",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Archaic-Style-Dress-by-Vera-Walker-Sheehan-1-768x1024.jpg"
+          },
+          {
+            "type": "Image",
+            "title": "Hand-woven milkweed fiber satchel used for collecting plants and seeds. Made by Vera Walker Sheehan.",
+            "url": "https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Twined-Bag-by-Vera-Walker-Sheehan-1-768x1024.jpg"
+          },
+          {
+            "type": "Image",
+            "title": "Abenaki women\u0027s headgear made of French lace",
+            "url": "ribbon, and beads in the curved motif of the Wabanaki Confederacy. Made by Lori Lambert.\",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Womens-Headgear-by-Lori-Lambert-1-768x1024.jpg"
+          },
+          {
+            "type": "Image",
+            "title": "Gourd art by Jeanne Morningstar Kent telling the traditional stories of \u0027Gluscape Fights the Water Serpent\u0027 and \u0027How Woodpecker Got His Red Head.\u0027",
+            "url": "https://abenaki-edu.org/wp-content/uploads/2021/04/Gourd-Art-by-Jeanne-Morningstar-Kent-scaled.jpg"
+          },
+          {
+            "type": "Image",
+            "title": "Photos from crafting and music classes",
+            "url": "fundraisers, and community gatherings.\",https://abenakination.com/news-%26-events"
+          },
+          {
+            "type": "Audio",
+            "title": "Language and cultural recordings",
+            "url": "including the Paul Thompson fonds and Bernard Assiniwi fonds.\",https://recherche-research.bac-lac.gc.ca/eng/public/list/46319"
+          },
+          {
+            "type": "Audio",
+            "title": "Music featuring traditional instruments like drums and rattles made from wood and rawhide.",
+            "url": "https://moose.nhhistory.org/Moose/media/Default/Documents%20and%20PDFs/Unit-2-docs/U2-Music-and-Dances.pdf"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Waban-Aki: People from Where the Sun Rises (2006)",
+            "url": "a feature-length film by Abenaki filmmaker Alanis Obomsawin.\",https://www.tenk.ca/en/documentaires/the-films-of-alanis-obomsawin/waban-aki-people-from-where-the-sun-rises"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Abenaki of New Hampshire",
+            "url": "https://www.youtube.com/watch?v\u003dcGwcGQpL5PM"
+          },
+          {
+            "type": "Video",
+            "title": "Lecture: \u0027Abenaki History In Vermont\u0027 by Dr. Frederick M. Wiseman",
+            "url": "covering 12,000 years of history.\",https://abenaki-edu.org/abenaki-history-in-vermont/"
+          },
+          {
+            "type": "Video",
+            "title": "News Clip: \u0027Vermont House Approves Apology for Eugenics Program",
+            "url": "\u0027 covering the official apology for the state\u0027s 20th-century eugenics program.\",https://abenaki-edu.org/vermont-house-approves-apology-for-eugenics-program/"
+          },
+          {
+            "type": "Video",
+            "title": "Cultural Demonstration: \u0027Virtual Abenaki Heritage Weekend: Abenaki Basket Makers\u0027 featuring Sherry Gould.",
+            "url": "https://abenaki-edu.org/virtual-abenaki-heritage-weekend-abenaki-basket-makers/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF on Abenaki Music and Dances.",
+            "url": "https://moose.nhhistory.org/Moose/media/Default/Documents%20and%20PDFs/Unit-2-docs/U2-Music-and-Dances.pdf"
+          },
+          {
+            "type": "Document",
+            "title": "PDF on Abenaki Oral Tradition.",
+            "url": "https://moose.nhhistory.org/Moose/media/Default/Documents%20and%20PDFs/Unit-2-docs/U2_L3_EG.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.4582,
+          45.6025
+        ]
+      },
+      "properties": {
+        "name": "Absaroka (Crow)",
+        "description": "Cultural assets and information for the Absaroka (Crow) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Painting: \u0027A Child of the Plains",
+            "url": "Absaroka Indian\u0027 by John Young-Hunter (1914), tempera on canvas.\",https://collections.starkculturalvenues.org/objects/40063/a-child-of-the-plains-absaroka-indian"
+          },
+          {
+            "type": "Image",
+            "title": "Painting: \u0027Knows Her Medicine Crow Indian\u0027 by contemporary Apsáalooke artist Kevin Red Star.",
+            "url": "https://www.denverartmuseum.org/en/edu/object/knows-her-medicine-crow-indian"
+          },
+          {
+            "type": "Image",
+            "title": "Photograph of a Crow woman\u0027s dress decorated with imitation imitation elk teeth",
+            "url": "made of red stroud cloth.\",https://www.penn.museum/collections/object/2324"
+          },
+          {
+            "type": "Image",
+            "title": "Framed Canvas Print: \u0027Absaroka Mountains\u0027 by Kelsey Shields.",
+            "url": "https://www.kelseyshieldsart.com/product-page/absaroka-mountains-framed-canvas-print-1"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: \u0027Crow Tribal Sundance Songs",
+            "url": "\u0027 featuring 14 songs by Pete Whiteman and Milton Yellow Mule.\",https://indianhouse.com/products/crow-tribal-sundance-songs"
+          },
+          {
+            "type": "Audio",
+            "title": "Music for the Crow-Hop dance",
+            "url": "a social dance said to have originated with the Crow Nation.\",https://www.bellisario.psu.edu/powwow/songs-and-dances"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of the Absaroka language spoken in conversation.",
+            "url": "https://www.youtube.com/watch?v\u003dxHQKFgYEw3w"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Crow Country: Our Right to Food Sovereignty",
+            "url": "directed by Tsanavi Spoonhunter.\",https://www.crowcountrydoc.com/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Contrary Warriors: A Story of the Crow Tribe",
+            "url": "co-produced by Pamela Roberts.\",https://itvs.org/films/contrary-warriors"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary short about the Crow people and their connection to their land.",
+            "url": "https://www.youtube.com/watch?v\u003dfJ32VSTO8fs"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of the Crow Reservation Timeline.",
+            "url": "https://opi.mt.gov/Portals/182/Page%20Files/Indian%20Education/Social%20Studies/K-12%20Resources/Crow%20Timeline.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.7917,
+          33.3444
+        ]
+      },
+      "properties": {
+        "name": "Apache",
+        "description": "Cultural assets and information for the Apache tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Photographs by Edward S. Curtis depicting Apache individuals and traditional dress.",
+            "url": "https://edwardcurtisphotos.com/store/apache-native-american-photos/"
+          },
+          {
+            "type": "Image",
+            "title": "Examples of Apache basketry",
+            "url": "including the large, pine-pitch-coated Tus basket for carrying water.\",https://scalar.usc.edu/works/american-indian-film-archive/apache-arts-and-crafts"
+          },
+          {
+            "type": "Image",
+            "title": "Sculptures by Chiricahua Apache artist Bob Haozous and Gaan Dancer carvings by Hopi artist Vincent Dawahongva.",
+            "url": "https://www.adobegallery.com/origin/Apache/"
+          },
+          {
+            "type": "Audio",
+            "title": "Western Apache Audio Bible",
+            "url": "including the full New Testament and hymns.\",https://todaysnative.org/native-language-audio-bible/apache-audio-bible/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings of Bible stories and evangelistic messages in the Apache: San Carlos dialect.",
+            "url": "https://globalrecordings.net/en/language/336"
+          },
+          {
+            "type": "Audio",
+            "title": "Music for the Gaan Dance (Crown Dance)",
+            "url": "a ceremonial performance where dancers impersonate Mountain Spirits.\",https://drumhop.com/music.php?page\u003d128"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Unconquered: Allan Houser and the Legacy of One Apache Family",
+            "url": "about the life and work of the Chiricahua Apache sculptor.\",https://www.youtube.com/watch?v\u003dKN9SifI6xbs"
+          },
+          {
+            "type": "Video",
+            "title": "Jesus Film dubbed into the Western Apache language.",
+            "url": "https://todaysnative.org/native-language-audio-bible/apache-audio-bible/"
+          },
+          {
+            "type": "Video",
+            "title": "Educational multimedia package for students",
+            "url": "including images, videos, and audio narration about Apache culture.\",https://www.classroomnook.com/shop/p/native-american-tribes-apache"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Apache Warriors Tell Their Side (to Eve Ball)\u0027.",
+            "url": "https://www.oldpueblo.org/wp-content/uploads/2022/02/202109opa86_-ApacheWarriorsTellTheirSideToEveBall.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.733,
+          43.1558
+        ]
+      },
+      "properties": {
+        "name": "Arapaho",
+        "description": "Cultural assets and information for the Arapaho tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Collection of 19th-century Arapaho artifacts including moccasins",
+            "url": "pipe bags, and robes.\",https://www.metmuseum.org/art/collection/search?q\u003dArapaho\u0026sortBy\u003dRelevance"
+          },
+          {
+            "type": "Image",
+            "title": "Collection of Arapaho art including a girl\u0027s turtle amulet",
+            "url": "pipe bags, and moccasins.\",http://portlandartmuseum.us/mwebcgi/mweb.exe?request\u003drecord;id\u003d300017634;type\u003d801"
+          },
+          {
+            "type": "Image",
+            "title": "Photographs of Arapaho individuals",
+            "url": "\u0027The Old Warrior\u0027 and \u0027Black Man,\u0027 by Edward Sheriff Curtis.\",http://portlandartmuseum.us/mwebcgi/mweb.exe?request\u003drecord;id\u003d300017634;type\u003d801"
+          },
+          {
+            "type": "Audio",
+            "title": "Digitized sound recordings of the Arapaho language",
+            "url": "including grammar, vocabularies, and oral narratives.\",https://indigenousguide.amphilsoc.org/search?f%5B0%5D\u003dguide_culture_content_title%3AArapaho\u0026f%5B1%5D\u003dguide_subject_content_title%3ALinguistics\u0026f%5B2%5D\u003dguide_type_content_title%3ASound%20recording"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of \u0027Words of Life",
+            "url": "\u0027 including Bible stories and hymns in Northern and Southern Arapaho dialects.\",https://todaysnative.org/native-language-audio-bible/arapaho-resources/"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of Ghost Dance-era songs associated with the Arapaho Crow Dance.",
+            "url": "https://indigenousguide.amphilsoc.org/entry/10170"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: We Are the Arapaho People",
+            "url": "examining the history, culture, and identity of the Northern Arapaho.\",https://www.arapahotruths.com/we-are-the-arapaho-people"
+          },
+          {
+            "type": "Video",
+            "title": "Educational Video: Who are the Northern Arapaho?",
+            "url": "providing an overview of the tribe\u0027s history and their arrival in Wyoming.\",https://www.pbslearningmedia.org/resource/who-are-the-northern-arapaho-video/wyomings-native-americans/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: History of the Arapaho Tribe",
+            "url": "https://www.youtube.com/watch?v\u003dCvudQYuvmUw"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Native Heritage - Northern Arapaho",
+            "url": "https://www.youtube.com/watch?v\u003djzsP3Px1uPg"
+          },
+          {
+            "type": "Document",
+            "title": "Oral history narrative from an unidentified Arapaho woman recorded in 1972.",
+            "url": "https://www.nativeoralhistory.org/digital-heritage/narrative-arapaho-woman"
+          },
+          {
+            "type": "Document",
+            "title": "Oral histories of the Sand Creek Massacre from the perspective of Cheyenne and Arapaho elders.",
+            "url": "https://www.historycolorado.org/lost-highways/2024/04/17/oral-histories-sand-creek-massacre-cheyenne-and-arapaho-tribes-located"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.9843,
+          48.557
+        ]
+      },
+      "properties": {
+        "name": "Blackfeet (Siksikaitsitapi)",
+        "description": "Cultural assets and information for the Blackfeet (Siksikaitsitapi) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Hide painting of \u0027White Quiver",
+            "url": "\u0027 a renowned Blackfeet horse thief, by contemporary artist David Dragonfly.\",https://iacbmuseums-viewingroom.exhibit-e.art/viewing-room/david-dragonfly/works/10976"
+          },
+          {
+            "type": "Image",
+            "title": "Linocut print \u0027Blackfeet Homeland\u0027 by David Dragonfly",
+            "url": "depicting tipis, horses, and the Rocky Mountains.\",https://iacbmuseums-viewingroom.exhibit-e.art/viewing-room/david-dragonfly/works/10975"
+          },
+          {
+            "type": "Image",
+            "title": "Portraits of Blackfeet individuals by artist Winold Reiss.",
+            "url": "https://iacbmuseums-viewingroom.exhibit-e.art/viewing-room/connections-the-blackfeet-and-winold-reiss"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings of the Gospels of John and Acts in the Blackfoot language.",
+            "url": "https://todaysnative.org/native-language-audio-bible/blackfoot-audio-bible/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio Bible stories and evangelistic messages in Blackfoot.",
+            "url": "https://globalrecordings.net/en/language/bla"
+          },
+          {
+            "type": "Audio",
+            "title": "Traditional music",
+            "url": "including the \u0027Blackfoot Theme Song\u0027 and \u0027Feather Belt Dance.\u0027\",https://drumhop.com/music.php?page\u003d268"
+          },
+          {
+            "type": "Audio",
+            "title": "Interviews discussing the preservation of ceremonial songs and modern drum groups.",
+            "url": "https://lewis-clark.org/arts/song-and-dance/blackfeet-songs/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Backbone of the World: The Blackfeet (1998)",
+            "url": "about the tribe\u0027s struggle to protect their sacred Badger-Two Medicine area.\",https://itvs.org/films/backbone-of-the-world/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Bring Them Home (2024)",
+            "url": "narrated by Lily Gladstone, about the mission to establish a wild buffalo herd on ancestral territory.\",https://www.thunderheartfilms.com/bring-them-home"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: A Blackfeet Encounter (2007)",
+            "url": "exploring the history of the only deadly clash between the Blackfeet and the Lewis and Clark Expedition.\",https://visionmakermedia.org/product/a_blackfeet-encounter/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of Blackfoot Creation Stories.",
+            "url": "https://blackfootconfederacy.ca/wp-content/uploads/2024/04/Creation-Stories.pdf"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027A Literary Analysis of Blackfoot Oral Stories\u0027.",
+            "url": "https://opus.uleth.ca/bitstreams/935c267a-e11f-46ad-8912-d8fe7ec46765/download"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.3967,
+          35.3039
+        ]
+      },
+      "properties": {
+        "name": "Caddo",
+        "description": "Cultural assets and information for the Caddo tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Contemporary Caddo pottery by artist Jeri Redcorn.",
+            "url": "https://www.thestoryoftexas.com/upload/files/american-indian-heritage/Coil_Pot_Activity_AIHD-2020.pdf"
+          },
+          {
+            "type": "Image",
+            "title": "Contemporary Caddo regalia",
+            "url": "including a ribbon shirt and a woman\u0027s headdress.\",https://caddoheritage.wordpress.com/culture/"
+          },
+          {
+            "type": "Audio",
+            "title": "Linguistic field recordings of the Caddo language from 1956",
+            "url": "including vocabulary, stories, and prayers.\",https://cla.berkeley.edu/collection/?collid\u003d10163\u003dThe%20Daniel%20DaCruz%20collection%20of%20Caddo%20sound%20recordings"
+          },
+          {
+            "type": "Audio",
+            "title": "Traditional Caddo songs",
+            "url": "including lullabies, victory songs, and the \u0027Song of the Little Skunk\u0027s Dream,\u0027 performed by elder Stanley Edge.\",https://drumhop.com/music.php?page\u003d136"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Caddo Voices: A Basketry Revival",
+            "url": "following modern Caddo people as they work to restore the tradition of river cane basketry.\",https://www.pbs.org/video/caddo-voices-a-basketry-retrieval-coesgt/"
+          },
+          {
+            "type": "Video",
+            "title": "TV spots produced by the Caddo Nation\u0027s Media and Marketing Department.",
+            "url": "https://mycaddonation.com/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027The Caddo Indians of Louisiana\u0027.",
+            "url": "https://www.crt.state.la.us/Assets/OCD/archaeology/discoverarchaeology/virtual-books/PDFs/Caddo.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.9727,
+          35.9151
+        ]
+      },
+      "properties": {
+        "name": "Cherokee",
+        "description": "Cultural assets and information for the Cherokee tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Modern \u0027tear dress\u0027 worn by women and ribbon shirts worn by men for special occasions.",
+            "url": "https://www.cherokee.org/about-the-nation/frequently-asked-questions/culture/"
+          },
+          {
+            "type": "Image",
+            "title": "Downloadable Christmas coloring pages featuring Cherokee designs.",
+            "url": "https://www.cherokee.org/media/mkko10yo/2023-christmas-ornament-coloring.pdf"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recording of the entire Gospel of John in the Cherokee language.",
+            "url": "https://todaysnative.org/native-language-audio-bible/cherokee-audio-resources/"
+          },
+          {
+            "type": "Audio",
+            "title": "Compilation of hymns sung by the Cherokee National Youth Choir.",
+            "url": "https://todaysnative.org/native-language-audio-bible/cherokee-audio-resources/"
+          },
+          {
+            "type": "Audio",
+            "title": "Cherokee Voices",
+            "url": "Cherokee Sounds radio program.\",https://www.cherokee.org/cherokee-voices-cherokee-sounds"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: By Blood (2016)",
+            "url": "chronicling the conflict over tribal rights between the Cherokee Nation and the Cherokee Freedmen.\",https://www.amdoc.org/watch/blood/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Indigenous People of the Americas: Cherokee (2020)",
+            "url": "providing a historical overview of the tribe.\",https://www.youtube.com/watch?v\u003df9fSCbL4mk8"
+          },
+          {
+            "type": "Video",
+            "title": "OsiyoTV",
+            "url": "a television program dedicated to sharing the stories, language, and culture of the Cherokee people.\",http://osiyo.tv/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of Christmas Coloring Sheets.",
+            "url": "https://www.cherokee.org/media/ljqly2xm/coloringsheets-2022-christmas.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.6548,
+          45.7208
+        ]
+      },
+      "properties": {
+        "name": "Cheyenne",
+        "description": "Cultural assets and information for the Cheyenne tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Historical photographs by Edward S. Curtis depicting Cheyenne individuals and clothing.",
+            "url": "https://edwardcurtisphotos.com/store/cheyenne-native-american-photos/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio course: Let\u0027s Talk Cheyenne",
+            "url": "an introductory course with audio files recorded by elder Ted Risingsun.\",https://www.cheyennelanguage.org/letstalk.htm"
+          },
+          {
+            "type": "Video",
+            "title": "Documentaries produced by the Cheyenne River Youth Project",
+            "url": "such as Wakanyeja Kin Wana Ku Pi (The Children are Coming Home).\",https://lakotayouth.org/about/documentaries/"
+          },
+          {
+            "type": "Video",
+            "title": "Programming from Cheyenne and Arapaho Productions (CAP)",
+            "url": "a public broadcast TV station.\",https://www.catv35.com/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Let\u0027s Talk Cheyenne\u0027 course booklet.",
+            "url": "https://www.cheyennelanguage.org/letstalk.htm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.6783,
+          34.7745
+        ]
+      },
+      "properties": {
+        "name": "Chickasaw",
+        "description": "Cultural assets and information for the Chickasaw tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Sculptures by Chickasaw artist Joanna Underwood representing designs from early pottery and shell carvings.",
+            "url": "https://www.chickasawculturalcenter.com/explore/statues-sculptures/"
+          },
+          {
+            "type": "Audio",
+            "title": "Language recordings of Chickasaw words for local plants and animals.",
+            "url": "http://www.wolfgaptn.com/qr-12"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio news releases from the Chickasaw Nation Media Relations department.",
+            "url": "https://chickasaw.net/News/Media-Room"
+          },
+          {
+            "type": "Audio",
+            "title": "Stomp dance songs and songs for social dances like the Gar Fish Dance and Snake Dance.",
+            "url": "https://www.chickasaw.net/Our-Nation/Culture/Society/Social-Dances.aspx"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: First Encounter",
+            "url": "chronicling the tribe\u0027s first contact with the Hernando de Soto expedition in 1540.\",https://chickasawfilms.com/Projects/Documentaries"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Bearer of the Morning",
+            "url": "about the life of the famed Chickasaw performer and storyteller Te Ata.\",https://chickasawfilms.com/Projects/Documentaries"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Montford Johnson: An Original Brand",
+            "url": "telling the story of the successful 19th-century Chickasaw cattleman.\",https://chickasawfilms.com/Projects/Documentaries"
+          },
+          {
+            "type": "Video",
+            "title": "Language learning videos and traditional stories told in the Chickasaw language.",
+            "url": "https://www.chickasaw.tv/language"
+          },
+          {
+            "type": "Video",
+            "title": "Cultural presentations on clothing",
+            "url": "food, games, and the creation of regalia.\",https://chickasaw.net/Our-Nation/Culture/Multimedia"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.3917,
+          34.6067
+        ]
+      },
+      "properties": {
+        "name": "Comanche",
+        "description": "Cultural assets and information for the Comanche tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Painting: \u0027Comanches of West Texas in War Regalia\u0027 (1830s) by Lino Sánchez y Tapia.",
+            "url": "https://www.tshaonline.org/handbook/entries/comanche-indians"
+          },
+          {
+            "type": "Image",
+            "title": "Collection of Comanche art including a parfleche flat case",
+            "url": "a bridle, and woman\u0027s boots from the mid-19th century.\",https://www.metmuseum.org/art/collection/search?q\u003dComanche\u0026sortBy\u003dRelevance"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings of \u0027Words of Life",
+            "url": "\u0027 including Bible stories and evangelistic messages in the Comanche language.\",https://globalrecordings.net/en/language/com"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: \u0027Comanche Tribal Chants",
+            "url": "\u0027 featuring war dances, sneak dances, and flag songs.\",https://music.apple.com/us/artist/comanche-tribal-chants/536947003"
+          },
+          {
+            "type": "Audio",
+            "title": "Podcast: Nʉmʉ Tekwarʉ: The Comanche Talk Podcast",
+            "url": "a bi-weekly podcast produced by the Comanche Nation.\",https://www.comanchenation.com/communications/page/meet-team"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Quanah Parker: The Last Comanche",
+            "url": "a chronicle of the last Comanche leader.\",https://tv.apple.com/us/episode/quanah-parker-the-last-comanche/umc.cmc.52pwsa7omxc1plpf3coar3w6o"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: \u0027Comanche Academy: A Healing Journey\u0027",
+            "url": "exploring healing from the trauma of Indian boarding schools.\",https://www.comanchenation.com/culture/page/comanche-academy-healing-journey-premieres-lawton"
+          },
+          {
+            "type": "Video",
+            "title": "Video news segments and footage of events produced by the Comanche Nation Public Information Office.",
+            "url": "https://www.youtube.com/channel/UCQ8a5K9b3iJ22xY6p-wE1-Q"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of the Comanche Nation Research Report.",
+            "url": "https://ftp.txdot.gov/pub/txdot-info/env/toolkit/415-03-rpt.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.973,
+          35.6159
+        ]
+      },
+      "properties": {
+        "name": "Creek (Muscogee)",
+        "description": "Cultural assets and information for the Creek (Muscogee) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Muscogee shell carving by artist Chris Thompson",
+            "url": "depicting figures like Grandmother Weaver.\",https://blog.wfsu.org/blog-coastal-health/2018/01/exploring-muscogee-culture-shell-carving/"
+          },
+          {
+            "type": "Image",
+            "title": "Collection of Muscogee/Creek art including a shoulder bag and moccasins from the 1830s.",
+            "url": "https://www.metmuseum.org/art/collection/search?q\u003dMuscogee%2F+Creek%2C+Native+American\u0026sortBy\u003dRelevance"
+          },
+          {
+            "type": "Audio",
+            "title": "Mvskoke Language Program audio links for 1st",
+            "url": "2nd, and 3rd level language learners.\",https://www.muscogeenation.com/department-of-education-and-training/mvskoke-language-program/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Forgotten Creeks",
+            "url": "an Emmy Award-winning film about the history of the Poarch Creek Indians.\",https://pci-nsn.gov/our-story/the-forgotten-creeks/"
+          },
+          {
+            "type": "Video",
+            "title": "News videos and press conferences regarding the protection of the sacred Hickory Ground.",
+            "url": "https://www.muscogeenation.com/justice-for-hickory-ground/hickory-ground-media/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of Mvskoke Media\u0027s newspaper",
+            "url": "Mvskoke News.\",https://www.mvskokemedia.com/about/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.9344,
+          36.6517
+        ]
+      },
+      "properties": {
+        "name": "Delaware (Lenape)",
+        "description": "Cultural assets and information for the Delaware (Lenape) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Delaware bandolier bag decorated with glass seed-bead embroidery in the \u0027Prairie style.\u0027",
+            "url": "https://americanindian.si.edu/exhibitions/infinityofnations/woodlands/213358.html"
+          },
+          {
+            "type": "Audio",
+            "title": "The Lenape Talking Dictionary",
+            "url": "containing over 15,000 words, with sound files for nearly 6,350 words.\",http://www.talk-lenape.org/"
+          },
+          {
+            "type": "Audio",
+            "title": "Western Delaware language program consisting of a workbook and three audio tapes with a 200-word glossary.",
+            "url": "https://shop.multilingualbooks.com/products/western-delaware-cassette-program"
+          },
+          {
+            "type": "Audio",
+            "title": "Music for social dances like the Stomp Dance",
+            "url": "Bean Dance, and Raccoon Dance, featuring the water drum and various rattles.\",https://delawaretribe.org/wp-content/uploads/Lenape-Dances.pdf"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Drive By History: The Secret World of the Lenape",
+            "url": "an investigation into the sophisticated civilization of the Lenape.\",https://www.pbs.org/video/the-secret-world-of-the-lenape-and-truths-about-1770s-life-ks8nel/"
+          },
+          {
+            "type": "Video",
+            "title": "Language and culture videos",
+            "url": "including \u0027Animals in Lenape and English\u0027 and \u0027How to Make Delaware Moccasins with Nora Thompson Dean.\u0027\",https://m.youtube.com/@delawaretribe-lenapecultur5135"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Lenape Dances\u0027.",
+            "url": "https://delawaretribe.org/wp-content/uploads/Lenape-Dances.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.1687,
+          47.4788
+        ]
+      },
+      "properties": {
+        "name": "Flathead (Salish)",
+        "description": "Cultural assets and information for the Flathead (Salish) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Artwork by Susan Point",
+            "url": "a Coast Salish artist, including the red cedar sculpture Butterfly Whorl and the serigraph Manawanui.\",https://vmfa.museum/learn/resources/art-making-activity-coast-salish-designs/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings of Salish language",
+            "url": "including pronunciation drills and vocabulary for animals, clothing, and plants.\",http://salishaudio.org/audio/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings from the Confederated Salish and Kootenai Tribes\u0027 multimedia Climate Change Strategic Plan.",
+            "url": "https://www.usetinc.org/community-resilience-archive/confederated-salish-and-kootenai-tribes-win-award-for-multimedia-climate-change-strategic-plan/"
+          },
+          {
+            "type": "Audio",
+            "title": "Pop songs by artist Salish Matter",
+            "url": "including \u0027Shiping Us\u0027 and \u0027The Truth About Their Feelings.\u0027\",https://music.apple.com/us/artist/salish-matter/1583064213"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Saving Salish",
+            "url": "which documents the N\u0027kwusm Salish language immersion school on the Flathead Indian Reservation.\",https://www.pbs.org/show/saving-salish/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Beyond the Salish Sea",
+            "url": "a film exploring the connection between place and environmental stewardship.\",https://beyondthesalishsea.com/"
+          },
+          {
+            "type": "Video",
+            "title": "Recordings with Salish language or cultural content",
+            "url": "including The Weavers of Musqueam and A Pair of Moccasins for Mary Thomas.\",https://recherche-research.bac-lac.gc.ca/eng/public/list/46482"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.6391,
+          35.8239
+        ]
+      },
+      "properties": {
+        "name": "Hopi",
+        "description": "Cultural assets and information for the Hopi tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Hopi art including jewelry",
+            "url": "pottery, and Kachina carvings from the collection of Mr. and Mrs. Walt Martin.\",https://lammuseum.wfu.edu/exhibits/virtual/living-arts-of-the-hopi/"
+          },
+          {
+            "type": "Image",
+            "title": "Painting of a Hopi man in traditional wear.",
+            "url": "https://scalar.usc.edu/works/american-indian-film-archive/hopi-clothing.4"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: Hopi Tales",
+            "url": "featuring spoken-word stories performed by actor Jack Moyles.\",https://folkways.si.edu/jack-moyles/hopi-tales/american-indian-childrens-spoken-word/album/smithsonian"
+          },
+          {
+            "type": "Audio",
+            "title": "Music by the artist \u0027Hopi",
+            "url": "\u0027 including \u0027Hopi Butterfly Song,\u0027 \u0027Hopi Lullaby,\u0027 and \u0027Hopi War Dance Song.\u0027\",https://music.apple.com/us/artist/hopi/1431050443"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recording and booklet: Hopilavayvenpi: The Hopi Alphabet in Conversation",
+            "url": "teaching the 21 symbols of the Hopi alphabet.\",https://mesamedia.org/store/Hopilavayvenpi-The-Hopi-Alphabet-in-Conversation-p438361986"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Hopi: Mesas",
+            "url": "Native American Indian Documentary (1982), an in-depth look at seasonal rituals and Hopi culture.\",https://www.ebay.com/itm/277079042802"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Koyaanisqatsi (1982)",
+            "url": "a non-narrative film whose title is a Hopi word meaning \u0027life out of balance\u0027.\",https://en.wikipedia.org/wiki/Koyaanisqatsi"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Hopi Oral Traditions and the Archaeology of Identity\u0027.",
+            "url": "https://digitalcommons.unl.edu/tsaconf/1111/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Prehistory and the Traditions of the O\u0027Odham and Hopi\u0027.",
+            "url": "https://www.resolutionmineeis.us/sites/default/files/references/teague-1993.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.1474,
+          42.9893
+        ]
+      },
+      "properties": {
+        "name": "Iroquois (Haudenosaunee)",
+        "description": "Cultural assets and information for the Iroquois (Haudenosaunee) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Sculpture: Iroquois (1983-1999) by Mark di Suvero",
+            "url": "a 40-foot-high painted steel sculpture.\",https://www.associationforpublicart.org/artwork/iroquois/"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of Iroquois social songs",
+            "url": "including \u0027Women\u0027s Rabbit Songs.\u0027\",https://recherche-research.bac-lac.gc.ca/eng/public/list/46458"
+          },
+          {
+            "type": "Audio",
+            "title": "Music for social dances",
+            "url": "featuring instruments like the water drum and horn rattle.\",https://en.wikipedia.org/wiki/Iroquois_music"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary Series: The Iroquois",
+            "url": "a four-part series exploring Iroquois culture.\",https://www.pbs.org/show/wmht-specials/collections/iroquois/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Iroquois Indians: A Documentary History",
+            "url": "digitized from microfilm.\",https://archive.org/details/per_iroquois-indians-a-documentary-history_iroquoi_february-06-1797-may-25-1807_ia40607516-21"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Oral Tradition: The Word is King\u0027.",
+            "url": "https://societies.learnquebec.ca/societies/iroquois-around-1500/oral-tradition-the-word-is-king/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.4612,
+          35.1587
+        ]
+      },
+      "properties": {
+        "name": "Kiowa",
+        "description": "Cultural assets and information for the Kiowa tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Cradleboard by artist Paukeigope.",
+            "url": "https://smarthistory.org/paukeigope-kiowa-cradleboard/"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: Kiowa",
+            "url": "featuring drumming and chanting by Kenneth Anquoe, including Flag Song, Gourd Dance, and War Dance songs.\",https://folkways.si.edu/kenneth-anquoe/kiowa/american-indian/music/album/smithsonian"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of \u0027Words of Life",
+            "url": "\u0027 including Bible stories and evangelistic messages in the Kiowa language.\",https://globalrecordings.net/en/language/kio"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary footage of Kiowa people.",
+            "url": "https://www.youtube.com/watch?v\u003dwcqflbbDIFo"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary about the Kiowa leader Satanta.",
+            "url": "https://www.youtube.com/watch?v\u003d8k3cRXBVGg4"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: Myths and oral traditions telling of a northern home near the Rocky Mountains.",
+            "url": "https://www.tshaonline.org/handbook/entries/kiowa-indians"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -102.5532,
+          43.43
+        ]
+      },
+      "properties": {
+        "name": "Lakota (Sioux)",
+        "description": "Cultural assets and information for the Lakota (Sioux) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Collection of Lakota/Teton Sioux art including a cradleboard",
+            "url": "woman\u0027s dress, and tipi bag from the late 19th century.\",https://www.metmuseum.org/art/collection/search?q\u003dLakota%2F+Teton+Sioux\u0026sortBy\u003dRelevance"
+          },
+          {
+            "type": "Audio",
+            "title": "Lakota Language Consortium audio series",
+            "url": "a practical conversation course with multiple levels and units.\",https://music.apple.com/us/artist/lakota-language-consortium/368331769"
+          },
+          {
+            "type": "Audio",
+            "title": "Lakota Horse Song",
+            "url": "a traditional song performed at Wicoti Tiwahe—Family Camp.\",https://www.sdpb.org/native-american-studies-multimedia/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Without Arrows",
+            "url": "an intimate portrait of contemporary Lakota life.\",https://www.pbs.org/independentlens/documentaries/without-arrows/"
+          },
+          {
+            "type": "Video",
+            "title": "The Lakota Berenstain Bears",
+            "url": "a 20-episode cartoon series produced in the Lakota language.\",https://www.sdpb.org/native-american-studies-multimedia/"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of \u0027Lakota Oral Literature\u0027.",
+            "url": "https://files.eric.ed.gov/fulltext/ED141014.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.0449,
+          35.6728
+        ]
+      },
+      "properties": {
+        "name": "Navajo (Diné)",
+        "description": "Cultural assets and information for the Navajo (Diné) tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Navajo Clan Wheel Chart",
+            "url": "used to help students identify family relationships and connections.\",http://navajopeople.org/"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio course: Dine Bizaad: Speak",
+            "url": "Read, Write Navajo, a set of 6 CDs with 5 hours of audio lessons.\",https://salinabookshelf.com/products/dine-bizaad-speak-read-write-navajo-audio-set-lessons-1-30-cd"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Jake Livingston – Navajo-Zuni Silversmith",
+            "url": "containing stories from his life.\",http://navajopeople.org/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Peter MacDonald Tribal Chairman \u0026 Code Talker",
+            "url": "containing stories from his life.\",http://navajopeople.org/"
+          },
+          {
+            "type": "Video",
+            "title": "Fictional Drama Film: Navajo (1952)",
+            "url": "which was nominated for a Best Documentary Feature Oscar.\",https://en.wikipedia.org/wiki/Navajo_(film"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: Transcripts of recordings made with Navajo interviewees",
+            "url": "documenting personal and family histories.\",https://guides.library.yale.edu/c.php?g\u003d1204136\u0026p\u003d8988902"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.6343,
+          46.3479
+        ]
+      },
+      "properties": {
+        "name": "Nez Percé",
+        "description": "Cultural assets and information for the Nez Percé tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Audio",
+            "title": "Recording of Elizabeth Penney Wilson",
+            "url": "a Nez Perce tribal member, singing a hymn in the nimipuutímt language.\",https://www.nps.gov/media/sound/view.htm?id\u003d07BF7DA3-BAE6-4F9C-99B4-D1B7AC48A631"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Sacred Journey of the Nez Perce",
+            "url": "chronicling the tribe\u0027s 1,600-mile journey during the Nez Perce War of 1877.\",https://www.pbs.org/show/sacred-journey-nez-perce/"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: The Nimiipuu creation story",
+            "url": "in which Coyote creates the various tribes from the pieces of a monster.\",https://www.nps.gov/museum/exhibits/nepe/legend_times.html"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8045,
+          36.3384
+        ]
+      },
+      "properties": {
+        "name": "Pawnee",
+        "description": "Cultural assets and information for the Pawnee tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Various paintings of Pawnee individuals and scenes by artists like Charles Bird King and George Catlin.",
+            "url": "https://www.google.com/search?q\u003dPawnee+art\u0026tbm\u003disch"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: Music of the Pawnee",
+            "url": "featuring 45 songs sung by Mark Evarts, recorded in 1936.\",https://folkways.si.edu/mark-evarts/music-of-the-pawnee/american-indian/album/smithsonian"
+          },
+          {
+            "type": "Audio",
+            "title": "Pawnee Prayer Song",
+            "url": "Hand Game Song, and Ghost Dance Song, recorded and edited by Willard Rhodes.\",https://drumhop.com/music.php?page\u003d138"
+          },
+          {
+            "type": "Audio",
+            "title": "Multimedia language lessons on CD-ROM that incorporate recordings of a native speaker pronouncing Pawnee vocabulary and sentences.",
+            "url": "https://aisri.indiana.edu/research/educational/pawnee.html"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Pawnee Seed Warriors Revive Ancient Ties to Ancestors",
+            "url": "following seed keepers working to regain food sovereignty.\",https://www.rmpbs.org/shows/homegrown-documentary-shorts-collection/episodes/pawnee-seed-warriors-revive-ancient-ties-ancestors-vnnbq1"
+          },
+          {
+            "type": "Video",
+            "title": "Photodocumentary: Pawnee Bill\u0027s Historic Wild West",
+            "url": "featuring 155 photographs from the 1900-1905 show tours.\",https://www.amazon.com/Pawnee-Bills-Historic-Wild-West/dp/0887404375"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: Traditions that date back to the Ice-Age",
+            "url": "potentially describing the Ice-Free Corridor.\",https://crowcanyon.org/resources/western-pawneeland-oral-traditions-archaeology-and-euro-american-accounts-of-pawnees-in-the-front-range/"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.2078,
+          39.1502
+        ]
+      },
+      "properties": {
+        "name": "Pomo",
+        "description": "Cultural assets and information for the Pomo tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Photograph of a Pomoan woman with a child in a baby basket",
+            "url": "c. 1892, by H.W. Henshaw.\",https://www.slideshare.net/slideshow/native-american-people-pomo-indian-tribe/75111715"
+          },
+          {
+            "type": "Image",
+            "title": "Photograph of a Pomoan man with two basketry fish traps",
+            "url": "c. 1892, by H.W. Henshaw.\",https://www.slideshare.net/slideshow/native-american-people-pomo-indian-tribe/75111715"
+          },
+          {
+            "type": "Image",
+            "title": "Image of a traditional Pomo dance outfit and a Native flute.",
+            "url": "https://hermosillopomo.weebly.com/art-music-and-artifacts.html"
+          },
+          {
+            "type": "Audio",
+            "title": "Music for Pomo dances",
+            "url": "which typically features simple background music from Native flutes and drumming.\",https://hermosillopomo.weebly.com/art-music-and-artifacts.html"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary Short: Pomo Land Back: a Prayer From the Forest (2022)",
+            "url": "documenting an inter-tribal gathering.\",https://www.nativewomeninfilm.com/pomo-land-back/"
+          },
+          {
+            "type": "Video",
+            "title": "Videos with subtitles of Northern Pomo stories and texts",
+            "url": "including recordings of speakers Edna Campbell Guerrero and Elenor Stevenson Gonzales.\",https://www.northernpomolanguagetools.com/texts/"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: The Pomo creation story of the sun and moon",
+            "url": "created by Coyote and Hawk.\",https://en.wikipedia.org/wiki/Pomo_traditional_narratives"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.6504,
+          35.0844
+        ]
+      },
+      "properties": {
+        "name": "Puebloan Peoples",
+        "description": "Cultural assets and information for the Puebloan Peoples tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Paintings by Miguel Camarena that depict Pueblo culture",
+            "url": "landscapes, and spiritual rituals.\",https://miguelcamarena.com/collections/pueblos-paintings"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: The Pueblo Indians In Story",
+            "url": "Song and Dance, featuring storyteller Swift Eagle.\",https://folkways.si.edu/swift-eagle/the-pueblo-indians-in-story-song-and-dance/american-indian-childrens-prose/album/smithsonian"
+          },
+          {
+            "type": "Audio",
+            "title": "Recording: \u0027The Indian Speaks\u0027",
+            "url": "featuring Domingo Montoya and Paul Tafoya of the All Indian Pueblo Council.\",https://www.nativeoralhistory.org/digital-heritage/recording-indian-speaks-domingo-montoya-and-paul-tafoya-all-indian-pueblo-council"
+          },
+          {
+            "type": "Video",
+            "title": "Videos from the Indian Pueblo Cultural Center",
+            "url": "including \u0027It All Starts Here.\u0027\",https://indianpueblo.org/media-center/"
+          },
+          {
+            "type": "Video",
+            "title": "Pueblo Voices",
+            "url": "a series of videos where Pueblo people and archaeologists discuss aspects of Pueblo history and culture.\",https://crowcanyon.org/resources/pueblo-voices-corn/"
+          },
+          {
+            "type": "Document",
+            "title": "Oral traditions that are a continuous dialogue about all aspects of life including beliefs",
+            "url": "stories, songs, and dances.\",https://home.nps.gov/band/learn/historyculture/oral.htm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2423,
+          26.1154
+        ]
+      },
+      "properties": {
+        "name": "Seminole",
+        "description": "Cultural assets and information for the Seminole tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Seminole crafts including beadwork",
+            "url": "sweetgrass baskets, and Seminole dolls made of palmetto fiber.\",https://floridaseminoletourism.com/the-art-of-seminole-crafts/"
+          },
+          {
+            "type": "Image",
+            "title": "Collection of Seminole art and adornment",
+            "url": "including an embroidered and beaded bandolier bag and patchwork clothing.\",https://omart.org/exhibitions/enduring_seminole/"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of traditional Seminole songs from the 1930s and 40s",
+            "url": "including songs from the Green Corn Dance and the Hunting Dance.\",https://www.loc.gov/item/ihas.200197481"
+          },
+          {
+            "type": "Audio",
+            "title": "Music by modern Seminole musicians like former Chairman James E. Billie and the duo Spencer Battiest and Doc Native.",
+            "url": "https://floridaseminoletourism.com/seminole-music/"
+          },
+          {
+            "type": "Audio",
+            "title": "The Ah-Tah-Thi-Ki Museum\u0027s Oral History Collection",
+            "url": "which includes recordings in the Miccosukee and Creek languages.\",https://www.ahtahthiki.com/oral-history/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Seminole Pathways",
+            "url": "a film about the history and culture of the Seminole Tribe of Florida.\",https://www.youtube.com/watch?v\u003d8IJtNpMlFVo"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Freedom Seekers: Black Seminoles of the Past and Present.",
+            "url": "https://www.documentary.org/project/freedom-seekers-black-seminoles-past-and-present"
+          },
+          {
+            "type": "Video",
+            "title": "Archival footage of Tribal events and historical moments",
+            "url": "available to Tribal Members upon request.\",https://seminolemediaproductions.com/"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: The Ah-Tah-Thi-Ki Museum\u0027s program to preserve Seminole history and culture by recording tribal members\u0027 stories.",
+            "url": "\"https://www.ahtahthiki.com/oral-history/#:~:text\u003dThe%20Ah%2DTah%2DThi%2DKi%2D,the%20American%20Alliance%20of%20Museums.\""
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.9248,
+          35.3378
+        ]
+      },
+      "properties": {
+        "name": "Shawnee",
+        "description": "Cultural assets and information for the Shawnee tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Exhibits at the Shawnee Tribe Cultural Center",
+            "url": "including historic and contemporary pottery.\",https://nativeamerica.travel/listings/shawnee-tribe-cultural-center"
+          },
+          {
+            "type": "Audio",
+            "title": "Shawnee language recordings",
+            "url": "including linguistic elicitations of grammar and vocabulary, and personal narratives.\",http://www.language-archives.org/item/oai:indigenousguide.amphilsoc.org:10892"
+          },
+          {
+            "type": "Audio",
+            "title": "Music from Shawnee Press",
+            "url": "a publisher of choral, vocal, and instrumental sheet music.\",https://www.prestomusic.com/sheet-music/publishers/77--shawnee-press"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Past is Prologue: The Shawnee Tribe",
+            "url": "detailing the history and migrations of the Shawnee people.\",https://www.youtube.com/watch?v\u003d0DOTJPYSjXU"
+          },
+          {
+            "type": "Video",
+            "title": "Video: \u0027Shawnee Language Page Introduction",
+            "url": "\u0027 a greeting from Shawnee Tribe representative George Blanchard.\",https://www.nps.gov/media/video/view.htm%3Fid%3DC1F3E2FE-A37E-496C-8E4B-04A5E275322E"
+          },
+          {
+            "type": "Document",
+            "title": "PDF of the Eastern Shawnee 1938 Roll.",
+            "url": "https://www.estoo-nsn.gov/library/page/george-j-captain-public-library"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.8832,
+          42.9958
+        ]
+      },
+      "properties": {
+        "name": "Shoshone",
+        "description": "Cultural assets and information for the Shoshone tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Hide Painting of the Sun Dance",
+            "url": "attributed to Eastern Shoshone artist Cotsiogo (Cadzi Cody).\",https://smarthistory.org/eastern-shoshone-hide-painting-of-the-sun-dance-attributed-to-cotsiogo-cadzi-cody/"
+          },
+          {
+            "type": "Image",
+            "title": "Photograph of Chief Washakie (c. 1865) wearing a trade blanket and an embroidered sash.",
+            "url": "https://faculty.weber.edu/kmackay/michael_kosuge.htm"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: \u0027Newe Hupia: Shoshoni Poetry Songs\u0027",
+            "url": "a collection of songs in Shoshoni and English.\",https://digitalcommons.usu.edu/usupress_pubs/24/"
+          },
+          {
+            "type": "Audio",
+            "title": "Recording of a Shoshone Sunrise song",
+            "url": "sung every morning at the Sundance, performed by Tissiwungu Gould.\",https://www.nativeoralhistory.org/digital-heritage/shoshone-sunrise-song-aug-1966"
+          },
+          {
+            "type": "Audio",
+            "title": "Digitized recordings of the Shoshoni language",
+            "url": "including conversations and linguistic elicitations.\",https://indigenousguide.amphilsoc.org/search?f%5B0%5D\u003dguide_language_content_title%3AShoshoni"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Who are the Eastern Shoshone?",
+            "url": "which details the tribe\u0027s history and the leadership of Chief Washakie.\",https://www.pbslearningmedia.org/resource/who-are-the-eastern-shoshone-video/wyomings-native-americans/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Shoshone Nation\u0027s quest to reclaim Bear River",
+            "url": "from the series WILD HOPE.\",https://www.youtube.com/watch?v\u003dAUwm1EH1LPk"
+          },
+          {
+            "type": "Video",
+            "title": "Audio and video books with full English-Shoshoni transcripts",
+            "url": "including stories like \u0027Kutise Itsappeh (Crazy Coyote).\u0027\",https://shoshoniproject.utah.edu/language-materials/audio-video-books.php"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: The Northwestern Shoshone have a strong oral tradition",
+            "url": "passing down stories and tribal histories through memorization.\",https://utahindians.org/archives/shoshone/didYouKnow.html"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.3464,
+          44.5245
+        ]
+      },
+      "properties": {
+        "name": "Sioux",
+        "description": "Cultural assets and information for the Sioux tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Collection of Sioux art at The Metropolitan Museum of Art",
+            "url": "including a courting flute, a woman\u0027s dress (c. 1870), and a tipi bag.\",https://www.metmuseum.org/art/collection/search?q\u003dSioux\u0026sortBy\u003dRelevance"
+          },
+          {
+            "type": "Audio",
+            "title": "Traditional Sioux music",
+            "url": "including society songs like the \u0027Omaha Society Song\u0027 and \u0027Brave Heart Society Song.\u0027\",https://drumhop.com/music.php?page\u003d155"
+          },
+          {
+            "type": "Audio",
+            "title": "Recordings of the Dakota/Lakota language",
+            "url": "including interviews and radio broadcasts from the 1950s onward.\",https://www.delaman.org/members/standing-rock-sioux-tribe-language-and-culture-institute/"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Oceti Sakowin: The People of the Seven Council Fires",
+            "url": "an overview of the Dakota, Lakota, and Nakota people.\",https://www.sdpb.org/native-american-studies-multimedia"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: The Sioux: From Red Cloud to Wounded Knee",
+            "url": "covering the history of the Sioux, including the Wounded Knee Massacre.\",https://www.youtube.com/watch?v\u003doIjAkJlHZZA"
+          },
+          {
+            "type": "Video",
+            "title": "Recordings with Sioux language or cultural content",
+            "url": "including interviews and documentaries.\",https://recherche-research.bac-lac.gc.ca/eng/public/list/46489"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: The Dakota have kept their history alive for thousands of years through the oral tradition of storytelling (Ohuŋkaŋkaŋ).",
+            "url": "https://www3.mnhs.org/usdakotawar/stories/history/dakota-homeland-land-lifestyle/oral-tradition"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.8473,
+          35.0692
+        ]
+      },
+      "properties": {
+        "name": "Zuni",
+        "description": "Cultural assets and information for the Zuni tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.0
+        ]
+      },
+      "properties": {
+        "name": "Asset Type,Description,Source / Link",
+        "description": "Cultural assets and information for the Asset Type,Description,Source / Link tribe.",
+        "image": "",
+        "audio": "",
+        "video": "",
+        "website": "",
+        "tribalAssets": [
+          {
+            "type": "Image",
+            "title": "Zuni art including a polychrome jar (c. 1875) and a polychrome bowl by the artist We\u0027wha (c. 1890).",
+            "url": "https://www.artic.edu/artists/29970/zuni"
+          },
+          {
+            "type": "Image",
+            "title": "Zuni art including handcrafted silver inlay jewelry and pottery with traditional heart-line deer and rain bird designs.",
+            "url": "https://www.indianpueblostore.com/collections/zuni"
+          },
+          {
+            "type": "Audio",
+            "title": "Album: Zuni Traditional Songs from the Zuni Pueblo",
+            "url": "featuring songs for the Rain Dance, Buffalo Dance, and Corn Dance.\",https://music.apple.com/us/artist/zuni-pueblo-singers/88617963"
+          },
+          {
+            "type": "Audio",
+            "title": "Audio recordings of Bible stories and hymns in the Zuni language.",
+            "url": "https://globalrecordings.net/en/language/zun"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Zuni in the Grand Canyon",
+            "url": "which follows A:shiwi rain priests and medicine men on a sacred pilgrimage.\",https://skyshipfilms.com/zuni-in-the-grand-canyon"
+          },
+          {
+            "type": "Video",
+            "title": "Documentary: Continuity through Creation: A living culture through the art of the Zuni People.",
+            "url": "https://www.youtube.com/watch?v\u003dejLUZ-YDPMs"
+          },
+          {
+            "type": "Video",
+            "title": "Performance of the Pottery Dance by the Cellicion Zuni Dancers",
+            "url": "a traditional social dance.\",https://www.nps.gov/media/video/view.htm%3Fid%3D07BF7DA3-BAE6-4F9C-99B4-D1B7AC48A631"
+          },
+          {
+            "type": "Document",
+            "title": "Oral History: An artist\u0027s depiction of the Zuni migration story.",
+            "url": "https://home.nps.gov/band/learn/historyculture/oral.htm"
+          }
+        ]
+      }
+    }
+  ]
+}
