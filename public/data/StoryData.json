@@ -1,0 +1,29 @@
+[
+  {
+    "id": "abenaki",
+    "title": "Abenaki Confederacy",
+    "description": "An alliance of Abenaki bands in what is now Vermont and New Hampshire, known for their birchbark canoes and Wabanaki Confederacy ties.",
+    "coordinates": [-72.5778, 44.2601],
+    "image": "/media/abenaki-18th-century-couple.jpg",
+    "youtube": "https://www.youtube.com/embed/VIDEO_ID_ABENAKI",
+    "audio": "/media/abenaki-language-recording.mp3",
+    "link": "https://en.wikipedia.org/wiki/Abenaki"
+  },
+  {
+    "id": "absaroka-crow",
+    "title": "Crow Nation (Absaroka)",
+    "description": "The Apsáalooke (“Children of the Large-Beaked Bird”) occupy the Crow Indian Reservation in south-central Montana.",
+    "coordinates": [-107.4582, 45.6025],
+    "image": "/media/crow-distinguished-indians.jpg",
+    "youtube": "https://www.youtube.com/embed/VIDEO_ID_CROW",
+    "link": "https://en.wikipedia.org/wiki/Crow_Nation"
+  },
+  {
+    "id": "trail-of-tears",
+    "title": "Trail of Tears",
+    "description": "The forced removal (1830s) of the Cherokee, Muscogee, Seminole, Chickasaw and Choctaw nations from the southeastern United States.",
+    "coordinates": [-85.7350, 35.4825],
+    "youtube": "https://www.youtube.com/embed/VIDEO_ID_TRAIL_OF_TEARS",
+    "link": "https://en.wikipedia.org/wiki/Trail_of_Tears"
+  }
+]
