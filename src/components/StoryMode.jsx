@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from 'react'
 import { fromLonLat } from 'ol/proj'
 import storyData from '../data/storyData.json'
-import '../styles/StoryMode.css'
-
 export default function StoryMode({ map }) {
     const [slides, setSlides] = useState([])
     const [idx, setIdx] = useState(0)

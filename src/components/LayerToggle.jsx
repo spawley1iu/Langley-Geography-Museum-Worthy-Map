@@ -1,7 +1,5 @@
 // src/components/LayerToggle.jsx
 import React from 'react'
-import '../styles/LayerToggle.css'
-
 export default function LayerToggle({ layerGroups, toggleLayer }) {
     return (
         <div className="layer-toggle-container">

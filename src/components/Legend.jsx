@@ -1,7 +1,5 @@
 // src/components/Legend.jsx
 import React from 'react'
-import '../styles/Legend.css'
-
 export default function Legend({
                                    toggleReservation,
                                    toggleAncestral,
