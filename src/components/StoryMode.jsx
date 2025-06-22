@@ -1,8 +1,7 @@
 // src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react'
 import storySlides from '../data/storyData.json'
-import './styles/StoryMode.css'    // use CSS Modules or move this into _app.js if you go global
-import { fromLonLat } from 'ol/proj'
+import '../styles/StoryMode.css';
 
 export default function StoryMode({ map, highlightSource }) {
     const [currentIndex, setCurrentIndex] = useState(0)
