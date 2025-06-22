@@ -1,7 +1,7 @@
 // pages/_app.js
 import '../styles/LayerToggle.css'
 import '../styles/Legend.css'
-import '../styles/StoryMode.css'
+import '../styles/StoryMode.module.css'
 
 // If you have any other global styles (e.g. reset) import them here too:
 // import '../styles/globals.css'

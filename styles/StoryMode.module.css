@@ -41,7 +41,7 @@
 .story-controls button:hover {
     background: #08519c;
 }
-/* src/components/styles/StoryMode.css */
+/* src/components/styles/StoryMode.module.css */
 .story-mode-panel {
     /* your panel styles… */
 }
