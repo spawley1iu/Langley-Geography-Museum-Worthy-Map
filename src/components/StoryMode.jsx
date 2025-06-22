@@ -1,57 +1,47 @@
 // src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react'
-import storySlides from 'src/data/storyData.json'
-import './styles/StoryMode.css'
-
-// import the same layer objects you use in MapView:
-import ancestralLayer from '../ol/layers/ancestralLayer'
-import reservationsLayer from '../ol/layers/reservationsLayer'
+import '../styles/StoryMode.css'
+import storySlides from '../data/storyData.json'
 
 export default function StoryMode({ map, highlightSource }) {
     const [currentIndex, setCurrentIndex] = useState(0)
     const slide = storySlides[currentIndex]
 
+    // when slide changes, clear highlight & pan/zoom to feature
     useEffect(() => {
         if (!map || !highlightSource || !slide) return
 
-        // clear previous highlight
         highlightSource.clear()
 
-        // pick the right source
-        let source = null
+        let sourceLayer
         switch (slide.type) {
             case 'tribe':
-                // find the tribal‐markers layer by its geojson URL
-                const tribeLayer = map
+                sourceLayer = map
                     .getLayers()
                     .getArray()
-                    .find(
-                        (l) =>
-                            typeof l.getSource === 'function' &&
-                            l.getSource().getUrl?.()?.includes('tribal-markers-geocoded.geojson')
-                    )
-                source = tribeLayer?.getSource()
+                    .find((l) => l.getSource()?.getUrl?.()?.includes('tribal-markers'))
                 break
-
             case 'land':
-                source = ancestralLayer.getSource()
+                sourceLayer = map
+                    .getLayers()
+                    .getArray()
+                    .find((l) => l === slide.featureName && l.getSource) // adjust if you pass the actual ancestralLayer
                 break
-
             case 'event':
-                source = reservationsLayer.getSource()
+                sourceLayer = map
+                    .getLayers()
+                    .getArray()
+                    .find((l) => l === slide.featureName && l.getSource) // adjust if you pass the actual reservationsLayer
                 break
-
             default:
-                source = null
+                sourceLayer = null
         }
 
+        const source = sourceLayer?.getSource()
         if (source) {
-            // find the feature matching this slide’s name
             const feat = source.getFeatures().find((f) => f.get('name') === slide.featureName)
             if (feat) {
-                // add a clone to the highlight layer
                 highlightSource.addFeature(feat.clone())
-                // pan & zoom
                 map.getView().animate({
                     center: feat.getGeometry().getCoordinates(),
                     zoom: slide.zoom || 6,
@@ -65,23 +55,30 @@ export default function StoryMode({ map, highlightSource }) {
 
     return (
         <div className="story-mode-panel">
-            <h2>{slide.featureName}</h2>
+            <h2>{slide.title || slide.featureName}</h2>
+            {slide.image && (
+                <img src={slide.image} alt={slide.title} className="story-image" />
+            )}
             <p>{slide.description}</p>
-
+            {slide.audio && (
+                <audio controls className="story-audio">
+                    <source src={slide.audio} type="audio/mpeg" />
+                    Your browser doesn’t support audio.
+                </audio>
+            )}
             {slide.videoUrl && (
                 <div className="story-video">
                     <iframe
                         width="100%"
-                        height="250"
+                        height="200"
                         src={slide.videoUrl.replace('watch?v=', 'embed/')}
                         frameBorder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allow="autoplay; encrypted-media"
                         allowFullScreen
                         title={slide.featureName}
                     />
                 </div>
             )}
-
             <div className="story-controls">
                 <button
                     onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}

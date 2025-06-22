@@ -1,25 +1,25 @@
+// src/components/LayerToggle.jsx
 import React from 'react'
-import "src/styles/LayerToggle.css"
-const LayerToggle = ({ layers, toggleLayer }) => {
+import '../styles/LayerToggle.css'
+
+export default function LayerToggle({ layerGroups, toggleLayer }) {
     return (
         <div className="layer-toggle-container">
-            <h4>Data Layers</h4>
-            <ul className="layer-toggle-list">
-                {Object.entries(layers).map(([label, { visible }]) => (
-                    <li key={label}>
-                        <label>
+            {Object.entries(layerGroups).map(([groupName, layers]) => (
+                <div key={groupName} className="layer-group">
+                    <h4>{groupName}</h4>
+                    {Object.entries(layers).map(([layerName, { layer, visible }]) => (
+                        <label key={layerName} className="layer-toggle-item">
                             <input
                                 type="checkbox"
                                 checked={visible}
-                                onChange={() => toggleLayer(label)}
+                                onChange={() => toggleLayer(groupName, layerName)}
                             />
-                            {label}
+                            {layerName}
                         </label>
-                    </li>
-                ))}
-            </ul>
+                    ))}
+                </div>
+            ))}
         </div>
     )
 }
-
-export default LayerToggle
