@@ -7,3 +7,22 @@ dist/
 # IntelliJ
 .idea/
 *.iml
+
+# Default settings for all hosts
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_ed25519
+    
+# Example GitHub configuration
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_github
+    
+# Example for a custom server
+Host myserver
+    HostName example.com
+    User username
+    Port 22
+    IdentityFile ~/.ssh/id_rsa_server
