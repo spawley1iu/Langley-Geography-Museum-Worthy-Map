@@ -32,7 +32,6 @@ import { DYNAMIC_DRAW } from '../webgl.js';
  * Note:
  * See the documentation of [WebGLRenderingContext.bufferData](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData)
  * for more info on buffer usage.
- * @api
  */
 declare class WebGLArrayBuffer {
     /**
@@ -43,19 +42,19 @@ declare class WebGLArrayBuffer {
     constructor(type: number, usage?: number | undefined);
     /**
      * @private
-     * @type {Float32Array|Uint32Array}
+     * @type {Float32Array|Uint32Array|null}
      */
-    private array;
+    private array_;
     /**
      * @private
      * @type {number}
      */
-    private type;
+    private type_;
     /**
      * @private
      * @type {number}
      */
-    private usage;
+    private usage_;
     /**
      * Populates the buffer with an array of the given size (all values will be zeroes).
      * @param {number} size Array size
@@ -81,9 +80,9 @@ declare class WebGLArrayBuffer {
     getType(): number;
     /**
      * Will return null if the buffer was not initialized
-     * @return {Float32Array|Uint32Array} Array.
+     * @return {Float32Array|Uint32Array|null} Array.
      */
-    getArray(): Float32Array | Uint32Array;
+    getArray(): Float32Array | Uint32Array | null;
     /**
      * @return {number} Usage.
      */

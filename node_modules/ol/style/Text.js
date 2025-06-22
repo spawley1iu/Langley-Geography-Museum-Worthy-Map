@@ -62,6 +62,7 @@ const DEFAULT_FILL_COLOR = '#333';
  * is `'point'`. Default is no stroke.
  * @property {Array<number>} [padding=[0, 0, 0, 0]] Padding in pixels around the text for decluttering and background. The order of
  * values in the array is `[top, right, bottom, left]`.
+ * @property {import('../style/Style.js').DeclutterMode} [declutterMode] Declutter mode: `declutter`, `obstacle`, `none`
  */
 
 /**
@@ -138,7 +139,7 @@ class Text {
 
     /**
      * @private
-     * @type {import("./Fill.js").default}
+     * @type {import("./Fill.js").default|null}
      */
     this.fill_ =
       options.fill !== undefined
@@ -167,7 +168,7 @@ class Text {
 
     /**
      * @private
-     * @type {import("./Stroke.js").default}
+     * @type {import("./Stroke.js").default|null}
      */
     this.stroke_ = options.stroke !== undefined ? options.stroke : null;
 
@@ -185,7 +186,7 @@ class Text {
 
     /**
      * @private
-     * @type {import("./Fill.js").default}
+     * @type {import("./Fill.js").default|null}
      */
     this.backgroundFill_ = options.backgroundFill
       ? options.backgroundFill
@@ -193,7 +194,7 @@ class Text {
 
     /**
      * @private
-     * @type {import("./Stroke.js").default}
+     * @type {import("./Stroke.js").default|null}
      */
     this.backgroundStroke_ = options.backgroundStroke
       ? options.backgroundStroke
@@ -204,6 +205,12 @@ class Text {
      * @type {Array<number>|null}
      */
     this.padding_ = options.padding === undefined ? null : options.padding;
+
+    /**
+     * @private
+     * @type {import('../style/Style.js').DeclutterMode}
+     */
+    this.declutterMode_ = options.declutterMode;
   }
 
   /**
@@ -237,6 +244,7 @@ class Text {
         ? this.getBackgroundStroke().clone()
         : undefined,
       padding: this.getPadding() || undefined,
+      declutterMode: this.getDeclutterMode(),
     });
   }
 
@@ -305,7 +313,7 @@ class Text {
 
   /**
    * Get the fill style for the text.
-   * @return {import("./Fill.js").default} Fill style.
+   * @return {import("./Fill.js").default|null} Fill style.
    * @api
    */
   getFill() {
@@ -349,7 +357,7 @@ class Text {
 
   /**
    * Get the stroke style for the text.
-   * @return {import("./Stroke.js").default} Stroke style.
+   * @return {import("./Stroke.js").default|null} Stroke style.
    * @api
    */
   getStroke() {
@@ -394,7 +402,7 @@ class Text {
 
   /**
    * Get the background fill style for the text.
-   * @return {import("./Fill.js").default} Fill style.
+   * @return {import("./Fill.js").default|null} Fill style.
    * @api
    */
   getBackgroundFill() {
@@ -403,7 +411,7 @@ class Text {
 
   /**
    * Get the background stroke style for the text.
-   * @return {import("./Stroke.js").default} Stroke style.
+   * @return {import("./Stroke.js").default|null} Stroke style.
    * @api
    */
   getBackgroundStroke() {
@@ -417,6 +425,15 @@ class Text {
    */
   getPadding() {
     return this.padding_;
+  }
+
+  /**
+   * Get the declutter mode of the shape
+   * @return {import("./Style.js").DeclutterMode} Shape's declutter mode
+   * @api
+   */
+  getDeclutterMode() {
+    return this.declutterMode_;
   }
 
   /**
@@ -501,7 +518,7 @@ class Text {
   /**
    * Set the fill.
    *
-   * @param {import("./Fill.js").default} fill Fill style.
+   * @param {import("./Fill.js").default|null} fill Fill style.
    * @api
    */
   setFill(fill) {
@@ -532,7 +549,7 @@ class Text {
   /**
    * Set the stroke.
    *
-   * @param {import("./Stroke.js").default} stroke Stroke style.
+   * @param {import("./Stroke.js").default|null} stroke Stroke style.
    * @api
    */
   setStroke(stroke) {
@@ -582,7 +599,7 @@ class Text {
   /**
    * Set the background fill.
    *
-   * @param {import("./Fill.js").default} fill Fill style.
+   * @param {import("./Fill.js").default|null} fill Fill style.
    * @api
    */
   setBackgroundFill(fill) {
@@ -592,7 +609,7 @@ class Text {
   /**
    * Set the background stroke.
    *
-   * @param {import("./Stroke.js").default} stroke Stroke style.
+   * @param {import("./Stroke.js").default|null} stroke Stroke style.
    * @api
    */
   setBackgroundStroke(stroke) {

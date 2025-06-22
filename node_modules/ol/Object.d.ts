@@ -99,7 +99,7 @@ declare class BaseObject extends Observable {
     un: ObjectOnSignature<void>;
     /**
      * @private
-     * @type {Object<string, *>}
+     * @type {Object<string, *>|null}
      */
     private values_;
     /**
@@ -123,6 +123,13 @@ declare class BaseObject extends Observable {
     getProperties(): {
         [x: string]: any;
     };
+    /**
+     * Get an object of all property names and values.
+     * @return {Object<string, *>?} Object.
+     */
+    getPropertiesInternal(): {
+        [x: string]: any;
+    } | null;
     /**
      * @return {boolean} The object has properties.
      */
