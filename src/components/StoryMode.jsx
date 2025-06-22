@@ -1,88 +1,108 @@
 // src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react'
+import storySlides from '../data/storyData.json'
+import './styles/StoryMode.css'    // use CSS Modules or move this into _app.js if you go global
 import { fromLonLat } from 'ol/proj'
-import storyData from '../data/storyData.json'
-export default function StoryMode({ map }) {
-    const [slides, setSlides] = useState([])
-    const [idx, setIdx] = useState(0)
 
-    // Load the slides once on mount
+export default function StoryMode({ map, highlightSource }) {
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const slide = storySlides[currentIndex]
+
+    // whenever slide changes, clear highlight & zoom to the actual feature
     useEffect(() => {
-        setSlides(storyData)
-    }, [])
+        if (!map || !highlightSource || !slide) return
+        highlightSource.clear()
 
-    // Pan & zoom whenever the slide index changes
-    useEffect(() => {
-        if (!map || slides.length === 0) return
-        const slide = slides[idx]
-        const center = fromLonLat(slide.coordinates)
-        map.getView().animate({
-            center,
-            zoom: slide.zoom || 6,
-            duration: 600
-        })
-    }, [idx, map, slides])
+        let source
+        if (slide.type === 'tribe') {
+            source = map
+                .getLayers()
+                .getArray()
+                .find(l => l.getSource()?.getUrl?.()?.includes('tribal-markers'))
+                .getSource()
+        } else if (slide.type === 'land') {
+            source = map
+                .getLayers()
+                .getArray()
+                .find(l => l === ancestralLayer)
+                .getSource()
+        } else if (slide.type === 'reservation') {
+            source = map
+                .getLayers()
+                .getArray()
+                .find(l => l === reservationsLayer)
+                .getSource()
+        }
 
-    if (slides.length === 0) return null
+        if (!source) return
 
-    const { title, description, image, audio, youtube, link } = slides[idx]
+        // find the matching feature by property
+        const feat = source
+            .getFeatures()
+            .find(f =>
+                slide.type === 'tribe'
+                    ? f.get('tribeName') === slide.featureName
+                    : f.get('name') === slide.featureName
+            )
+        if (!feat) return
+
+        // highlight it
+        highlightSource.addFeature(feat.clone())
+
+        // pan+zoom to its geometry
+        const coords = feat.getGeometry().getCoordinates()
+        map.getView().animate({ center: coords, zoom: slide.zoom || 6, duration: 600 })
+    }, [currentIndex, map, highlightSource, slide])
+
+    if (!slide) return null
 
     return (
         <div className="story-mode-panel">
-            <h2 className="story-mode-title">{title}</h2>
+            <h2>{slide.title}</h2>
+            {slide.image && <img src={slide.image} alt={slide.title} className="story-image" />}
+            <p>{slide.description}</p>
 
-            {image && (
-                <img
-                    src={image}
-                    alt={title}
-                    className="story-mode-image"
-                />
-            )}
-
-            <p className="story-mode-description">{description}</p>
-
-            {audio && (
-                <audio controls className="story-mode-audio">
-                    <source src={audio} type="audio/mpeg" />
-                    Your browser does not support the audio element.
+            {slide.audio && (
+                <audio controls className="story-audio">
+                    <source src={slide.audio} type="audio/mpeg" />
                 </audio>
             )}
 
-            {youtube && (
-                <div className="story-mode-video">
+            {slide.videoUrl && (
+                <div className="story-video">
                     <iframe
                         width="100%"
-                        height="250"
-                        src={youtube.replace('watch?v=', 'embed/')}
+                        height="200"
+                        src={slide.videoUrl.replace('watch?v=', 'embed/')}
                         frameBorder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        title={`Video for ${title}`}
+                        title={slide.featureName}
                     />
                 </div>
             )}
 
-            {link && (
-                <p className="story-mode-link">
-                    <a href={link} target="_blank" rel="noopener noreferrer">
+            {slide.link && (
+                <p>
+                    <a href={slide.link} target="_blank" rel="noopener noreferrer">
                         Learn more →
                     </a>
                 </p>
             )}
 
-            <div className="story-mode-controls">
+            <div className="story-controls">
                 <button
-                    onClick={() => setIdx(i => Math.max(0, i - 1))}
-                    disabled={idx === 0}
+                    onClick={() => setCurrentIndex(i => (i > 0 ? i - 1 : storySlides.length - 1))}
                 >
                     ← Previous
                 </button>
-                <span className="story-mode-counter">
-          {idx + 1} / {slides.length}
+                <span>
+          {currentIndex + 1} / {storySlides.length}
         </span>
                 <button
-                    onClick={() => setIdx(i => Math.min(slides.length - 1, i + 1))}
-                    disabled={idx === slides.length - 1}
+                    onClick={() =>
+                        setCurrentIndex(i => (i < storySlides.length - 1 ? i + 1 : 0))
+                    }
                 >
                     Next →
                 </button>
