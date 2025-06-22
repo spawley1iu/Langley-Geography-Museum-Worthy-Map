@@ -8,7 +8,7 @@ import OSM from 'ol/source/OSM';
 import GeoJSON from 'ol/format/GeoJSON';
 import { Style, Circle as CircleStyle, Fill, Stroke, Text } from 'ol/style';
 import 'ol/ol.css';
-import './MapView.css'; // Create this file for custom popup styles
+import styles from './MapView.module.css'; // Correctly import as a CSS Module
 
 // Component Imports
 import CountyPopup from './CountyPopup';
@@ -137,13 +137,8 @@ export default function MapView() {
   useEffect(() => {
     if (!mapInstance) return;
 
-    // Tooltip for Ancestral Lands
     const handlePointerMove = (e) => {
-      const features = mapInstance.getFeaturesAtPixel(e.pixel, {
-        layerFilter: (l) => l === layers.ancestral,
-        hitTolerance: 4
-      });
-
+      const features = mapInstance.getFeaturesAtPixel(e.pixel, { layerFilter: (l) => l === layers.ancestral, hitTolerance: 4 });
       if (features.length > 0) {
         const feature = features[0];
         const label = feature.get('name') || 'Unnamed Territory';
@@ -157,22 +152,18 @@ export default function MapView() {
       }
     };
 
-    // Click Popup for Counties & Tribes
     const handleSingleClick = (e) => {
       let content = null;
       const features = mapInstance.getFeaturesAtPixel(e.pixel, { hitTolerance: 4 });
-
       if (features.length > 0) {
         const feature = features[0];
         const layer = mapInstance.forEachFeatureAtPixel(e.pixel, (f, l) => l, { hitTolerance: 4 });
-
         if (layer === layers.aiAn) {
           content = <CountyPopup feature={feature} />;
         } else if (layer === layers.tribalMarkers) {
           content = <TribalPopup name={feature.get('tribeName')} properties={feature.getProperties()} />;
         }
       }
-
       setPopupContent(content);
       setPopupPosition(content ? e.coordinate : undefined);
     };
@@ -198,13 +189,13 @@ export default function MapView() {
       <>
         <div ref={mapRef} style={{ width: '100vw', height: '100vh' }} />
 
-        <div ref={popupRef} className="ol-popup">
+        <div ref={popupRef} className={styles.olPopup}>
           {/* Popup content is now rendered here by React */}
           <div dangerouslySetInnerHTML={{ __html: typeof popupContent === 'string' ? popupContent : '' }} />
           {React.isValidElement(popupContent) && popupContent}
         </div>
 
-        <div className="searchbox-container">
+        <div className={styles.searchboxContainer}>
           <SearchBox tribes={tribeNames} onSelect={zoomToTribe} />
         </div>
 
