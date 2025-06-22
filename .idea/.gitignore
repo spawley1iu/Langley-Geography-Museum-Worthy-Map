@@ -5,3 +5,5 @@ __MACOSX/
 .Trashes
 .AppleDouble
 .LSOverride
+/node_modules
+/.next
