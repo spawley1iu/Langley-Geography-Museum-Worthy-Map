@@ -8,18 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "15.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ol": "^9.2.4",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^5.17.1",
     "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.17.1",
+    "@react-google-maps/api": "^2.20.7",
     "chart.js": "^4.5.0",
-    "react-chartjs-2": "^5.3.0",
     "dotenv": "^16.5.0",
-    "node-fetch": "^3.3.2"
-  },
-  "devDependencies": {}
+    "next": "15.3.4",
+    "node-fetch": "^3.3.2",
+    "ol": "^9.2.4",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "18.2.0"
+  }
 }
