@@ -27,12 +27,12 @@
     &quot;assignee&quot;: &quot;spawley1iu&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:spawley1iu/Langley-Geography-Museum-Worthy-Map.git",
-    "accountId": "72e8d5c3-2556-459d-948c-540a87fd716d"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:spawley1iu/Langley-Geography-Museum-Worthy-Map.git&quot;,
+    &quot;accountId&quot;: &quot;72e8d5c3-2556-459d-948c-540a87fd716d&quot;
   }
-}]]></component>
+}</component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
