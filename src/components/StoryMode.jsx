@@ -1,6 +1,6 @@
 // src/components/StoryMode.jsx
 import React, { useState, useEffect } from 'react';
-import storySlides from '../data/storyData.json';
+import storySlides from '../data/story-data.json';
 // 1. Correctly import CSS Modules as an object (e.g., 'styles')
 //    This assumes 'StoryMode.module.css' is in the same folder.
 import styles from './StoryMode.module.css';
