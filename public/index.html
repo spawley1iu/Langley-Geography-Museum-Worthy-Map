@@ -114,133 +114,45 @@
 </div>
 
 <script>
-  // --- DATA ---
-  const storyData = [
-    { "title": "Arrival of Colonists", "description": "Early European settlements begin to appear on the East Coast, marking the beginning of centuries of conflict, displacement, and treaties.", "year": 1620, "location": [-70.6, 42.0], "zoom": 6 },
-    { "title": "The Pueblo Revolt", "description": "In 1680, the Pueblo people of modern-day New Mexico rose up against Spanish colonizers in a successful revolt, driving them out for 12 years.", "year": 1680, "location": [-106.0, 35.5], "zoom": 6 },
-    { "title": "Indian Removal Act", "description": "The Indian Removal Act is signed into law by President Andrew Jackson, authorizing the president to grant unsettled lands west of the Mississippi in exchange for Indian lands within existing state borders.", "year": 1830, "location": [-84, 34], "zoom": 5 },
-    { "title": "The Great Removal (Trail of Tears)", "description": "In 1838, the U.S. government forcibly removed more than 16,000 Cherokee people from their homelands in the southeastern United States to 'Indian Territory' (present-day Oklahoma). Thousands died on the journey.", "year": 1838, "location": [-89.0, 36.0], "zoom": 5 },
-    { "title": "The Long Walk", "description": "From 1864-1866, the U.S. government forced the Navajo people to walk hundreds of miles from their homeland to an internment camp at Bosque Redondo, New Mexico.", "year": 1864, "location": [-106.5, 34.5], "zoom": 6 },
-    { "title": "Dawes Act", "description": "The Dawes Act of 1887 authorized the U.S. government to break up tribal lands by partitioning them into individual plots. The objective was to assimilate Native Americans into mainstream US society.", "year": 1887, "location": [-98, 39], "zoom": 4 },
-    { "title": "Indian Reorganization Act", "description": "The Indian Reorganization Act of 1934, also known as the 'Indian New Deal', aimed to reverse the assimilationist policies of the Dawes Act and strengthen tribal governments.", "year": 1934, "location": [-98, 39], "zoom": 4 },
-    { "title": "Indian Self-Determination Act", "description": "The 1975 Indian Self-Determination and Education Assistance Act allowed tribes to assume responsibility for federally funded programs, increasing tribal sovereignty.", "year": 1975, "location": [-98, 39], "zoom": 4 }
-  ];
-
-  const tribalLandsData = {
-    "type": "FeatureCollection",
-    "features": [
-      { "type": "Feature", "properties": { "name": "Powhatan Confederacy", "description": "A powerful confederation of Algonquian-speaking peoples in what is now eastern Virginia at the time of the first English settlements.", "startYear": 1600, "endYear": 1646, "color": "#e67e22" }, "geometry": { "type": "Polygon", "coordinates": [[ [-77.5, 38.5], [-76.0, 38.0], [-76.2, 36.8], [-78.0, 37.0], [-77.5, 38.5] ]] } },
-      { "type": "Feature", "properties": { "name": "Haudenosaunee (Iroquois) Confederacy", "description": "A confederacy of six nations (Mohawk, Onondaga, Oneida, Cayuga, Seneca, and Tuscarora) that dominated the northeastern region.", "startYear": 1600, "endYear": 1784, "color": "#3498db" }, "geometry": { "type": "Polygon", "coordinates": [[ [-79, 44.5], [-73, 44], [-74, 42], [-79, 42.5], [-79, 44.5] ]] } },
-      { "type": "Feature", "properties": { "name": "Cherokee (ᏣᎳᎩ) Ancestral Lands", "description": "The vast ancestral homelands of the Cherokee people before forced removal in the 1830s.", "startYear": 1600, "endYear": 1838, "color": "#e74c3c" }, "geometry": { "type": "Polygon", "coordinates": [[ [-86, 37], [-82, 37], [-82, 34], [-86, 34], [-86, 37] ]] } },
-      { "type": "Feature", "properties": { "name": "Lakota Territory (Oceti Sakowin)", "description": "The Great Sioux Nation territory as recognized in the Treaty of Fort Laramie of 1851.", "startYear": 1750, "endYear": 1877, "color": "#f1c40f" }, "geometry": { "type": "Polygon", "coordinates": [[ [-105, 48], [-98, 48], [-97, 43], [-105, 43], [-105, 48] ]] } },
-      { "type": "Feature", "properties": { "name": "Navajo Nation (Diné Bikéyah)", "description": "The modern-day boundaries of the Navajo Nation, the largest land area retained by a Native American tribe in the US.", "startYear": 1868, "endYear": 2025, "color": "#9b59b6" }, "geometry": { "type": "Polygon", "coordinates": [[ [-111.5, 37], [-109, 37], [-109, 35], [-111.5, 35], [-111.5, 37] ]] } },
-      { "type": "Feature", "properties": { "name": "Great Sioux Reservation", "description": "The reservation established by the Treaty of Fort Laramie in 1868 before it was broken up by the US government.", "startYear": 1868, "endYear": 1889, "color": "#f39c12" }, "geometry": { "type": "Polygon", "coordinates": [[ [-104, 46], [-99, 46], [-100, 43], [-104, 43], [-104, 46] ]]} },
-      { "type": "Feature", "properties": { "name": "Cherokee Nation (Modern)", "description": "The jurisdictional area of the Cherokee Nation in Oklahoma today.", "startYear": 1839, "endYear": 2025, "color": "#c0392b" }, "geometry": { "type": "Polygon", "coordinates": [[ [-96, 37], [-94.5, 37], [-94.5, 35.5], [-96, 35.5], [-96, 37] ]]} }
-    ]
-  };
-
   let map;
   let infoWindow;
 
   // This function is called by the Google Maps script when it has loaded.
-  function initMap() {
+  async function initMap() {
     // Museum-style dark map theme
     const mapStyle = [
-      { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-      { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
-      { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
-      {
-        featureType: "administrative.locality",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#d59563" }],
-      },
-      {
-        featureType: "poi",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#d59563" }],
-      },
-      {
-        featureType: "poi.park",
-        elementType: "geometry",
-        stylers: [{ color: "#263c3f" }],
-      },
-      {
-        featureType: "poi.park",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#6b9a76" }],
-      },
-      {
-        featureType: "road",
-        elementType: "geometry",
-        stylers: [{ color: "#38414e" }],
-      },
-      {
-        featureType: "road",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#212a37" }],
-      },
-      {
-        featureType: "road",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#9ca5b3" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "geometry",
-        stylers: [{ color: "#746855" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#1f2835" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#f3d19c" }],
-      },
-      {
-        featureType: "transit",
-        elementType: "geometry",
-        stylers: [{ color: "#2f3948" }],
-      },
-      {
-        featureType: "transit.station",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#d59563" }],
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [{ color: "#17263c" }],
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#515c6d" }],
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.stroke",
-        stylers: [{ color: "#17263c" }],
-      },
+      { elementType: "geometry", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] }, { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] }, { featureType: "administrative.locality", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }] }, { featureType: "poi", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }] }, { featureType: "poi.park", elementType: "geometry", stylers: [{ color: "#263c3f" }] }, { featureType: "poi.park", elementType: "labels.text.fill", stylers: [{ color: "#6b9a76" }] }, { featureType: "road", elementType: "geometry", stylers: [{ color: "#38414e" }] }, { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#212a37" }] }, { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#9ca5b3" }] }, { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#746855" }] }, { featureType: "road.highway", elementType: "geometry.stroke", stylers: [{ color: "#1f2835" }] }, { featureType: "road.highway", elementType: "labels.text.fill", stylers: [{ color: "#f3d19c" }] }, { featureType: "transit", elementType: "geometry", stylers: [{ color: "#2f3948" }] }, { featureType: "transit.station", elementType: "labels.text.fill", stylers: [{ color: "#d59563" }] }, { featureType: "water", elementType: "geometry", stylers: [{ color: "#17263c" }] }, { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#515c6d" }] }, { featureType: "water", elementType: "labels.text.stroke", stylers: [{ color: "#17263c" }] },
     ];
 
     map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 39, lng: -98 },
       zoom: 4,
       styles: mapStyle,
-      disableDefaultUI: true, // cleaner look
+      disableDefaultUI: true,
       zoomControl: true,
     });
 
     infoWindow = new google.maps.InfoWindow();
 
-    // Load the GeoJSON data onto the map
-    map.data.addGeoJson(tribalLandsData);
+    // Load external data
+    try {
+      const [tribalLandsResponse, storyDataResponse] = await Promise.all([
+        fetch('./tribal-lands.json'),
+        fetch('./story-data.json')
+      ]);
+      const tribalLandsData = await tribalLandsResponse.json();
+      const storyData = await storyDataResponse.json();
 
-    // Set up all the UI interactions
-    setupInteractions();
+      // Load the GeoJSON data onto the map
+      map.data.addGeoJson(tribalLandsData);
+
+      // Set up all the UI interactions with the loaded data
+      setupInteractions(storyData);
+
+    } catch (error) {
+      console.error("Failed to load map data:", error);
+      alert("Could not load the required map data. Please check the console for more information.");
+    }
   }
 
   // --- UI & INTERACTION LOGIC ---
@@ -255,8 +167,8 @@
     let isPlaying = false;
     let animationFrameId = null;
 
-    // This is called after initMap has run
-    window.setupInteractions = () => {
+    // This is called after initMap has loaded data
+    window.setupInteractions = (storyData) => {
       // Set initial year
       updateMapForYear(parseInt(slider.value, 10));
 
@@ -292,9 +204,7 @@
                         <p>${props.description}</p>
                         <p class="text-xs text-gray-400 mt-2">Active Period: ${props.startYear} - ${props.endYear}</p>
                     </div>`;
-
         infoWindow.setContent(content);
-        // Position InfoWindow at the click location
         infoWindow.setPosition(event.latLng);
         infoWindow.open(map);
       });
