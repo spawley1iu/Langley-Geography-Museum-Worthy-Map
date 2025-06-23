@@ -1,0 +1,332 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Powhatan Confederacy",
+        "description": "A powerful confederation of Algonquian-speaking peoples in what is now eastern Virginia at the time of the first English settlements.",
+        "startYear": 1600,
+        "endYear": 1646,
+        "color": "#e67e22"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-77.5, 38.5],
+            [-76.0, 38.0],
+            [-76.2, 36.8],
+            [-78.0, 37.0],
+            [-77.5, 38.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haudenosaunee (Iroquois) Confederacy",
+        "description": "A confederacy of six nations (Mohawk, Onondaga, Oneida, Cayuga, Seneca, and Tuscarora) that dominated the northeastern region.",
+        "startYear": 1600,
+        "endYear": 1784,
+        "color": "#3498db"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-79, 44.5],
+            [-73, 44],
+            [-74, 42],
+            [-79, 42.5],
+            [-79, 44.5]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherokee (ᏣᎳᎩ) Ancestral Lands",
+        "description": "The vast ancestral homelands of the Cherokee people before forced removal in the 1830s.",
+        "startYear": 1600,
+        "endYear": 1838,
+        "color": "#e74c3c"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-86, 37],
+            [-82, 37],
+            [-82, 34],
+            [-86, 34],
+            [-86, 37]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lakota Territory (Oceti Sakowin)",
+        "description": "The Great Sioux Nation territory as recognized in the Treaty of Fort Laramie of 1851.",
+        "startYear": 1750,
+        "endYear": 1877,
+        "color": "#f1c40f"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-105, 48],
+            [-98, 48],
+            [-97, 43],
+            [-105, 43],
+            [-105, 48]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Navajo Nation (Diné Bikéyah)",
+        "description": "The modern-day boundaries of the Navajo Nation, the largest land area retained by a Native American tribe in the US.",
+        "startYear": 1868,
+        "endYear": 2025,
+        "color": "#9b59b6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-111.5, 37],
+            [-109, 37],
+            [-109, 35],
+            [-111.5, 35],
+            [-111.5, 37]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Sioux Reservation",
+        "description": "The reservation established by the Treaty of Fort Laramie in 1868 before it was broken up by the US government.",
+        "startYear": 1868,
+        "endYear": 1889,
+        "color": "#f39c12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-104, 46],
+            [-99, 46],
+            [-100, 43],
+            [-104, 43],
+            [-104, 46]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherokee Nation (Modern)",
+        "description": "The jurisdictional area of the Cherokee Nation in Oklahoma today.",
+        "startYear": 1839,
+        "endYear": 2025,
+        "color": "#c0392b"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-96, 37],
+            [-94.5, 37],
+            [-94.5, 35.5],
+            [-96, 35.5],
+            [-96, 37]
+          ]
+        ]
+      }
+    },
+    { "type": "Feature", "properties": { "name": "Absentee-Shawnee Tribe of Indians of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.9241278, 35.2932119 ] } },
+    { "type": "Feature", "properties": { "name": "Agua Caliente Band of Cahuilla Indians, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.545, 33.824 ] } },
+    { "type": "Feature", "properties": { "name": "Ak-Chin Indian Community, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.06, 33.028 ] } },
+    { "type": "Feature", "properties": { "name": "Alabama-Coushatta Tribe of Texas", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.674011, 30.701577 ] } },
+    { "type": "Feature", "properties": { "name": "Alabama-Quassarte Tribal Town", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.2386, 35.2411 ] } },
+    { "type": "Feature", "properties": { "name": "Apache Tribe of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.2359535, 35.0659637 ] } },
+    { "type": "Feature", "properties": { "name": "Aroostook Band of Micmacs", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -68.0341, 46.6992 ] } },
+    { "type": "Feature", "properties": { "name": "Assiniboine and Sioux Tribes of the Fort Peck Indian Reservation, Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -105.53, 48.35 ] } },
+    { "type": "Feature", "properties": { "name": "Bad River Band of the Lake Superior Tribe of Chippewa Indians, Wisconsin", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -90.66, 46.59 ] } },
+    { "type": "Feature", "properties": { "name": "Bay Mills Indian Community, Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -84.6136, 46.4542 ] } },
+    { "type": "Feature", "properties": { "name": "Blackfeet Tribe of the Blackfeet Indian Reservation of Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -113.0, 48.5 ] } },
+    { "type": "Feature", "properties": { "name": "Burns Paiute Tribe, Oregon", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -119.0614, 43.5883 ] } },
+    { "type": "Feature", "properties": { "name": "Cabazon Band of Cahuilla Indians, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.1944, 33.7174 ] } },
+    { "type": "Feature", "properties": { "name": "Caddo Nation of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.34765981331239, 35.22502880967241 ] } },
+    { "type": "Feature", "properties": { "name": "Catawba Indian Nation, South Carolina", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -80.911, 34.853 ] } },
+    { "type": "Feature", "properties": { "name": "Cayuga Nation, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -76.73, 42.91 ] } },
+    { "type": "Feature", "properties": { "name": "Cher-Ae Heights Indian Community of the Trinidad Rancheria, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.1303, 41.0542 ] } },
+    { "type": "Feature", "properties": { "name": "Cherokee Nation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.669789, 35.750786 ] } },
+    { "type": "Feature", "properties": { "name": "Cheyenne and Arapaho Tribes, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.6939, 35.6156047 ] } },
+    { "type": "Feature", "properties": { "name": "Cheyenne River Sioux Tribe of the Cheyenne River Reservation, South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -101.24, 45.02 ] } },
+    { "type": "Feature", "properties": { "name": "Chickahominy Indian Tribe", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -76.9826, 37.4327 ] } },
+    { "type": "Feature", "properties": { "name": "Chickasaw Nation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -97.13, 34.50 ] } },
+    { "type": "Feature", "properties": { "name": "Chippewa Cree Indians of the Rocky Boy's Reservation, Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -109.814561, 48.1837375 ] } },
+    { "type": "Feature", "properties": { "name": "Chitimacha Tribe of Louisiana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -91.528095, 29.887985 ] } },
+    { "type": "Feature", "properties": { "name": "Choctaw Nation of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -95.53, 33.99 ] } },
+    { "type": "Feature", "properties": { "name": "Citizen Potawatomi Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -97.13474, 35.40483 ] } },
+    { "type": "Feature", "properties": { "name": "Cocopah Tribe of Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -114.6917, 32.7325 ] } },
+    { "type": "Feature", "properties": { "name": "Coeur D'Alene Tribe", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.9545, 47.3142 ] } },
+    { "type": "Feature", "properties": { "name": "Colorado River Indian Tribes of the Colorado River Indian Reservation, Arizona and California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -114.6, 34.13 ] } },
+    { "type": "Feature", "properties": { "name": "Comanche Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.47, 34.67 ] } },
+    { "type": "Feature", "properties": { "name": "Confederated Salish & Kootenai Tribes of the Flathead Reservation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -114.28, 47.45 ] } },
+    { "type": "Feature", "properties": { "name": "Confederated Tribes and Bands of the Yakama Nation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -120.5, 46.3 ] } },
+    { "type": "Feature", "properties": { "name": "Confederated Tribes of Siletz Indians of Oregon", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.010611, 44.901577 ] } },
+    { "type": "Feature", "properties": { "name": "Confederated Tribes of the Colville Reservation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -118.88, 48.13 ] } },
+    { "type": "Feature", "properties": { "name": "Coquille Indian Tribe, Oregon", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.95858, 43.10938 ] } },
+    { "type": "Feature", "properties": { "name": "Coushatta Tribe of Louisiana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -92.91, 30.55 ] } },
+    { "type": "Feature", "properties": { "name": "Cow Creek Band of Umpqua Tribe of Indians", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.3378, 42.9469 ] } },
+    { "type": "Feature", "properties": { "name": "Cowlitz Indian Tribe", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.9084, 46.1468 ] } },
+    { "type": "Feature", "properties": { "name": "Crow Creek Sioux Tribe of the Crow Creek Reservation, South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -99.43, 44.1 ] } },
+    { "type": "Feature", "properties": { "name": "Crow Tribe of Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -107.46, 45.618 ] } },
+    { "type": "Feature", "properties": { "name": "Delaware Tribe of Indians", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -95.919, 36.7582 ] } },
+    { "type": "Feature", "properties": { "name": "Duckwater Shoshone Tribe, Nevada", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -115.7103, 38.9303 ] } },
+    { "type": "Feature", "properties": { "name": "Eastern Band of Cherokee Indians, North Carolina", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -83.3203, 35.4769 ] } },
+    { "type": "Feature", "properties": { "name": "Eastern Shawnee Tribe of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.61845, 36.83905 ] } },
+    { "type": "Feature", "properties": { "name": "Ely Shoshone Tribe of Nevada", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -115.013, 39.161 ] } },
+    { "type": "Feature", "properties": { "name": "Flandreau Santee Sioux Tribe of South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.6, 44.04 ] } },
+    { "type": "Feature", "properties": { "name": "Forest County Potawatomi Community, Wisconsin", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -88.88, 45.67 ] } },
+    { "type": "Feature", "properties": { "name": "Fort Belknap Indian Community of the Fort Belknap Reservation of Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -108.78, 48.06 ] } },
+    { "type": "Feature", "properties": { "name": "Fort McDermitt Paiute and Shoshone Tribes of the Fort McDermitt Indian Reservation, Nevada and Oregon", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -117.7076, 41.9429 ] } },
+    { "type": "Feature", "properties": { "name": "Fort McDowell Yavapai Nation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -111.6667, 33.6333 ] } },
+    { "type": "Feature", "properties": { "name": "Fort Sill Apache Tribe of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.3655607, 34.8937875 ] } },
+    { "type": "Feature", "properties": { "name": "Gila River Indian Community of the Gila River Indian Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.03, 33.16 ] } },
+    { "type": "Feature", "properties": { "name": "Grand Traverse Band of Ottawa and Chippewa Indians, Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -85.6061, 45.0203 ] } },
+    { "type": "Feature", "properties": { "name": "Havasupai Tribe of the Havasupai Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.7, 36.2 ] } },
+    { "type": "Feature", "properties": { "name": "Ho-Chunk Nation of Wisconsin", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -90.15, 44.13 ] } },
+    { "type": "Feature", "properties": { "name": "Hoh Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.41, 47.74 ] } },
+    { "type": "Feature", "properties": { "name": "Hoopa Valley Tribe, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.688, 41.096 ] } },
+    { "type": "Feature", "properties": { "name": "Hopi Tribe of Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -110.61, 35.85 ] } },
+    { "type": "Feature", "properties": { "name": "Houlton Band of Maliseet Indians, Maine", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -67.79, 46.12 ] } },
+    { "type": "Feature", "properties": { "name": "Hualapai Indian Tribe of the Hualapai Indian Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -113.1328, 35.9069 ] } },
+    { "type": "Feature", "properties": { "name": "Jamestown S'Klallam Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.08, 48.12 ] } },
+    { "type": "Feature", "properties": { "name": "Jena Band of Choctaw Indians, Louisiana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -92.13, 31.68 ] } },
+    { "type": "Feature", "properties": { "name": "Jicarilla Apache Nation, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -107.0, 36.5 ] } },
+    { "type": "Feature", "properties": { "name": "Kaibab Band of Paiute Indians of the Kaibab Indian Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.67, 36.93 ] } },
+    { "type": "Feature", "properties": { "name": "Kalispel Indian Community of the Kalispel Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -117.29, 48.37 ] } },
+    { "type": "Feature", "properties": { "name": "Keweenaw Bay Indian Community, Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -88.48, 46.77 ] } },
+    { "type": "Feature", "properties": { "name": "Kickapoo Tribe of Indians of the Kickapoo Reservation in Kansas", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -95.6, 39.67 ] } },
+    { "type": "Feature", "properties": { "name": "Klamath Tribes, Oregon", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -121.87, 42.6 ] } },
+    { "type": "Feature", "properties": { "name": "Kootenai Tribe of Idaho", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.32, 48.77 ] } },
+    { "type": "Feature", "properties": { "name": "Lac du Flambeau Band of Lake Superior Chippewa Indians, Wisconsin", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -89.89, 45.97 ] } },
+    { "type": "Feature", "properties": { "name": "Leech Lake Band of Ojibwe, Minnesota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.22, 47.28 ] } },
+    { "type": "Feature", "properties": { "name": "Little Traverse Bay Bands of Odawa Indians, Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -85.0, 45.37 ] } },
+    { "type": "Feature", "properties": { "name": "Lower Elwha Tribal Community, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.56, 48.15 ] } },
+    { "type": "Feature", "properties": { "name": "Lummi Tribe of the Lummi Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.63, 48.77 ] } },
+    { "type": "Feature", "properties": { "name": "Makah Indian Tribe of the Makah Indian Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.6, 48.33 ] } },
+    { "type": "Feature", "properties": { "name": "Mashantucket Pequot Indian Tribe, Connecticut", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -71.97, 41.47 ] } },
+    { "type": "Feature", "properties": { "name": "Mashpee Wampanoag Tribe, Massachusetts", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -70.52, 41.65 ] } },
+    { "type": "Feature", "properties": { "name": "Menominee Indian Tribe of Wisconsin", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -88.6, 45.1 ] } },
+    { "type": "Feature", "properties": { "name": "Mescalero Apache Tribe of the Mescalero Reservation, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -105.7, 33.2 ] } },
+    { "type": "Feature", "properties": { "name": "Miami Tribe of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.88, 36.91 ] } },
+    { "type": "Feature", "properties": { "name": "Miccosukee Tribe of Indians, Florida", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -80.64, 25.74 ] } },
+    { "type": "Feature", "properties": { "name": "Mi'kmaq Nation", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -68.0341, 46.6992 ] } },
+    { "type": "Feature", "properties": { "name": "Minnesota Chippewa Tribe, Minnesota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.22, 47.28 ] } },
+    { "type": "Feature", "properties": { "name": "Mississippi Band of Choctaw Indians", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -89.2, 32.8 ] } },
+    { "type": "Feature", "properties": { "name": "Mohegan Tribe of Indians of Connecticut", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -72.08, 41.49 ] } },
+    { "type": "Feature", "properties": { "name": "Muckleshoot Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.1, 47.3 ] } },
+    { "type": "Feature", "properties": { "name": "Muscogee (Creek) Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.0, 35.75 ] } },
+    { "type": "Feature", "properties": { "name": "Narragansett Indian Tribe, Rhode Island", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -71.55, 41.45 ] } },
+    { "type": "Feature", "properties": { "name": "Navajo Nation, Arizona, New Mexico & Utah", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -110.0, 36.0 ] } },
+    { "type": "Feature", "properties": { "name": "Nez Perce Tribe, Idaho", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.2, 46.2 ] } },
+    { "type": "Feature", "properties": { "name": "Nisqually Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.65, 47.01 ] } },
+    { "type": "Feature", "properties": { "name": "Nooksack Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.35, 48.9 ] } },
+    { "type": "Feature", "properties": { "name": "Northern Cheyenne Tribe of the Northern Cheyenne Indian Reservation, Montana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -106.7, 45.5 ] } },
+    { "type": "Feature", "properties": { "name": "Northwestern Band of the Shoshone Nation, Utah", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.1, 41.9 ] } },
+    { "type": "Feature", "properties": { "name": "Oglala Sioux Tribe, South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -102.5, 43.3 ] } },
+    { "type": "Feature", "properties": { "name": "Omaha Tribe of Nebraska", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.3, 42.1 ] } },
+    { "type": "Feature", "properties": { "name": "Oneida Indian Nation, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -75.6, 43.1 ] } },
+    { "type": "Feature", "properties": { "name": "Onondaga Nation, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -76.1, 42.9 ] } },
+    { "type": "Feature", "properties": { "name": "Osage Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.4, 36.7 ] } },
+    { "type": "Feature", "properties": { "name": "Paiute-Shoshone Tribe of the Fallon Reservation and Colony, Nevada", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -118.7, 39.4 ] } },
+    { "type": "Feature", "properties": { "name": "Pamunkey Indian Tribe, Virginia", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -77.01, 37.58 ] } },
+    { "type": "Feature", "properties": { "name": "Pascua Yaqui Tribe of Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -111.0, 32.1 ] } },
+    { "type": "Feature", "properties": { "name": "Passamaquoddy Tribe, Maine", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -67.3, 45.1 ] } },
+    { "type": "Feature", "properties": { "name": "Pauma Band of Luiseno Mission Indians of the Pauma & Yuima Reservation, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -116.9, 33.3 ] } },
+    { "type": "Feature", "properties": { "name": "Penobscot Nation, Maine", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -68.7, 45.3 ] } },
+    { "type": "Feature", "properties": { "name": "Peoria Tribe of Indians of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.7, 36.9 ] } },
+    { "type": "Feature", "properties": { "name": "Pit River Tribe, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -121.4, 41.0 ] } },
+    { "type": "Feature", "properties": { "name": "Poarch Band of Creek Indians, Alabama", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -87.5, 31.1 ] } },
+    { "type": "Feature", "properties": { "name": "Ponca Tribe of Nebraska", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -97.8, 42.6 ] } },
+    { "type": "Feature", "properties": { "name": "Port Gamble S'Klallam Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.6, 47.8 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Acoma, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -107.5, 34.9 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Cochiti, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -106.3, 35.6 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Jemez, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -106.7, 35.6 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Laguna, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -107.3, 35.0 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of San Felipe, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -106.4, 35.4 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Santa Ana, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -106.5, 35.3 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Taos, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -105.5, 36.4 ] } },
+    { "type": "Feature", "properties": { "name": "Pueblo of Zuni, New Mexico", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -108.8, 35.0 ] } },
+    { "type": "Feature", "properties": { "name": "Puyallup Tribe of the Puyallup Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.4, 47.2 ] } },
+    { "type": "Feature", "properties": { "name": "Quapaw Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.7, 36.9 ] } },
+    { "type": "Feature", "properties": { "name": "Quechan Tribe of the Fort Yuma Indian Reservation, California & Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -114.6, 32.7 ] } },
+    { "type": "Feature", "properties": { "name": "Quileute Tribe of the Quileute Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.6, 47.9 ] } },
+    { "type": "Feature", "properties": { "name": "Quinault Indian Nation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.1, 47.3 ] } },
+    { "type": "Feature", "properties": { "name": "Red Lake Band of Chippewa Indians, Minnesota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -95.2, 47.9 ] } },
+    { "type": "Feature", "properties": { "name": "Rosebud Sioux Tribe of the Rosebud Indian Reservation, South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -100.8, 43.2 ] } },
+    { "type": "Feature", "properties": { "name": "Sac & Fox Nation, Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.8, 35.6 ] } },
+    { "type": "Feature", "properties": { "name": "Saginaw Chippewa Indian Tribe of Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -84.7, 43.6 ] } },
+    { "type": "Feature", "properties": { "name": "Saint Regis Mohawk Tribe, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -74.6, 45.0 ] } },
+    { "type": "Feature", "properties": { "name": "Salt River Pima-Maricopa Indian Community of the Salt River Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -111.8, 33.5 ] } },
+    { "type": "Feature", "properties": { "name": "Samish Indian Nation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.5, 48.5 ] } },
+    { "type": "Feature", "properties": { "name": "San Carlos Apache Tribe of the San Carlos Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -110.4, 33.3 ] } },
+    { "type": "Feature", "properties": { "name": "Santee Sioux Nation, Nebraska", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -97.8, 42.8 ] } },
+    { "type": "Feature", "properties": { "name": "Sauk-Suiattle Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -121.6, 48.3 ] } },
+    { "type": "Feature", "properties": { "name": "Sault Ste. Marie Tribe of Chippewa Indians, Michigan", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -84.3, 46.5 ] } },
+    { "type": "Feature", "properties": { "name": "Seminole Nation of Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.6, 35.2 ] } },
+    { "type": "Feature", "properties": { "name": "Seminole Tribe of Florida", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -80.8, 26.2 ] } },
+    { "type": "Feature", "properties": { "name": "Seneca Nation of Indians, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -78.7, 42.2 ] } },
+    { "type": "Feature", "properties": { "name": "Shakopee Mdewakanton Sioux Community, Minnesota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -93.4, 44.7 ] } },
+    { "type": "Feature", "properties": { "name": "Shawnee Tribe", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -95.0, 35.0 ] } },
+    { "type": "Feature", "properties": { "name": "Shinnecock Indian Nation, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -72.4, 40.8 ] } },
+    { "type": "Feature", "properties": { "name": "Shoalwater Bay Indian Tribe of the Shoalwater Bay Indian Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -124.0, 46.7 ] } },
+    { "type": "Feature", "properties": { "name": "Shoshone-Bannock Tribes of the Fort Hall Reservation, Idaho", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.4, 43.0 ] } },
+    { "type": "Feature", "properties": { "name": "Sisseton-Wahpeton Oyate of the Lake Traverse Reservation, South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -97.0, 45.6 ] } },
+    { "type": "Feature", "properties": { "name": "Skokomish Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.1, 47.3 ] } },
+    { "type": "Feature", "properties": { "name": "Snoqualmie Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -121.8, 47.5 ] } },
+    { "type": "Feature", "properties": { "name": "Spirit Lake Tribe, North Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.9, 47.9 ] } },
+    { "type": "Feature", "properties": { "name": "Spokane Tribe of the Spokane Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -118.0, 47.8 ] } },
+    { "type": "Feature", "properties": { "name": "Standing Rock Sioux Tribe of North & South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -100.9, 46.0 ] } },
+    { "type": "Feature", "properties": { "name": "Stillaguamish Tribe of Indians of Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.2, 48.2 ] } },
+    { "type": "Feature", "properties": { "name": "Suquamish Indian Tribe of the Port Madison Reservation, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.5, 47.7 ] } },
+    { "type": "Feature", "properties": { "name": "Swinomish Indian Tribal Community, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.5, 48.4 ] } },
+    { "type": "Feature", "properties": { "name": "Te-Moak Tribe of Western Shoshone Indians of Nevada", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -115.7, 40.7 ] } },
+    { "type": "Feature", "properties": { "name": "Three Affiliated Tribes of the Fort Berthold Reservation, North Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -102.0, 47.7 ] } },
+    { "type": "Feature", "properties": { "name": "Tohono O'odham Nation of Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -112.0, 32.0 ] } },
+    { "type": "Feature", "properties": { "name": "Tonawanda Band of Seneca, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -78.3, 43.0 ] } },
+    { "type": "Feature", "properties": { "name": "Tonto Apache Tribe of Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -111.3, 34.2 ] } },
+    { "type": "Feature", "properties": { "name": "Tulalip Tribes of Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.2, 48.0 ] } },
+    { "type": "Feature", "properties": { "name": "Tule River Indian Tribe of the Tule River Reservation, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -118.8, 36.1 ] } },
+    { "type": "Feature", "properties": { "name": "Tunica-Biloxi Indian Tribe, Louisiana", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -92.0, 31.0 ] } },
+    { "type": "Feature", "properties": { "name": "Turtle Mountain Band of Chippewa Indians of North Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -99.8, 48.8 ] } },
+    { "type": "Feature", "properties": { "name": "Tuscarora Nation, New York", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -79.0, 43.1 ] } },
+    { "type": "Feature", "properties": { "name": "United Auburn Indian Community of the Auburn Rancheria, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -121.0, 38.9 ] } },
+    { "type": "Feature", "properties": { "name": "United Keetoowah Band of Cherokee Indians in Oklahoma", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -94.9, 35.9 ] } },
+    { "type": "Feature", "properties": { "name": "Upper Skagit Indian Tribe, Washington", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -122.3, 48.4 ] } },
+    { "type": "Feature", "properties": { "name": "Ute Indian Tribe of the Uintah and Ouray Reservation, Utah", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -109.8, 40.1 ] } },
+    { "type": "Feature", "properties": { "name": "Ute Mountain Ute Tribe, Colorado, New Mexico & Utah", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -108.6, 37.1 ] } },
+    { "type": "Feature", "properties": { "name": "Wampanoag Tribe of Gay Head (Aquinnah), Massachusetts", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -70.8, 41.3 ] } },
+    { "type": "Feature", "properties": { "name": "Washoe Tribe of Nevada & California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -119.8, 39.0 ] } },
+    { "type": "Feature", "properties": { "name": "White Mountain Apache Tribe of the Fort Apache Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -110.0, 33.8 ] } },
+    { "type": "Feature", "properties": { "name": "Winnebago Tribe of Nebraska", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -96.4, 42.2 ] } },
+    { "type": "Feature", "properties": { "name": "Yankton Sioux Tribe of South Dakota", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -98.2, 43.0 ] } },
+    { "type": "Feature", "properties": { "name": "Yavapai-Apache Nation of the Camp Verde Indian Reservation, Arizona", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -111.8, 34.5 ] } },
+    { "type": "Feature", "properties": { "name": "Yurok Tribe of the Yurok Reservation, California", "description": "Federally recognized tribal location.", "startYear": 1950, "endYear": 2025, "color": "#ffffff" }, "geometry": { "type": "Point", "coordinates": [ -123.9, 41.3 ] } }
+  ]
+}
