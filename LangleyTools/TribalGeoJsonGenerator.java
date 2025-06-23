@@ -1,19 +1,24 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * A utility class to parse raw text data about Native American tribes and their cultural assets,
+ * geocode them to an approximate location, and generate a GeoJSON file.
+ * This GeoJSON file is intended to be used by a web map application to display interactive markers.
+ */
 public class TribalGeoJsonGenerator {
 
     /**
-     * Main method to generate the GeoJSON file.
-     * It parses the raw data, creates feature objects for each tribe,
+     * Main method to run the data generation process.
+     * It parses the raw data, creates GeoJSON Feature objects for each tribe,
      * wraps them in a FeatureCollection, and writes the result to a file.
      *
      * @param args Command line arguments (not used).
@@ -26,8 +31,8 @@ public class TribalGeoJsonGenerator {
         //     <artifactId>gson</artifactId>
         //     <version>2.10.1</version>
         // </dependency>
-
         List<Feature> features = new ArrayList<>();
+
         // Split the entire data block into individual records for each tribe.
         // Each tribe's data is separated by two newlines followed by a name starting with a capital letter.
         String[] tribalDataBlocks = RAW_TRIBAL_DATA.trim().split("\n\n(?=[A-Z])");
@@ -40,16 +45,16 @@ public class TribalGeoJsonGenerator {
 
             // Skip the tribe name and the header line of the asset table.
             List<String> assetLines = Arrays.stream(lines)
-                    .skip(2)
-                    .filter(line -> !line.trim().isEmpty())
+                    .skip(2) // Skips tribe name and "Asset Type,Description,Source / Link"
+                    .filter(line -> !line.trim().isEmpty() && line.contains(","))
                     .collect(Collectors.toList());
 
             List<TribalAsset> tribalAssets = new ArrayList<>();
-            for(String assetLine : assetLines) {
+            for (String assetLine : assetLines) {
                 // Split the line into 3 parts: Type, Description, and URL.
                 // This is more robust than a simple split, as descriptions can contain commas.
                 String[] parts = assetLine.split(",", 3);
-                if(parts.length >= 3) {
+                if (parts.length >= 3) {
                     String type = parts[0].trim();
                     // Clean up the title/description by removing surrounding quotes.
                     String title = parts[1].replaceAll("^\"|\"$", "").trim();
@@ -62,34 +67,51 @@ public class TribalGeoJsonGenerator {
             Properties properties = new Properties(
                     tribeName,
                     "Cultural assets and information for the " + tribeName + " tribe.",
-                    "", // image placeholder
-                    "", // audio placeholder
-                    "", // video placeholder
-                    "", // website placeholder
+                    findBestAsset(tribalAssets, "Image"),
+                    findBestAsset(tribalAssets, "Audio"),
+                    findBestAsset(tribalAssets, "Video"),
                     tribalAssets
             );
 
             // Get pre-defined coordinates for the tribe
             double[] coordinates = getCoordinatesForTribe(tribeName);
             Geometry geometry = new Geometry("Point", coordinates);
-
             features.add(new Feature("Feature", geometry, properties));
         }
 
         FeatureCollection featureCollection = new FeatureCollection("FeatureCollection", features);
-
-        // Use Gson to convert the Java object to a JSON string
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonOutput = gson.toJson(featureCollection);
 
-        // Write the output to a file
-        try (FileWriter writer = new FileWriter("tribal-markers-geocoded.geojson")) {
+        // Write the output to a file in a 'public/data' directory for Next.js
+        try (FileWriter writer = new FileWriter("public/data/tribal-markers-geocoded.geojson")) {
             writer.write(jsonOutput);
             System.out.println("Successfully created tribal-markers-geocoded.geojson");
         } catch (IOException e) {
-            System.err.println("An error occurred while writing the GeoJSON file.");
+            System.err.println("An error occurred while writing the GeoJSON file. Make sure the 'public/data' directory exists.");
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Finds the "best" representative asset URL for a given type (Image, Video, etc.).
+     * Prefers non-placeholder links.
+     *
+     * @param assets The list of all assets for a tribe.
+     * @param type The type of asset to find ("Image", "Video", etc.).
+     * @return The URL of the best found asset, or an empty string.
+     */
+    private static String findBestAsset(List<TribalAsset> assets, String type) {
+        Optional<String> specificAsset = assets.stream()
+                .filter(a -> a.type().equalsIgnoreCase(type) && !a.url().contains("placehold.co"))
+                .map(TribalAsset::url)
+                .findFirst();
+
+        return specificAsset.orElseGet(() -> assets.stream()
+                .filter(a -> a.type().equalsIgnoreCase(type))
+                .map(TribalAsset::url)
+                .findFirst()
+                .orElse(""));
     }
 
     /**
@@ -102,46 +124,45 @@ public class TribalGeoJsonGenerator {
      */
     private static double[] getCoordinatesForTribe(String tribeName) {
         switch (tribeName.toLowerCase()) {
-            case "abenaki": return new double[]{-72.5778, 44.2601}; // Vermont
-            case "absaroka (crow)": return new double[]{-107.4582, 45.6025}; // Crow Agency, MT
-            case "apache": return new double[]{-105.7917, 33.3444}; // Mescalero, NM
-            case "arapaho": return new double[]{-108.7330, 43.1558}; // Wind River Reservation, WY
-            case "blackfeet (siksikaitsitapi)": return new double[]{-112.9843, 48.5570}; // Browning, MT
-            case "caddo": return new double[]{-98.3967, 35.3039}; // Binger, OK
-            case "cherokee": return new double[]{-94.9727, 35.9151}; // Tahlequah, OK
-            case "cheyenne": return new double[]{-106.6548, 45.7208}; // Lame Deer, MT
-            case "chickasaw": return new double[]{-96.6783, 34.7745}; // Ada, OK
-            case "comanche": return new double[]{-98.3917, 34.6067}; // Lawton, OK
-            case "creek (muscogee)": return new double[]{-95.9730, 35.6159}; // Okmulgee, OK
-            case "delaware (lenape)": return new double[]{-95.9344, 36.6517}; // Bartlesville, OK
-            case "flathead (salish)": return new double[]{-114.1687, 47.4788}; // Pablo, MT
-            case "hopi": return new double[]{-110.6391, 35.8239}; // Kykotsmovi Village, AZ
-            case "iroquois (haudenosaunee)": return new double[]{-76.1474, 42.9893}; // Onondaga Reservation, NY
-            case "kiowa": return new double[]{-98.4612, 35.1587}; // Carnegie, OK
-            case "lakota (sioux)": return new double[]{-102.5532, 43.4300}; // Pine Ridge, SD
-            case "navajo (diné)": return new double[]{-109.0449, 35.6728}; // Window Rock, AZ
-            case "nez percé": return new double[]{-116.6343, 46.3479}; // Lapwai, ID
-            case "pawnee": return new double[]{-96.8045, 36.3384}; // Pawnee, OK
-            case "pomo": return new double[]{-123.2078, 39.1502}; // Ukiah, CA
-            case "puebloan peoples": return new double[]{-106.6504, 35.0844}; // Albuquerque, NM
-            case "seminole": return new double[]{-80.2423, 26.1154}; // Hollywood, FL
-            case "shawnee": return new double[]{-96.9248, 35.3378}; // Shawnee, OK
-            case "shoshone": return new double[]{-108.8832, 42.9958}; // Fort Washakie, WY
-            case "sioux": return new double[]{-100.3464, 44.5245}; // South Dakota
-            case "zuni": return new double[]{-108.8473, 35.0692}; // Zuni Pueblo, NM
-            default: return new double[]{0, 0}; // Default case
+            case "abenaki": return new double[]{-72.5778, 44.2601};
+            case "absaroka (crow)": return new double[]{-107.4582, 45.6025};
+            case "apache": return new double[]{-105.7917, 33.3444};
+            case "arapaho": return new double[]{-108.7330, 43.1558};
+            case "blackfeet (siksikaitsitapi)": return new double[]{-112.9843, 48.5570};
+            case "caddo": return new double[]{-98.3967, 35.3039};
+            case "cherokee": return new double[]{-94.9727, 35.9151};
+            case "cheyenne": return new double[]{-106.6548, 45.7208};
+            case "chickasaw": return new double[]{-96.6783, 34.7745};
+            case "comanche": return new double[]{-98.3917, 34.6067};
+            case "creek (muscogee)": return new double[]{-95.9730, 35.6159};
+            case "delaware (lenape)": return new double[]{-95.9344, 36.6517};
+            case "flathead (salish)": return new double[]{-114.1687, 47.4788};
+            case "hopi": return new double[]{-110.6391, 35.8239};
+            case "iroquois (haudenosaunee)": return new double[]{-76.1474, 42.9893};
+            case "kiowa": return new double[]{-98.4612, 35.1587};
+            case "lakota (sioux)": return new double[]{-102.5532, 43.4300};
+            case "navajo (diné)": return new double[]{-109.0449, 35.6728};
+            case "nez percé": return new double[]{-116.6343, 46.3479};
+            case "pawnee": return new double[]{-96.8045, 36.3384};
+            case "pomo": return new double[]{-123.2078, 39.1502};
+            case "puebloan peoples": return new double[]{-106.6504, 35.0844};
+            case "seminole": return new double[]{-80.2423, 26.1154};
+            case "shawnee": return new double[]{-96.9248, 35.3378};
+            case "shoshone": return new double[]{-108.8832, 42.9958};
+            case "sioux": return new double[]{-100.3464, 44.5245};
+            case "zuni": return new double[]{-108.8473, 35.0692};
+            default: return new double[]{-98.5795, 39.8283}; // Geographic center of US
         }
     }
 
-    // Static raw data string copied from the provided document, using a text block.
+    // Static raw data string copied from the provided document.
     private static final String RAW_TRIBAL_DATA = """
     Abenaki
-
     Asset Type,Description,Source / Link
     Image,"Painting: '18th Century Abenaki Couple' by Francine Poitras Jones, depicting post-contact clothing with wool, linen, and trade goods.",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/18th-Century-Abenaki-Couple-by-Francine-Poitras-Jones-Nulhegan-Abenaki-1-1024x768.jpg
     Image,"Replica of an archaic style dress made from milkweed plant fiber, representing pre-contact attire. Made by Vera Walker Sheehan.",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Archaic-Style-Dress-by-Vera-Walker-Sheehan-1-768x1024.jpg
     Image,Hand-woven milkweed fiber satchel used for collecting plants and seeds. Made by Vera Walker Sheehan.,https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Twined-Bag-by-Vera-Walker-Sheehan-1-768x1024.jpg
-    Image,"Abenaki women's headgear made of French lace, ribbon, and beads in the curved motif of the Wabanaki Confederacy. Made by Lori Lambert.",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Womens-Headgear-by-Lori-Lambert-1-768x1024.jpg
+    Image,"Abenaki women’s headgear made of French lace, ribbon, and beads in the curved motif of the Wabanaki Confederacy. Made by Lori Lambert.",https://hidden.coplacdigital.org/afualor/wp-content/uploads/sites/18/2018/10/Womens-Headgear-by-Lori-Lambert-1-768x1024.jpg
     Image,"Gourd art by Jeanne Morningstar Kent telling the traditional stories of 'Gluscape Fights the Water Serpent' and 'How Woodpecker Got His Red Head.'",https://abenaki-edu.org/wp-content/uploads/2021/04/Gourd-Art-by-Jeanne-Morningstar-Kent-scaled.jpg
     Image,"Photos from crafting and music classes, fundraisers, and community gatherings.",https://abenakination.com/news-%26-events
     Audio,"Language and cultural recordings, including the Paul Thompson fonds and Bernard Assiniwi fonds.",https://recherche-research.bac-lac.gc.ca/eng/public/list/46319
@@ -155,7 +176,6 @@ public class TribalGeoJsonGenerator {
     Document,PDF on Abenaki Oral Tradition.,https://moose.nhhistory.org/Moose/media/Default/Documents%20and%20PDFs/Unit-2-docs/U2_L3_EG.pdf
 
     Absaroka (Crow)
-
     Asset Type,Description,Source / Link
     Image,"Painting: 'Distinguished Crow Indians' by George Catlin (1861/1869), oil on card mounted on paperboard.",https://www.nga.gov/artworks/50328-distinguished-crow-indians
     Image,"Painting: 'A Child of the Plains, Absaroka Indian' by John Young-Hunter (1914), tempera on canvas.",https://collections.starkculturalvenues.org/objects/40063/a-child-of-the-plains-absaroka-indian
@@ -171,7 +191,6 @@ public class TribalGeoJsonGenerator {
     Document,PDF of the Crow Reservation Timeline.,https://opi.mt.gov/Portals/182/Page%20Files/Indian%20Education/Social%20Studies/K-12%20Resources/Crow%20Timeline.pdf
 
     Apache
-
     Asset Type,Description,Source / Link
     Image,"Historical portraits of leaders Geronimo, Mangas Coloradas, and Victorio.",https://mescaleroapachetribe.com/our-culture/
     Image,Photographs by Edward S. Curtis depicting Apache individuals and traditional dress.,https://edwardcurtisphotos.com/store/apache-native-american-photos/
@@ -186,7 +205,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Apache Warriors Tell Their Side (to Eve Ball)'.",https://www.oldpueblo.org/wp-content/uploads/2022/02/202109opa86_-ApacheWarriorsTellTheirSideToEveBall.pdf
 
     Arapaho
-
     Asset Type,Description,Source / Link
     Image,Ledger art by Frank Henderson depicting warrior society dances and battle exploits.,https://www.metmuseum.org/art/collection/search/679641
     Image,"Collection of 19th-century Arapaho artifacts including moccasins, pipe bags, and robes.",https://www.metmuseum.org/art/collection/search?q=Arapaho&sortBy=Relevance
@@ -203,7 +221,6 @@ public class TribalGeoJsonGenerator {
     Document,Oral histories of the Sand Creek Massacre from the perspective of Cheyenne and Arapaho elders.,https://www.historycolorado.org/lost-highways/2024/04/17/oral-histories-sand-creek-massacre-cheyenne-and-arapaho-tribes-located
 
     Blackfeet (Siksikaitsitapi)
-
     Asset Type,Description,Source / Link
     Image,"Man's shirt (c. 1880) made of red wool trade cloth, with weasel-fur fringe and beaded rosettes.",https://www.metmuseum.org/art/collection/search/642585
     Image,"Hide painting of 'White Quiver,' a renowned Blackfeet horse thief, by contemporary artist David Dragonfly.",https://iacbmuseums-viewingroom.exhibit-e.art/viewing-room/david-dragonfly/works/10976
@@ -220,7 +237,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'A Literary Analysis of Blackfoot Oral Stories'.",https://opus.uleth.ca/bitstreams/935c267a-e11f-46ad-8912-d8fe7ec46765/download
 
     Caddo
-
     Asset Type,Description,Source / Link
     Image,"Caddo pottery, including carinated bowls and long-necked bottles with intricate engraved designs.",https://www.texasbeyondhistory.net/tejas/clay/tradition.html
     Image,Contemporary Caddo pottery by artist Jeri Redcorn.,https://www.thestoryoftexas.com/upload/files/american-indian-heritage/Coil_Pot_Activity_AIHD-2020.pdf
@@ -232,7 +248,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'The Caddo Indians of Louisiana'.",https://www.crt.state.la.us/Assets/OCD/archaeology/discoverarchaeology/virtual-books/PDFs/Caddo.pdf
 
     Cherokee
-
     Asset Type,Description,Source / Link
     Image,"Traditional Cherokee arts and crafts including basketry, pottery, and carving.",https://quallaartsandcrafts.org/
     Image,"Modern 'tear dress' worn by women and ribbon shirts worn by men for special occasions.",https://www.cherokee.org/about-the-nation/frequently-asked-questions/culture/
@@ -246,7 +261,6 @@ public class TribalGeoJsonGenerator {
     Document,PDF of Christmas Coloring Sheets.,https://www.cherokee.org/media/ljqly2xm/coloringsheets-2022-christmas.pdf
 
     Cheyenne
-
     Asset Type,Description,Source / Link
     Image,Painted tipi curtain from the Elkhorn Scraper Warrior Society and a painted robe with a sunburst design (c. 1850-1870).,https://www.artic.edu/artworks/100658/painted-tipi-curtain-victory-record-of-the-elkhorn-scraper-warrior-society
     Image,Historical photographs by Edward S. Curtis depicting Cheyenne individuals and clothing.,https://edwardcurtisphotos.com/store/cheyenne-native-american-photos/
@@ -256,7 +270,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Let's Talk Cheyenne' course booklet.",https://www.cheyennelanguage.org/letstalk.htm
 
     Chickasaw
-
     Asset Type,Description,Source / Link
     Image,Bronze statue by James Blackburn depicting traditional Chickasaw hunters.,https://www.chickasawculturalcenter.com/explore/statues-sculptures/
     Image,Sculptures by Chickasaw artist Joanna Underwood representing designs from early pottery and shell carvings.,https://www.chickasawculturalcenter.com/explore/statues-sculptures/
@@ -270,7 +283,6 @@ public class TribalGeoJsonGenerator {
     Video,"Cultural presentations on clothing, food, games, and the creation of regalia.",https://chickasaw.net/Our-Nation/Culture/Multimedia
 
     Comanche
-
     Asset Type,Description,Source / Link
     Image,"Painting: 'The Buffalo Chase' by George Catlin.",https://www.tshaonline.org/handbook/entries/comanche-indians
     Image,"Painting: 'Comanches of West Texas in War Regalia' (1830s) by Lino Sánchez y Tapia.",https://www.tshaonline.org/handbook/entries/comanche-indians
@@ -284,7 +296,6 @@ public class TribalGeoJsonGenerator {
     Document,PDF of the Comanche Nation Research Report.,https://ftp.txdot.gov/pub/txdot-info/env/toolkit/415-03-rpt.pdf
 
     Creek (Muscogee)
-
     Asset Type,Description,Source / Link
     Image,"Painting of Tchow-ee-put-o-kaw, a Creek woman in traditional fringed skin garments, by George Catlin (1836).",https://homepages.rootsweb.com/~cmamcrk4/crk5.html
     Image,"Muscogee shell carving by artist Chris Thompson, depicting figures like Grandmother Weaver.",https://blog.wfsu.org/blog-coastal-health/2018/01/exploring-muscogee-culture-shell-carving/
@@ -295,7 +306,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of Mvskoke Media's newspaper, Mvskoke News.",https://www.mvskokemedia.com/about/
 
     Delaware (Lenape)
-
     Asset Type,Description,Source / Link
     Image,"Artwork by Lenape artists from 1920 to the present, including paintings by Jacob Parks and Ruthe Blalock Jones.",https://delawaretribe.org/wp-content/uploads/Artwork-by-Lenape-Artists.pdf
     Image,"Delaware bandolier bag decorated with glass seed-bead embroidery in the 'Prairie style.'",https://americanindian.si.edu/exhibitions/infinityofnations/woodlands/213358.html
@@ -307,7 +317,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Lenape Dances'.",https://delawaretribe.org/wp-content/uploads/Lenape-Dances.pdf
 
     Flathead (Salish)
-
     Asset Type,Description,Source / Link
     Image,"Images of Salish and Dene clothing, including a general image and one related to weaving.",https://s3-us-west-2.amazonaws.com/tota-images/1639605703151-b7f5d4862a8ac2b4.png
     Image,"Artwork by Susan Point, a Coast Salish artist, including the red cedar sculpture Butterfly Whorl and the serigraph Manawanui.",https://vmfa.museum/learn/resources/art-making-activity-coast-salish-designs/
@@ -319,7 +328,6 @@ public class TribalGeoJsonGenerator {
     Video,"Recordings with Salish language or cultural content, including The Weavers of Musqueam and A Pair of Moccasins for Mary Thomas.",https://recherche-research.bac-lac.gc.ca/eng/public/list/46482
 
     Hopi
-
     Asset Type,Description,Source / Link
     Image,"Art from the Hopi Arts Trail, including pottery, Kachina Doll carving, basket weaving, and silversmithing.",https://hopiartstrail.com/
     Image,"Hopi art including jewelry, pottery, and Kachina carvings from the collection of Mr. and Mrs. Walt Martin.",https://lammuseum.wfu.edu/exhibits/virtual/living-arts-of-the-hopi/
@@ -333,7 +341,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Prehistory and the Traditions of the O'Odham and Hopi'.",https://www.resolutionmineeis.us/sites/default/files/references/teague-1993.pdf
 
     Iroquois (Haudenosaunee)
-
     Asset Type,Description,Source / Link
     Image,"Contemporary Iroquois art including basketry, antler carving, painting, and stone sculpture.",https://www.iroquoismuseum.org/collections
     Image,"Sculpture: Iroquois (1983-1999) by Mark di Suvero, a 40-foot-high painted steel sculpture.",https://www.associationforpublicart.org/artwork/iroquois/
@@ -344,7 +351,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Oral Tradition: The Word is King'.",https://societies.learnquebec.ca/societies/iroquois-around-1500/oral-tradition-the-word-is-king/
 
     Kiowa
-
     Asset Type,Description,Source / Link
     Image,"Watercolor paintings by the Kiowa Six, a collective of artists from the early 20th century, depicting ceremonial life.",https://www.nypl.org/events/exhibitions/galleries/fortitude/item/10088
     Image,Cradleboard by artist Paukeigope.,https://smarthistory.org/paukeigope-kiowa-cradleboard/
@@ -355,7 +361,6 @@ public class TribalGeoJsonGenerator {
     Document,Oral History: Myths and oral traditions telling of a northern home near the Rocky Mountains.,https://www.tshaonline.org/handbook/entries/kiowa-indians
 
     Lakota (Sioux)
-
     Asset Type,Description,Source / Link
     Image,"Black Bonnet War Robe (1963), a painted bison robe by Yanktonai Sioux artist Herman Red Elk.",https://www.doi.gov/iacb/TreasuresHerman
     Image,"Collection of Lakota/Teton Sioux art including a cradleboard, woman's dress, and tipi bag from the late 19th century.",https://www.metmuseum.org/art/collection/search?q=Lakota%2F+Teton+Sioux&sortBy=Relevance
@@ -366,7 +371,6 @@ public class TribalGeoJsonGenerator {
     Document,"PDF of 'Lakota Oral Literature'.",https://files.eric.ed.gov/fulltext/ED141014.pdf
 
     Navajo (Diné)
-
     Asset Type,Description,Source / Link
     Image,"Navajo art including sand paintings, turquoise and silver jewelry, woven ceremonial baskets, and pottery.",https://www.invaluable.com/blog/navajo-art/
     Image,"Navajo Clan Wheel Chart, used to help students identify family relationships and connections.",http://navajopeople.org/
@@ -377,7 +381,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral History: Transcripts of recordings made with Navajo interviewees, documenting personal and family histories.",https://guides.library.yale.edu/c.php?g=1204136&p=8988902
 
     Nez Percé
-
     Asset Type,Description,Source / Link
     Image,"Traditional Nez Perce art, including geometric and floral patterns in decorations and beadwork.",https://www.fs.usda.gov/main/npnht/learningcenter/history-culture
     Audio,"Recording of Elizabeth Penney Wilson, a Nez Perce tribal member, singing a hymn in the nimipuutímt language.",https://www.nps.gov/media/sound/view.htm?id=07BF7DA3-BAE6-4F9C-99B4-D1B7AC48A631
@@ -385,7 +388,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral History: The Nimiipuu creation story, in which Coyote creates the various tribes from the pieces of a monster.",https://www.nps.gov/museum/exhibits/nepe/legend_times.html
 
     Pawnee
-
     Asset Type,Description,Source / Link
     Image,"Painting: 'Pawnee Indians' by George Catlin (1861/1869), depicting three warriors and a woman.",https://www.nga.gov/artworks/50368-pawnee-indians
     Image,Various paintings of Pawnee individuals and scenes by artists like Charles Bird King and George Catlin.,https://www.google.com/search?q=Pawnee+art&tbm=isch
@@ -397,7 +399,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral History: Traditions that date back to the Ice-Age, potentially describing the Ice-Free Corridor.",https://crowcanyon.org/resources/western-pawneeland-oral-traditions-archaeology-and-euro-american-accounts-of-pawnees-in-the-front-range/
 
     Pomo
-
     Asset Type,Description,Source / Link
     Image,"Pomo basketry, considered among the finest in the world, using a wide variety of weaving techniques.",https://www.metmuseum.org/exhibitions/jules-tavernier/visiting-guide
     Image,"Photograph of a Pomoan woman with a child in a baby basket, c. 1892, by H.W. Henshaw.",https://www.slideshare.net/slideshow/native-american-people-pomo-indian-tribe/75111715
@@ -409,7 +410,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral History: The Pomo creation story of the sun and moon, created by Coyote and Hawk.",https://en.wikipedia.org/wiki/Pomo_traditional_narratives
 
     Puebloan Peoples
-
     Asset Type,Description,Source / Link
     Image,Pueblo art including pottery and turquoise jewelry.,https://libapps.salisbury.edu/nabb-online/exhibits/show/native-americans-then-and-now/pueblo-art
     Image,"Paintings by Miguel Camarena that depict Pueblo culture, landscapes, and spiritual rituals.",https://miguelcamarena.com/collections/pueblos-paintings
@@ -420,7 +420,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral traditions that are a continuous dialogue about all aspects of life including beliefs, stories, songs, and dances.",https://home.nps.gov/band/learn/historyculture/oral.htm
 
     Seminole
-
     Asset Type,Description,Source / Link
     Image,"Seminole patchwork clothing, including a man's satin jacket and a woman's handmade skirt by Ida Cypress.",https://thefabledthread.com/blog/seminole-clothing
     Image,"Seminole crafts including beadwork, sweetgrass baskets, and Seminole dolls made of palmetto fiber.",https://floridaseminoletourism.com/the-art-of-seminole-crafts/
@@ -434,7 +433,6 @@ public class TribalGeoJsonGenerator {
     Document,Oral History: The Ah-Tah-Thi-Ki Museum's program to preserve Seminole history and culture by recording tribal members' stories.,"https://www.ahtahthiki.com/oral-history/#:~:text=The%20Ah%2DTah%2DThi%2DKi%2D,the%20American%20Alliance%20of%20Museums."
 
     Shawnee
-
     Asset Type,Description,Source / Link
     Image,"Painting: 'Red Coat – Shawnee Chief Tecumseh' by Doug Hall, depicting the leader on horseback.",https://doughallgallery.com/product/red-coat-shawnee-chief-tecumseh-fine-art-prints/
     Image,"Exhibits at the Shawnee Tribe Cultural Center, including historic and contemporary pottery.",https://nativeamerica.travel/listings/shawnee-tribe-cultural-center
@@ -445,7 +443,6 @@ public class TribalGeoJsonGenerator {
     Document,PDF of the Eastern Shawnee 1938 Roll.,https://www.estoo-nsn.gov/library/page/george-j-captain-public-library
 
     Shoshone
-
     Asset Type,Description,Source / Link
     Image,"Photograph: 'Shoshone' by Timothy H. O'Sullivan (1867-72), an albumen silver print depicting thirteen Shoshoni men.",https://www.metmuseum.org/art/collection/search/283214
     Image,"Hide Painting of the Sun Dance, attributed to Eastern Shoshone artist Cotsiogo (Cadzi Cody).",https://smarthistory.org/eastern-shoshone-hide-painting-of-the-sun-dance-attributed-to-cotsiogo-cadzi-cody/
@@ -459,7 +456,6 @@ public class TribalGeoJsonGenerator {
     Document,"Oral History: The Northwestern Shoshone have a strong oral tradition, passing down stories and tribal histories through memorization.",https://utahindians.org/archives/shoshone/didYouKnow.html
 
     Sioux
-
     Asset Type,Description,Source / Link
     Image,"Artworks from the Sioux Indian Museum, including historic clothing, horse gear, weapons, and contemporary arts and crafts.",https://www.doi.gov/iacb/our-museums/sioux
     Image,"Collection of Sioux art at The Metropolitan Museum of Art, including a courting flute, a woman's dress (c. 1870), and a tipi bag.",https://www.metmuseum.org/art/collection/search?q=Sioux&sortBy=Relevance
@@ -471,7 +467,6 @@ public class TribalGeoJsonGenerator {
     Document,Oral History: The Dakota have kept their history alive for thousands of years through the oral tradition of storytelling (Ohuŋkaŋkaŋ).,https://www3.mnhs.org/usdakotawar/stories/history/dakota-homeland-land-lifestyle/oral-tradition
 
     Zuni
-
     Asset Type,Description,Source / Link
     Image,"Zuni art including pottery, fetish carvings, and jewelry from the Ancestral Rich Treasures of Zuni Cooperative (ARTZ).",https://www.zunipuebloart.com/
     Image,Zuni art including a polychrome jar (c. 1875) and a polychrome bowl by the artist We'wha (c. 1890).,https://www.artic.edu/artists/29970/zuni
@@ -484,28 +479,10 @@ public class TribalGeoJsonGenerator {
     Document,Oral History: An artist's depiction of the Zuni migration story.,https://home.nps.gov/band/learn/historyculture/oral.htm
     """;
 
-    // --- GeoJSON Data Structure Classes ---
-
-    // Represents the entire GeoJSON file structure.
+    // --- GeoJSON Data Structure Records ---
     record FeatureCollection(String type, List<Feature> features) {}
-
-    // Represents a single feature (in this case, a single tribe).
     record Feature(String type, Geometry geometry, Properties properties) {}
-
-    // Represents the geographic data for a feature.
     record Geometry(String type, double[] coordinates) {}
-
-    // Represents the descriptive properties of a feature.
-    record Properties(
-            String name,
-            String description,
-            String image,
-            String audio,
-            String video,
-            String website,
-            @SerializedName("tribalAssets") List<TribalAsset> tribalAssets
-    ) {}
-
-    // Represents a single media asset for a tribe.
+    record Properties(String name, String description, String image, String audio, String video, @SerializedName("tribalAssets") List<TribalAsset> tribalAssets) {}
     record TribalAsset(String type, String title, String url) {}
 }
