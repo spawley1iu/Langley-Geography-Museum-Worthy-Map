@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Langley-Geography-Museum-Worthy-Map</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+    #map {
+      height: 100vh;
+      width: 100vw;
+    }
+    /* Custom styles for Google Maps InfoWindow */
+    .gm-style-iw {
+      border-radius: 8px !important;
+      padding: 0 !important;
+    }
+    .gm-style-iw-c {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+      border-radius: 8px !important;
+    }
+    .gm-style-iw-d {
+      overflow: hidden !important; /* Hide the default scrollbar */
+    }
+    .info-window-content {
+      font-family: 'Inter', sans-serif;
+      padding: 15px;
+      background-color: rgba(45, 55, 72, 0.9);
+      color: #E2E8F0;
+    }
+    .info-window-content h3 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #FFF;
+    }
+    .info-window-content p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+    /* Custom scrollbar for story chapters */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.3);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<div id="map" class="absolute top-0 bottom-0 left-0 right-0"></div>
+
+<!-- Main Title -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 bg-gray-900/50 backdrop-blur-md p-3 rounded-lg shadow-lg text-center z-10">
+  <h1 class="text-xl md:text-2xl font-bold text-white">Langley-Geography-Museum-Worthy-Map</h1>
+  <p class="text-sm text-gray-300">1600 – 2025</p>
+</div>
+
+<!-- Info Panel / Welcome Message -->
+<div id="info-panel" class="absolute top-4 left-4 w-80 max-w-[calc(100vw-2rem)] bg-gray-800/60 backdrop-blur-md rounded-lg shadow-2xl p-5 text-gray-200 transition-transform duration-300 ease-in-out z-10">
+  <button id="close-info-panel" class="absolute top-2 right-2 text-gray-400 hover:text-white text-2xl leading-none">&times;</button>
+  <div id="info-content">
+    <h2 class="text-lg font-bold text-white mb-2">Welcome</h2>
+    <p class="text-sm mb-4">This map is an interactive exploration of Native American lands over time. Use the timeline slider below to see how territories have changed. Click on a territory for more information.</p>
+    <p class="text-xs text-gray-400">This representation is based on historical data and is inherently a simplification of a complex and ongoing history. It is intended for educational purposes.</p>
+  </div>
+</div>
+
+<!-- Story Chapters Panel -->
+<div class="absolute top-1/2 -translate-y-1/2 right-4 w-72 max-w-[calc(100vw-2rem)] bg-gray-800/60 backdrop-blur-md rounded-lg shadow-2xl transition-all duration-300 ease-in-out z-10">
+  <h2 class="text-lg font-bold text-white p-4 border-b border-gray-700/50">Story Chapters</h2>
+  <div id="story-chapters-list" class="p-2 custom-scrollbar overflow-y-auto max-h-[50vh]">
+    <!-- Chapters will be injected here by JavaScript -->
+  </div>
+</div>
+
+<!-- Timeline Controls -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent z-10">
+  <div class="max-w-4xl mx-auto bg-gray-800/60 backdrop-blur-md p-4 rounded-lg shadow-2xl">
+    <div class="flex items-center space-x-4">
+      <button id="play-pause-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+      <input id="timeline-slider" type="range" min="1600" max="2025" value="1600" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer">
+      <div class="text-center w-24">
+        <span id="year-display" class="text-xl font-bold text-white">1600</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // --- DATA ---
+  const storyData = [
+    { "title": "Arrival of Colonists", "description": "Early European settlements begin to appear on the East Coast, marking the beginning of centuries of conflict, displacement, and treaties.", "year": 1620, "location": [-70.6, 42.0], "zoom": 6 },
+    { "title": "The Pueblo Revolt", "description": "In 1680, the Pueblo people of modern-day New Mexico rose up against Spanish colonizers in a successful revolt, driving them out for 12 years.", "year": 1680, "location": [-106.0, 35.5], "zoom": 6 },
+    { "title": "Indian Removal Act", "description": "The Indian Removal Act is signed into law by President Andrew Jackson, authorizing the president to grant unsettled lands west of the Mississippi in exchange for Indian lands within existing state borders.", "year": 1830, "location": [-84, 34], "zoom": 5 },
+    { "title": "The Great Removal (Trail of Tears)", "description": "In 1838, the U.S. government forcibly removed more than 16,000 Cherokee people from their homelands in the southeastern United States to 'Indian Territory' (present-day Oklahoma). Thousands died on the journey.", "year": 1838, "location": [-89.0, 36.0], "zoom": 5 },
+    { "title": "The Long Walk", "description": "From 1864-1866, the U.S. government forced the Navajo people to walk hundreds of miles from their homeland to an internment camp at Bosque Redondo, New Mexico.", "year": 1864, "location": [-106.5, 34.5], "zoom": 6 },
+    { "title": "Dawes Act", "description": "The Dawes Act of 1887 authorized the U.S. government to break up tribal lands by partitioning them into individual plots. The objective was to assimilate Native Americans into mainstream US society.", "year": 1887, "location": [-98, 39], "zoom": 4 },
+    { "title": "Indian Reorganization Act", "description": "The Indian Reorganization Act of 1934, also known as the 'Indian New Deal', aimed to reverse the assimilationist policies of the Dawes Act and strengthen tribal governments.", "year": 1934, "location": [-98, 39], "zoom": 4 },
+    { "title": "Indian Self-Determination Act", "description": "The 1975 Indian Self-Determination and Education Assistance Act allowed tribes to assume responsibility for federally funded programs, increasing tribal sovereignty.", "year": 1975, "location": [-98, 39], "zoom": 4 }
+  ];
+
+  const tribalLandsData = {
+    "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature", "properties": { "name": "Powhatan Confederacy", "description": "A powerful confederation of Algonquian-speaking peoples in what is now eastern Virginia at the time of the first English settlements.", "startYear": 1600, "endYear": 1646, "color": "#e67e22" }, "geometry": { "type": "Polygon", "coordinates": [[ [-77.5, 38.5], [-76.0, 38.0], [-76.2, 36.8], [-78.0, 37.0], [-77.5, 38.5] ]] } },
+      { "type": "Feature", "properties": { "name": "Haudenosaunee (Iroquois) Confederacy", "description": "A confederacy of six nations (Mohawk, Onondaga, Oneida, Cayuga, Seneca, and Tuscarora) that dominated the northeastern region.", "startYear": 1600, "endYear": 1784, "color": "#3498db" }, "geometry": { "type": "Polygon", "coordinates": [[ [-79, 44.5], [-73, 44], [-74, 42], [-79, 42.5], [-79, 44.5] ]] } },
+      { "type": "Feature", "properties": { "name": "Cherokee (ᏣᎳᎩ) Ancestral Lands", "description": "The vast ancestral homelands of the Cherokee people before forced removal in the 1830s.", "startYear": 1600, "endYear": 1838, "color": "#e74c3c" }, "geometry": { "type": "Polygon", "coordinates": [[ [-86, 37], [-82, 37], [-82, 34], [-86, 34], [-86, 37] ]] } },
+      { "type": "Feature", "properties": { "name": "Lakota Territory (Oceti Sakowin)", "description": "The Great Sioux Nation territory as recognized in the Treaty of Fort Laramie of 1851.", "startYear": 1750, "endYear": 1877, "color": "#f1c40f" }, "geometry": { "type": "Polygon", "coordinates": [[ [-105, 48], [-98, 48], [-97, 43], [-105, 43], [-105, 48] ]] } },
+      { "type": "Feature", "properties": { "name": "Navajo Nation (Diné Bikéyah)", "description": "The modern-day boundaries of the Navajo Nation, the largest land area retained by a Native American tribe in the US.", "startYear": 1868, "endYear": 2025, "color": "#9b59b6" }, "geometry": { "type": "Polygon", "coordinates": [[ [-111.5, 37], [-109, 37], [-109, 35], [-111.5, 35], [-111.5, 37] ]] } },
+      { "type": "Feature", "properties": { "name": "Great Sioux Reservation", "description": "The reservation established by the Treaty of Fort Laramie in 1868 before it was broken up by the US government.", "startYear": 1868, "endYear": 1889, "color": "#f39c12" }, "geometry": { "type": "Polygon", "coordinates": [[ [-104, 46], [-99, 46], [-100, 43], [-104, 43], [-104, 46] ]]} },
+      { "type": "Feature", "properties": { "name": "Cherokee Nation (Modern)", "description": "The jurisdictional area of the Cherokee Nation in Oklahoma today.", "startYear": 1839, "endYear": 2025, "color": "#c0392b" }, "geometry": { "type": "Polygon", "coordinates": [[ [-96, 37], [-94.5, 37], [-94.5, 35.5], [-96, 35.5], [-96, 37] ]]} }
+    ]
+  };
+
+  let map;
+  let infoWindow;
+
+  // This function is called by the Google Maps script when it has loaded.
+  function initMap() {
+    // Museum-style dark map theme
+    const mapStyle = [
+      { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+      { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+      {
+        featureType: "administrative.locality",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [{ color: "#263c3f" }],
+      },
+      {
+        featureType: "poi.park",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#6b9a76" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [{ color: "#38414e" }],
+      },
+      {
+        featureType: "road",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#212a37" }],
+      },
+      {
+        featureType: "road",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#9ca5b3" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [{ color: "#746855" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#1f2835" }],
+      },
+      {
+        featureType: "road.highway",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#f3d19c" }],
+      },
+      {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [{ color: "#2f3948" }],
+      },
+      {
+        featureType: "transit.station",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#d59563" }],
+      },
+      {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [{ color: "#17263c" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.fill",
+        stylers: [{ color: "#515c6d" }],
+      },
+      {
+        featureType: "water",
+        elementType: "labels.text.stroke",
+        stylers: [{ color: "#17263c" }],
+      },
+    ];
+
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 39, lng: -98 },
+      zoom: 4,
+      styles: mapStyle,
+      disableDefaultUI: true, // cleaner look
+      zoomControl: true,
+    });
+
+    infoWindow = new google.maps.InfoWindow();
+
+    // Load the GeoJSON data onto the map
+    map.data.addGeoJson(tribalLandsData);
+
+    // Set up all the UI interactions
+    setupInteractions();
+  }
+
+  // --- UI & INTERACTION LOGIC ---
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('timeline-slider');
+    const yearDisplay = document.getElementById('year-display');
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const infoPanel = document.getElementById('info-panel');
+    const closeInfoPanelBtn = document.getElementById('close-info-panel');
+    const storyChaptersList = document.getElementById('story-chapters-list');
+
+    let isPlaying = false;
+    let animationFrameId = null;
+
+    // This is called after initMap has run
+    window.setupInteractions = () => {
+      // Set initial year
+      updateMapForYear(parseInt(slider.value, 10));
+
+      // Populate story chapters
+      storyData.forEach(chapter => {
+        const chapterDiv = document.createElement('div');
+        chapterDiv.className = 'p-3 hover:bg-gray-700/70 rounded-md cursor-pointer transition-colors';
+        chapterDiv.innerHTML = `<h3 class="font-semibold text-white">${chapter.title} (${chapter.year})</h3><p class="text-sm text-gray-300">${chapter.description}</p>`;
+        chapterDiv.addEventListener('click', () => {
+          const year = chapter.year;
+          slider.value = year;
+          yearDisplay.textContent = year;
+          updateMapForYear(year);
+          map.panTo({ lat: chapter.location[1], lng: chapter.location[0] });
+          map.setZoom(chapter.zoom);
+        });
+        storyChaptersList.appendChild(chapterDiv);
+      });
+
+      // Slider interaction
+      slider.addEventListener('input', (e) => {
+        const year = parseInt(e.target.value, 10);
+        yearDisplay.textContent = year;
+        updateMapForYear(year);
+      });
+
+      // Data layer interactions
+      map.data.addListener('click', (event) => {
+        const props = event.feature.getProperty('properties');
+        const content = `
+                    <div class="info-window-content">
+                        <h3>${props.name}</h3>
+                        <p>${props.description}</p>
+                        <p class="text-xs text-gray-400 mt-2">Active Period: ${props.startYear} - ${props.endYear}</p>
+                    </div>`;
+
+        infoWindow.setContent(content);
+        // Position InfoWindow at the click location
+        infoWindow.setPosition(event.latLng);
+        infoWindow.open(map);
+      });
+
+      map.data.addListener('mouseover', () => map.setOptions({draggableCursor:'pointer'}));
+      map.data.addListener('mouseout', () => map.setOptions({draggableCursor:''}));
+
+
+      // Play/Pause functionality
+      playPauseBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playPauseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+          if(parseInt(slider.value) >= parseInt(slider.max)) slider.value = slider.min;
+          animateTimeline();
+        } else {
+          playPauseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+          cancelAnimationFrame(animationFrameId);
+        }
+      });
+
+      // Close info panel button
+      closeInfoPanelBtn.addEventListener('click', () => {
+        infoPanel.style.transform = 'translateX(-120%)';
+      });
+
+      // Animation function
+      function animateTimeline() {
+        if (!isPlaying) return;
+        const currentYear = parseInt(slider.value, 10);
+        const maxYear = parseInt(slider.max, 10);
+        if (currentYear < maxYear) {
+          const nextYear = currentYear + 1;
+          slider.value = nextYear;
+          yearDisplay.textContent = nextYear;
+          updateMapForYear(nextYear);
+        } else {
+          isPlaying = false;
+          playPauseBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+          return;
+        }
+        animationFrameId = requestAnimationFrame(animateTimeline);
+      }
+    };
+
+    // Main function to update map based on year
+    function updateMapForYear(year) {
+      map.data.setStyle(feature => {
+        const startYear = feature.getProperty('properties').startYear;
+        const endYear = feature.getProperty('properties').endYear;
+        const color = feature.getProperty('properties').color;
+
+        let isVisible = (year >= startYear && year <= endYear);
+
+        return {
+          visible: isVisible,
+          fillColor: color,
+          strokeColor: color,
+          strokeWeight: 2,
+          fillOpacity: 0.5
+        };
+      });
+    }
+  });
+</script>
+
+<!-- Google Maps Platform Script -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAt2PYehALpL6t5HrhKG0SE1J9-qPYbu9I&callback=initMap">
+</script>
+
+</body>
+</html>
